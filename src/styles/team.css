@@ -1,0 +1,96 @@
+/* Container styling */
+.team-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #d14f81;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Team card */
+.team-card {
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Team photo */
+.team-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.team-card:hover .team-photo {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+/* Name */
+.team-card h5 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.team-card:hover h5 {
+  color: #d14f81;
+}
+
+/* Role */
+.team-card p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #777;
+  transition: color 0.3s;
+}
+
+.team-card:hover p {
+  color: #444;
+}
+
+/* Optional bio on hover */
+.team-bio {
+  font-size: 0.85rem;
+  color: #666;
+  padding: 0 1rem;
+  margin-top: 0.3rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.team-card:hover .team-bio {
+  opacity: 1;
+  max-height: 80px;
+}

@@ -1,0 +1,139 @@
+.contact-wrapper {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  color: #555;
+  font-size: 1rem;
+}
+
+.brand-name {
+  color: #007dc5;
+}
+
+.contact-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.contact-form-section,
+.contact-info-section {
+  flex: 1 1 45%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 2px solid #d7bfbf ;
+}
+
+.contact-form button {
+  background-color: #007dc5;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #005a99;
+}
+
+.contact-info-section h3, .contact-info-section h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-info-section p {
+  margin: 6px 0;
+}
+
+.contact-locations {
+  margin-top: 40px;
+}
+
+.location-title {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.location-card {
+  background: #eef3f3;
+  border-left: 5px solid #007dc5;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.location-card h4 {
+  margin-bottom: 10px;
+  color: #007dc5;
+}
+
+.location-card p {
+  margin: 6px 0;
+  color: #333;
+}
+
+.info-card {
+  background: #f5f5f5;
+  border-left: 5px solid #007dc5;
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-title {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #007dc5;
+}
+
+.info-label {
+  font-weight: 600;
+  margin-right: 8px;
+  color: #222;
+}
+
+.info-text {
+  color: #444;
+}

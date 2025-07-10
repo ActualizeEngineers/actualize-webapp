@@ -1,0 +1,81 @@
+.footer {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 30px;
+}
+
+.footer-brand {
+  flex: 1 1 250px;
+}
+
+.footer-brand-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-logo {
+  height: 48px;
+}
+
+.footer-brand-text h2 {
+  margin: 0 0 6px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00a9e0;
+}
+
+.footer-brand-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1 1 150px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 4px 0;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00a9e0;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}
