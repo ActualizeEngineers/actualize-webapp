@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
-import banner from "../assets/banners/banner1.png";
 import "../styles/custom.css";
 import Industrial from "./Industries/Industrial";
 import CustomerCarousel from "../components/shared/CustomerCarousel";
