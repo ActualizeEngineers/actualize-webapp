@@ -1,0 +1,50 @@
+.life-section {
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.life-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.life-card:hover {
+  transform: translateY(-5px);
+}
+
+.life-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.life-content {
+  padding: 1.2rem;
+}
+
+.life-content h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d14f81;
+}
+
+.life-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,56 @@
+.core-highlights-section {
+  padding: 80px 30px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+}
+
+.section-title .brand-name {
+  color: #007dc5;
+}
+
+.highlights-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.highlight-card {
+  background-color: #e3eef9;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 125, 197, 0.08);
+  padding: 25px;
+  width: 270px;
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 125, 197, 0.15);
+}
+
+.highlight-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.highlight-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #007dc5;
+  margin-bottom: 12px;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}

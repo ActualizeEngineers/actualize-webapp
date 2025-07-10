@@ -1,0 +1,84 @@
+/* Hero section */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* General highlight card styles */
+.highlight-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styling */
+.service-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+/* Typography */
+.highlight-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d14f81;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA section */
+.custom-highlight-section {
+  background: linear-gradient(90deg, #d14f81, #a93d70);
+}
+
+.custom-highlight-section h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.custom-highlight-section .btn-light {
+  color: #d14f81;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.custom-highlight-section .btn-light:hover {
+  background-color: white;
+  color: #a93d70;
+  border-color: white;
+}
+
+/* Responsive padding */
+@media (max-width: 768px) {
+  .highlight-card {
+    padding: 1.5rem 1rem;
+  }
+}

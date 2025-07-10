@@ -1,0 +1,239 @@
+.hero-card {
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-logo {
+  height: 32px;
+  margin-right: 12px;
+}
+
+.brand-name {
+  color: #007dc5; /* Sky blue brand color */
+}
+
+.hero-text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #00a9e0;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  padding: 40px 30px;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Optional: Make navbar background transparent */
+.navbar {
+  background-color: transparent;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Solid background on scroll (optional) */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-banner {
+  position: relative; /* Add this */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden; /* Add this */
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 30px;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.services-section {
+  position: relative; /* Optional */
+  z-index: auto;
+}
+
+.services-showcase {
+  background: #f5f9ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.section-title .highlight {
+  color: #00a9e0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-tile {
+  position: relative;
+  height: 300px;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+}
+
+.service-tile:hover {
+  transform: scale(1.02);
+}
+
+.service-tile .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 100%;
+}
+
+.service-tile h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.service-tile p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.service-tile .icon {
+  font-size: 2rem;
+}
+
+/* Unique background colors/images */
+.service-tile.engineering {
+  background-image: url('../assets/services/engineering.jpg');
+}
+
+.service-tile.digital {
+  background-image: url('../assets/services/digital.jpg');
+}
+
+.service-tile.product {
+  background-image: url('../assets/services/product.jpg');
+}
+
+.service-tile.software {
+  background-image: url('../assets/services/software.jpg');
+}
+
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-item:hover {
+  color: #ffffff !important; /* Text color on hover */
+  background-color: #b23a6e !important; /* Darker pink shade */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Optional: Active link highlight */
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  background-color: #b23a6e !important;
+  border-radius: 4px;
+}
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--bs-dropdown-link-active-color);
+    text-decoration: none;
+    background-color: #d15481 !important;
+}
+
+.nav-item.active-root > .nav-link {
+  background-color: #fff;
+  color: #d14f81 !important;
+  border-radius: 4px;
+  font-weight: bold;
+}
