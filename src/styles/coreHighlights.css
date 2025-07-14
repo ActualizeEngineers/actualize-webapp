@@ -1,56 +1,82 @@
 .core-highlights-section {
-  padding: 80px 30px;
-  background-color: #ffffff;
+  padding: 60px 20px;
+  background-color: #fff;
   text-align: center;
 }
 
-.section-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 50px;
-  color: #1a1a1a;
+.section-title-h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 5%;
+  color: #d14f81;
 }
 
-.section-title .brand-name {
+.brand-name {
   color: #007dc5;
 }
 
-.highlights-grid {
-  display: flex;
-  flex-wrap: wrap;
+.slick-slide-inner {
+  display: flex !important;
   justify-content: center;
-  gap: 30px;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
-.highlight-card {
-  background-color: #e3eef9;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0, 125, 197, 0.08);
-  padding: 25px;
-  width: 270px;
-  transition: transform 0.3s ease;
+.core-highlight-card {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2%;
+  width: 90%; 
+  min-height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
 }
 
-.highlight-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0, 125, 197, 0.15);
+.core-highlight-card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.highlight-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 20px;
-}
-
-.highlight-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #007dc5;
-  margin-bottom: 12px;
-}
-
-.highlight-card p {
-  font-size: 0.95rem;
-  color: #444;
+.core-highlight-card p {
+  font-size: 1.5rem;
+  color: #FFA07A ;
   line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+  .core-highlight-card {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .highlight-icon {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+
+  .core-description-container {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .core-highlight-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .core-highlight-card p {
+    font-size: 1rem;
+  }
+}
+

@@ -1,6 +1,7 @@
 .floating-actions {
     position: fixed;
-    bottom: 400px;
+    top: 100px;
+    bottom: 300px;
     right: 8px;
     display: flex;
     flex-direction: column;
