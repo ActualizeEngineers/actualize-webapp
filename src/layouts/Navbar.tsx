@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#d14f81' }}>
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
             <img src={logo} alt="Actualize Logo" height="36" />
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           </button>
 
           <div className="collapse navbar-collapse" id="mainNav">
-            <ul className="navbar-nav ms-auto" style={{ fontSize: '1.1rem', color: 'green' }}>
+            <ul className="navbar-nav ms-auto" style={{  }}>
               <li className="nav-item">
                 <NavLink to="/" className="nav-link">Home</NavLink>
               </li>
