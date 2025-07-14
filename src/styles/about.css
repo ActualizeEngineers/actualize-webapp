@@ -1,3 +1,12 @@
+.about-container {
+  height: 100vh;
+  background-image: url("../assets/banners/aboutbanner.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-top: -90px;
+}
+
 /* Section base */
 .section-title {
   font-size: 2.4rem;
@@ -8,6 +17,11 @@
 
 .brand-name {
   color: #d14f81;
+}
+
+/* Offset for content below fixed/absolute navbar */
+.pt-navbar-offset {
+  padding-top: 70px; /* Adjust based on actual navbar height */
 }
 
 /* Fade-in Animation */

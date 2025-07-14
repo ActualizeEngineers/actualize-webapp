@@ -50,23 +50,28 @@ const teamData: TeamMember[] = [
 
 const Team: React.FC = () => {
   return (
-    <div className="leaders-container">
-      <h1 className="leaders-heading">Meet Our Members</h1>
-      <div className="leaders-image-con">
-        {teamData.map((leader, idx) => (
-          <div className="image-card" key={idx}>
-            <img src={leader.imageUrl} alt={leader.alt} />
-            <div className="card-description-overlay">
-              <p>{leader.description}</p>
-            </div>
-            <div className="image-label">
-              <h3>{leader.name}</h3>
-              <p>{leader.role}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+    <>
+    <div className="team-container">
+      
     </div>
+      <div className="leaders-container">
+        <h1 className="leaders-heading">Meet Our Members</h1>
+        <div className="leaders-image-con">
+          {teamData.map((leader, idx) => (
+            <div className="image-card" key={idx}>
+              <img src={leader.imageUrl} alt={leader.alt} />
+              <div className="card-description-overlay">
+                <p>{leader.description}</p>
+              </div>
+              <div className="image-label">
+                <h3>{leader.name}</h3>
+                <p>{leader.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
