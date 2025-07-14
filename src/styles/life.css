@@ -1,3 +1,12 @@
+.life-container {
+  height: 100vh;
+  background-image: url("../assets/banners/lifebanner.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-top: -90px;
+}
+
 .life-section {
   background-color: #f9f9f9;
 }
