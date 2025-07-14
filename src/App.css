@@ -4,6 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+.captain
+{
+  background-color: pink;
+}
 
 .logo {
   height: 6em;
