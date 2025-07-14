@@ -10,11 +10,14 @@ import {
   faTools,
   faBullseye,
 } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../../layouts/Navbar";
 
 const About: React.FC = () => {
   return (
     <>
-      <div className="about-container"></div>
+      <div className="about-container">
+        <Navbar />
+      </div>
       <div className="container py-5">
         <section className="py-5 fade-in pt-navbar-offset">
           <div className="container text-center">
@@ -28,6 +31,7 @@ const About: React.FC = () => {
           </div>
         </section>
       </div>
+
       <div className="container py-5">
         {/* Company Introduction */}
         <div className="row align-items-center mb-5 fade-in delay-1">

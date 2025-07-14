@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/team.css";
+import Navbar from "../../layouts/Navbar";
 
 type TeamMember = {
   imageUrl: string;
@@ -52,7 +53,7 @@ const Team: React.FC = () => {
   return (
     <>
     <div className="team-container">
-      
+      <Navbar />
     </div>
       <div className="leaders-container">
         <h1 className="leaders-heading">Meet Our Members</h1>
