@@ -1,8 +1,56 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+
+.hero-section > .navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.hero-section .overlay {
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .contact-wrapper {
   padding: 60px 20px;
   max-width: 1200px;
   margin: auto;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .contact-intro {
@@ -42,7 +90,7 @@
   padding: 12px;
   margin-bottom: 16px;
   border-radius: 4px;
-  border: 2px solid #d7bfbf ;
+  border: 2px solid #d7bfbf;
 }
 
 .contact-form button {
@@ -58,7 +106,8 @@
   background-color: #005a99;
 }
 
-.contact-info-section h3, .contact-info-section h4 {
+.contact-info-section h3,
+.contact-info-section h4 {
   margin-top: 0;
   margin-bottom: 10px;
   color: #333;
@@ -89,7 +138,7 @@
   border-left: 5px solid #007dc5;
   padding: 20px;
   border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .location-card h4 {
