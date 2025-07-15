@@ -45,4 +45,76 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
 }
+.video-container {
+  position: relative;
+ height:60vh;
+ 
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: relative;
+  height:30vh;
+  
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 60%;
+  left:30%;
+  
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  color: #d14f81;
+}
+
+.overlay-text p {
+  font-size: 1.5rem;
+  color:blue;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem auto;
+  position: relative;
+}
+
+.bounce-icon {
+  width: 30px;
+  height: 30px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Bouncing Animation Keyframes */
+@keyframes bounce {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50%,75% {
+    transform: translateY(-30px);
+  }
+}
+
 

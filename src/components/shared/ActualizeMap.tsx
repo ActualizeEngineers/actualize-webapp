@@ -13,6 +13,7 @@ type Location = {
   coords: [number, number];
   image: string;
   description: JSX.Element;
+  tooltipClass:string;
 };
 
 const locations: Location[] = [
@@ -27,6 +28,7 @@ const locations: Location[] = [
     Suite 234# 162, </p>
     <p>Cleveland, Ohio – 44127</p>
     </div>,
+    tooltipClass:'ohio',
   },
   {
     name: <h2>Munich, Germany</h2>,
@@ -38,6 +40,7 @@ const locations: Location[] = [
     <p>GmbH Weidenweg 6,</p>
        <p>85764 Oberschleißheim, Munich</p>
        </div> ,
+      tooltipClass:'germany',
 
   },
   {
@@ -48,10 +51,11 @@ const locations: Location[] = [
     description: <div className='map'>
     <p>91 Springboard 6th Floor, Trifecta Adatto,</p>
     <p>21, ITPL Main Road, Mahadevapura, </p>
-    <p>Bengaluru – 56004891 Springboard 6th Floor,</p>
-    <p> Trifecta Adatto, 21, ITPL Main Road, Mahadevapura, </p>
+    <p>Springboard 6th Floor,Trifecta Adatto, </p>
+    <p> 21, ITPL Main Road, Mahadevapura, </p>
     <p>Bengaluru – 560048</p>
     </div>,
+    tooltipClass:'bengaluru',
   },
   {
     name: <h2>Pune, India</h2>,
@@ -63,14 +67,17 @@ const locations: Location[] = [
     <p>  Pvt Ltd 1125, 1st Floor,</p>
        <p>JK Infotech 2 Rajiv Gandhi Infotech Park,</p>
        <p> Phase I Hinjewadi Pune – 411057</p>
-       </div>
+       </div>,
+       tooltipClass:'pune'
+
        ,
   },
 ];
 
 const WorldMap: React.FC = () => {
   return (
-    <MapContainer center={[20, 0]} zoom={3} style={{ height: '90vh', width: '100%' }}  zoomControl={false}
+    <div className='map-wrapper'>
+    <MapContainer center={[20, 0]} zoom={3} style={{ height: '100%', width: '100%' }}  zoomControl={false}
   dragging={false}
   scrollWheelZoom={false}
   doubleClickZoom={false}
@@ -91,8 +98,8 @@ const WorldMap: React.FC = () => {
             opacity={1}
             interactive={true}
           >
-            <div style={{ width: '300px' }}>
-  <img src={loc.image} style={{ width: '100%', borderRadius: '6px' ,height:'50%'}} />
+            <div className={loc.tooltipClass}  style={{  width: '300px' ,backgroundColor:'white'}}>
+  <img src={loc.image} style={{ width: '100%', borderRadius: '6px' ,height:'30%'}} />
   <h6 style={{ margin: '5px 0' ,fontSize:'1px' }}>{loc.name}</h6>
   <p style={{ fontSize: '0.8rem', margin: 0 }}>{loc.description}</p>
 </div>
@@ -101,6 +108,7 @@ const WorldMap: React.FC = () => {
         </Marker>
       ))}
     </MapContainer>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/engineering.css';
-import engineeringHero from '../../assets/services/engineering.jpg';
+// import engineeringHero from '../../assets/services/engineering.jpg';
+import engHero from '../../assets/services/engineering.mp4'
 import mechanical from '../../assets/icons/mechanical.png'
 import electrical from '../../assets/icons/electrical.png'
 import manufacturing from '../../assets/icons/manufacturing.png'
@@ -44,17 +45,16 @@ const Engineering: React.FC = () => {
     <>
       {/* Hero Section */}
       <section
-        className="hero-section text-white text-center d-flex align-items-center justify-content-center"
-        style={{
-          backgroundImage: `url(${engineeringHero})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '60vh',
-        }}
-      >
-        <div className="overlay">
-          <h1 className="display-4 fw-bold">Engineering Services</h1>
-          <p className="lead">Innovate. Simulate. Deliver.</p>
+        className="hero-section text-white text-center d-flex align-items-center justify-content-center">
+          <div className='video-container'>
+            <video autoPlay muted loop playsInline className='background-video'>
+                <source src={engHero} type="video/mp4" />
+        Your browser does not support the video tag.
+            </video>
+        <div className="overlay-text">
+          <h1 >Engineering Services</h1>
+          <p >Innovate. Simulate. Deliver.</p>
+        </div>
         </div>
       </section>
 
@@ -70,7 +70,9 @@ const Engineering: React.FC = () => {
         <div className="row g-4 text-center">
           <div className="col-md-3 col-sm-6 d-flex">
             <div className="highlight-card h-100 w-100">
-              <i className="fas fa-drafting-compass fa-2x text-primary mb-3"></i>
+              <div className='icon-wrapper'>
+              <i className="fas fa-drafting-compass fa-2x text-primary mb-3 bounce-icon"></i>
+              </div>
               <h5>Design & Modeling</h5>
               <p>Comprehensive 2D/3D CAD support across industries.</p>
             </div>
@@ -78,7 +80,9 @@ const Engineering: React.FC = () => {
 
           <div className="col-md-3 col-sm-6 d-flex">
             <div className="highlight-card h-100 w-100">
-              <i className="fas fa-cogs fa-2x text-primary mb-3"></i>
+              <div className='icon-wrapper'>
+              <i className="fas fa-cogs fa-2x text-primary mb-3 bounce-icon"></i>
+              </div>
               <h5>Simulation</h5>
               <p>Advanced FEA & CFD to optimize performance and durability.</p>
             </div>
@@ -86,7 +90,9 @@ const Engineering: React.FC = () => {
 
           <div className="col-md-3 col-sm-6 d-flex">
             <div className="highlight-card h-100 w-100">
-              <i className="fas fa-tools fa-2x text-primary mb-3"></i>
+              <div className='icon-wrapper'>
+              <i className="fas fa-tools fa-2x text-primary mb-3 bounce-icon"></i>
+              </div>
               <h5>Manufacturing Support</h5>
               <p>Support for prototyping, reverse engineering & shop-floor documentation.</p>
             </div>
@@ -94,7 +100,9 @@ const Engineering: React.FC = () => {
 
           <div className="col-md-3 col-sm-6 d-flex">
             <div className="highlight-card h-100 w-100">
-              <i className="fas fa-sync-alt fa-2x text-primary mb-3"></i>
+              <div className='icon-wrapper'>
+              <i className="fas fa-sync-alt fa-2x text-primary mb-3 bounce-icon"></i>
+              </div>
               <h5>Lifecycle Management</h5>
               <p>PLM customization, integration, and support across Windchill, Teamcenter & more.</p>
             </div>
