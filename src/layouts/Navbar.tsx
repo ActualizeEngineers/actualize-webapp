@@ -151,7 +151,11 @@ const Navbar: React.FC = () => {
                 </li>
               </ul>
             </li>
-
+            <li className="nav-item">
+              <NavLink to="/careers" className="nav-link">
+                Careers
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink to="/contact" className="nav-link">
                 Contact Us
