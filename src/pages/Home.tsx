@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import logo from "../assets/images/logo.png";
 import "../styles/custom.css";
 
@@ -6,43 +6,20 @@ import Industrial from "./Industries/Industrial";
 import CustomerCarousel from "../components/shared/CustomerCarousel";
 import WhyChoose from "../components/shared/WhyChoose";
 import CoreHighlights from "../components/shared/CoreHighlights";
-
-import navbg1video from "../assets/banners/navbg1video.mp4";
-import navbg2video from "../assets/banners/navbg2video.mp4";
-import navbg3video from "../assets/banners/navbg3video.mp4";
-import navbg4video from "../assets/banners/navbg4video.mp4";
+import Navbar from "../layouts/Navbar";
 
 const Home: React.FC = () => {
-  const videos = [navbg3video, navbg2video, navbg1video, navbg4video];
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [videos.length]);
-
   return (
     <>
-      <section className="video-banner">
-        <div className="video-container">
-          {videos.map((videoSrc, index) => (
-            <video
-              key={index}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className={`bg-video ${
-                index === currentVideoIndex ? "active" : ""
-              }`}
-            >
-              <source src={videoSrc} type="video/mp4" />
-            </video>
-          ))}
-        </div>
+      <div className="video-banner">
+        <video autoPlay loop muted playsInline>
+          <source
+            src="https://res.cloudinary.com/dcyuick4m/video/upload/v1752494954/homebanner_d5iiqk.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <Navbar />
 
         <div className="banner-overlay">
           <div className="hero-card">
@@ -60,7 +37,7 @@ const Home: React.FC = () => {
             </a>
           </div>
         </div>
-      </section>
+      </div>
 
       <div className="home-content-offset">
         <WhyChoose />
