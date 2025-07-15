@@ -18,8 +18,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter:  grayscale(50%);
-  background: rgba(255, 255, 255, 0.05);
+  /* backdrop-filter:  grayscale(50%); */
+  /* background: rgba(255, 255, 255, 0.05); */
   z-index: -1;
 }
 
@@ -226,4 +226,29 @@
 
 .service-tile.software {
   background-image: url("../assets/services/software.jpg");
+}
+
+
+.service-tile.innovation {
+  background-image: url("../assets/icons/innovation.png");
+}
+
+.service-tile.team {
+  background-image: url("../assets/icons/team.png");
+}
+
+.service-tile.global {
+  background-image: url("../assets/icons/global.png");
+}
+
+.service-tile.support {
+  background-image: url("../assets/icons/customer-support.png");
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }

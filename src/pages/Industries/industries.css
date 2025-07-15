@@ -1,0 +1,55 @@
+/* .industry-hero.heavy-bg {
+  background: url('../../assets/images//heavy.jpg') center center / cover no-repeat;
+  height: 60vh;
+} */
+
+/* .card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+} */
+
+.heavy-container {
+ position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/heavy.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.auto-container {
+ position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/automotive.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+.indus-container{
+  position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/industrial.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+.process-container{
+  position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/process.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.blue {
+    background-Color: #00ccd9 !important; 
+    color: white !important;
+}

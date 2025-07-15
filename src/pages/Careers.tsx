@@ -97,7 +97,7 @@ const Careers: React.FC = () => {
             <div className="col-md-4">
               <i className="bi bi-laptop benefit-icon"></i>
               <h5 className="mt-2">Remote Friendly</h5>
-              <p>Work from anywhere with flexible hours.</p>
+              <p>We are in hybrid more.</p>
             </div>
             <div className="col-md-4">
               <i className="bi bi-person-heart benefit-icon"></i>
@@ -114,11 +114,11 @@ const Careers: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-5 text-white bg-primary text-center">
+      <section className="py-5 text-white text-center" style={{backgroundColor: '#00ccd9'}}>
         <div className="container">
           <h2 className="mb-3">Your Future Starts Here</h2>
           <p className="mb-4">Be a part of our journey. Let’s build something amazing together.</p>
-          <a href="#openings" className="btn btn-light">View Openings</a>
+          {/* <a href="#openings" className="btn btn-light">View Openings</a> */}
         </div>
       </section>
     </div>

@@ -11,14 +11,16 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container navbar-inside">
         <NavLink
           to="/"
           className="navbar-brand d-flex align-items-center gap-2"
         >
           <img src={logo} alt="Actualize Logo" height="30" />
-          <span style={{ fontWeight: 700, fontSize: "1.5rem" }}>Actualize</span>
+          <span style={{ fontWeight: 700, fontSize: "1.5rem", color: "white" }}>
+            Actualize
+          </span>
         </NavLink>
 
         <button

@@ -9,8 +9,15 @@ import softwareIcon from "../../assets/icons/software.png";
 import cadIcon from "../../assets/icons/cad.png";
 import cloudIcon from "../../assets/icons/cloud.png";
 import consultIcon from "../../assets/icons/consulting.webp";
-
+import embedded_Systems from "../../assets/icons/embedded_Systems.jpg";
+import data_engineering from "../../assets/icons/data_engineering.png";
 const highlights = [
+  {
+    icon: cadIcon,
+    alt: "PLM & CAD Engineering",
+    title: "PLM & CAD Engineering",
+    description: "Tailored solutions around Windchill, SolidWorks & more.",
+  },
   {
     icon: softwareIcon,
     alt: "Software Development",
@@ -19,10 +26,11 @@ const highlights = [
       "Modern, scalable web & mobile apps built using Angular, React, .NET & cloud-native stacks.",
   },
   {
-    icon: cadIcon,
-    alt: "PLM & CAD Engineering",
-    title: "PLM & CAD Engineering",
-    description: "Tailored solutions around Windchill, SolidWorks & more.",
+    icon: data_engineering,
+    alt: "Data Engineering",
+    title: "Data Engineering",
+    description:
+      "Building scalable data pipelines to transform raw data into actionable insights.",
   },
   {
     icon: cloudIcon,
@@ -30,6 +38,13 @@ const highlights = [
     title: "Cloud & DevOps",
     description:
       "CI/CD, containerization, and Azure/AWS/GCP cloud deployments.",
+  },
+  {
+    icon: embedded_Systems,
+    alt: "Embedded System",
+    title: "Embedded Systems",
+    description:
+      "Smart, efficient, and reliable embedded solutions powering intelligent devices and systems.",
   },
   {
     icon: consultIcon,
@@ -43,7 +58,7 @@ const highlights = [
 const sliderSettings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 700,
   slidesToShow: 2,
   slidesToScroll: 2,
   autoplay: true,

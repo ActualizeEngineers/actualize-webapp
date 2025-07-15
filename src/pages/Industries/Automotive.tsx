@@ -1,12 +1,23 @@
 import React from 'react';
+import Navbar from '../../layouts/Navbar';
+import './industries.css'
 
 
 const Automotive : React.FC = () => {
   return (
-     <div className="container py-5">
-      <h2>Automotive</h2>
-      <p>Actualize is a technology-driven organization focused on engineering excellence.</p>
-    </div>
+    <>
+      <div className="auto-container">
+        <Navbar />
+      </div>
+      <section className="industry-hero heavy-bg text-white d-flex align-items-center">
+        <div className="container text-center">
+          <h1 className="display-5 fw-bold">Automotive Engineering</h1>
+          <p className="lead">
+            Engineering excellence for large-scale, mission-critical industries
+          </p>
+        </div>
+      </section>
+    </>
   );
 };
 
