@@ -1,0 +1,139 @@
+.our-presence-container {
+    padding: 5rem 4.25rem;
+    background: url('../assets/images/Map-background.jpg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.our-offices-text {
+    font-size: 2.25rem;
+    letter-spacing: 1.5px;
+}
+
+.our-motto {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.office-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0 3rem 0;
+}
+
+.office-location-name {
+    font-size: 0.925rem !important;
+    letter-spacing: 0px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+
+.office-location-name:hover {
+    box-shadow: 0px 2px 0px #106EAA;
+}
+
+.map-container {
+    position: relative;
+    height: auto;
+    width: fit-content;
+}
+
+.tooltip-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 350px;
+    height: 150px;
+    z-index: 100;
+    display: flex;
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+.tooltip-tip {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ffffff;
+    margin-top: -1px;
+}
+
+.tooltip-office-name {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.tooltip-office-address {
+    font-size: 0.75rem;
+    color: #333;
+    margin: 0px;
+}
+
+.hover-card-image-container {
+    width: 45%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .our-presence-container {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .our-offices-text {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .our-motto {
+        margin: 0;
+        font-size: 0.75rem;
+        letter-spacing: 0.75px;
+    }
+
+    .world-map {
+        width: 100%;
+    }
+
+    .hover-card-image-container {
+        display: none;
+    }
+
+    .tooltip-container {
+        width: 225px;
+        height: 125px;
+    }
+
+    .tooltip-office-name {
+        font-size: 1rem;
+    }
+
+    .tooltip-office-address {
+        font-size: 0.625rem;
+    }
+}
+
+
+@media (max-width: 539px) {
+    .tooltip-container {
+        width: 175px;
+        height: 110px;
+    }
+}
