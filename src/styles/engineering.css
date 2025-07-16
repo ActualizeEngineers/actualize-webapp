@@ -49,45 +49,53 @@
 }
 
 
-.video-container
-
+.box
 {
-  
- height:100vh;
- width:100%;
+  height:100vh;
+ width:100vw;
   overflow: hidden;
   background-image: url('../assets//images/services1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-position: center center;
+  box-shadow: 10px 10px solid black;
+}
+@media screen and (min-width:768px) {
+  background-color: blue;
+  
+  
 }
 
 .overlay-text {
   position: absolute;
-  top:40%;
-  left:30%;
+  top:0px;
+  left:45%;
   height:30vh;
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:10px;
-  background-color: rgb(243, 238, 238);
-  
-}
+  ;
+  }
 
 .overlay-text h1 {
   font-size: 3.5rem;
   font-weight: 1200;;
-  color: #d14f81;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #e9699a;
   margin-bottom: 10px;
 }
 
 .overlay-text p {
   
   font-size: 1rem;
-  color:blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:black;
   font-size:1.5rem;
+}
+
+.bouncer{
+   animation: bounce 2s ease-in-out infinite;
 }
 
 .icon-wrapper {
@@ -108,8 +116,8 @@
   0%,100% {
     transform: translateY(0px);
   }
-  50%,75% {
-    transform: translateY(-30px);
+  50% {
+    transform: translateY(-10px);
   }
 }
 

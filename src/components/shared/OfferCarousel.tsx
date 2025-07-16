@@ -1,10 +1,9 @@
 // src/components/OfferCarousel.tsx
-
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../styles/OfferCarousel.css"; // your optional styling
+import "../../styles/OfferCarousel.css"; 
+
 
 const OfferCarousel = () => {
   const settings = {
@@ -54,7 +53,7 @@ const OfferCarousel = () => {
     <section className="container py-5">
       <div className="text-center mb-4">
         <h2 className="fw-bold text-primary">What We Offer</h2>
-        <p className="lead text-muted">
+        <p className="lead text-muted fw-bolder" >
           Empowering product development with cutting-edge engineering, CAD, and PLM expertise.
         </p>
       </div>
