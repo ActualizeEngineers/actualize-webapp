@@ -1,14 +1,51 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
 import "../styles/custom.css";
+import { useNavigate } from "react-router-dom";
 
-import Industrial from "./Industries/Industrial";
 import CustomerCarousel from "../components/shared/CustomerCarousel";
 import WhyChoose from "../components/shared/WhyChoose";
 import CoreHighlights from "../components/shared/CoreHighlights";
 import Navbar from "../layouts/Navbar";
 
+import mining_truck from "../assets/images/mining_truck.png";
+import industrial from "../assets/industries/industrial2.jpg";
+import automotive from "../assets/industries/automotive2.jpg";
+import process from "../assets/industries/process.jpg";
+
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
+  const industries = [
+    {
+      title: "Heavy Engineering",
+      image: mining_truck,
+      short: "Heavy",
+    },
+    {
+      title: "Industrial Engineering",
+      image: industrial,
+      short: "Industrial",
+    },
+    {
+      title: "Automotive Engineering",
+      image: automotive,
+      short: "Automotive",
+    },
+    {
+      title: "Process Engineering",
+      image: process,
+      short: "Process",
+    },
+  ];
+
+  let navigateT0 = (state: string) => {
+    if (state == "Heavy") navigate("/industries/heavy-engineering");
+    if (state == "Industrial") navigate("/industries/industrial-engineering");
+    if (state == "Automotive") navigate("/industries/automotive-engineering");
+    if (state == "Process") navigate("/industries/process-engineering");
+  };
+
   return (
     <>
       <div className="video-banner">
@@ -39,7 +76,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="home-content-offset">
+      <div>
         <WhyChoose />
         <CoreHighlights />
         <section className="services-showcase">
@@ -55,6 +92,12 @@ const Home: React.FC = () => {
                   Design, simulation, and validation across the product
                   lifecycle.
                 </p>
+                <button
+                  className="btn btn-primary mt-3"
+                  onClick={() => navigate("/services/engineering")}
+                >
+                  Explore More
+                </button>
               </div>
             </div>
             <div className="service-tile digital">
@@ -62,13 +105,12 @@ const Home: React.FC = () => {
                 <div className="icon">💡</div>
                 <h3>Digital Transformation</h3>
                 <p>AI, cloud, and automation-driven process improvements.</p>
-              </div>
-            </div>
-            <div className="service-tile product">
-              <div className="overlay">
-                <div className="icon">🚀</div>
-                <h3>Product Development</h3>
-                <p>From idea to market with full-cycle innovation.</p>!
+                <button
+                  className="btn btn-primary mt-3"
+                  onClick={() => navigate("/services/digital-transformation")}
+                >
+                  Explore More
+                </button>
               </div>
             </div>
             <div className="service-tile software">
@@ -76,11 +118,59 @@ const Home: React.FC = () => {
                 <div className="icon">💻</div>
                 <h3>Software Solutions</h3>
                 <p>Enterprise-grade applications for diverse industries.</p>
+                <button
+                  className="btn btn-primary mt-3"
+                  onClick={() => navigate("/services/software-development")}
+                >
+                  Explore More
+                </button>
+              </div>
+            </div>
+            <div className="service-tile product">
+              <div className="overlay">
+                <div className="icon">🚀</div>
+                <h3>Product Development</h3>
+                <p>From idea to market with full-cycle innovation.</p>
+                <button
+                  className="btn btn-primary mt-3"
+                  onClick={() => navigate("/services/product-development")}
+                >
+                  Explore More
+                </button>
               </div>
             </div>
           </div>
         </section>
-        <Industrial />
+        <section
+          className="industries-section"
+          style={{ backgroundColor: "#e5e5e5" }}
+        >
+          <h2 className="industries-heading">
+            20 Years of Engineering Excellence
+            <br />
+            <span className="highlight">Across Industries</span>
+          </h2>
+          <div className="industries-grid">
+            {industries.map((industry, index) => (
+              <div className="industry-card" key={index}>
+                <img
+                  src={industry.image}
+                  alt={industry.title}
+                  className="industry-image"
+                />
+                <div className="industry-overlay">
+                  <h3>{industry.title}</h3>
+                  <button
+                    className="btn btn-primary mt-2"
+                    onClick={() => navigateT0(industry.short)}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
         <CustomerCarousel />
       </div>
     </>
