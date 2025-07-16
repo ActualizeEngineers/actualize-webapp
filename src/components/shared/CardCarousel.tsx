@@ -1,4 +1,3 @@
-// CardCarousel.tsx
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,7 +43,11 @@ const CardCarousel: React.FC<Props> = ({ services }) => {
       {services.map((service, index) => (
         <SwiperSlide key={index} className="card-slide">
           <div className="card-content">
-            <img src={service.icon} alt={service.title} className="carousel-icon" />
+            <img
+              src={service.icon}
+              alt={service.title}
+              className="carousel-icon"
+            />
             <h5>{service.title}</h5>
             <p>{service.description}</p>
           </div>
