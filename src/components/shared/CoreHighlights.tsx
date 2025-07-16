@@ -13,19 +13,19 @@ import embeddedImage from "../../assets/icons/embedded_Systems.jpg";
 import dataImage from "../../assets/icons/data_engineering.png";
 const highlights = [
   {
+    icon: GiGears,
+    imageUrl: cadImage,
+    alt: "PLM AND CAD Engineering",
+    title: "PLM AND CAD Engineering",
+    description: "Tailored solutions around Windchill, SolidWorks & more.",
+  },
+  {
     icon: FaCode,
     imageUrl: softwareImage,
     alt: "Software Development",
     title: "Software Development",
     description:
       "Modern, scalable web & mobile apps built using Angular, React, .NET & cloud-native stacks.",
-  },
-  {
-    icon: GiGears,
-    imageUrl: cadImage,
-    alt: "PLM AND CAD Engineering",
-    title: "PLM AND CAD Engineering",
-    description: "Tailored solutions around Windchill, SolidWorks & more.",
   },
   {
     icon: FaCloud,
