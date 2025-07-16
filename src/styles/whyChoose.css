@@ -48,3 +48,16 @@
   color: #444;
   line-height: 1.5;
 }
+.custom-card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}

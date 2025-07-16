@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 70vh !important;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -155,7 +155,8 @@
 
 /* CONTACT SECTION */
 .contact-us-section {
-  background: linear-gradient(90deg, #007bff, #0056b3);
+  /* background: linear-gradient(90deg, #007bff, #0056b3); */
+  background-color: #00ccd9;
   color: #fff;
   text-align: center;
   padding: 80px 20px;
@@ -217,4 +218,13 @@
   .hero-section .overlay {
     padding: 1.5rem;
   }
+
+  .software-hero {
+  background-image: url('/assets/images/software-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
 }

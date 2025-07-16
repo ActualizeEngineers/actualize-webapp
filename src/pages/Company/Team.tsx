@@ -1,6 +1,8 @@
 import React from "react";
 import "../../styles/team.css";
 import Navbar from "../../layouts/Navbar";
+import Harish from '../../assets/team/Harish.jpg'
+import Akhilesh from '../../assets/team/Akhilesh.jpg'
 
 type TeamMember = {
   imageUrl: string;
@@ -12,20 +14,18 @@ type TeamMember = {
 
 const teamData: TeamMember[] = [
   {
-    imageUrl:
-      "https://t3.ftcdn.net/jpg/02/48/15/86/360_F_248158608_0ErNeAWWx6GZVDCg66jNRoPGEhHCSpaJ.jpg",
-    alt: "Arjun Image",
-    name: "Arjun Mehta",
-    role: "Chief Executive Officer",
+    imageUrl:Harish,
+    alt: "Harish",
+    name: "Harish",
+    role: "XXXXXX",
     description:
       "Leads the company with a strategic vision and ensures sustainable growth across all departments.",
   },
   {
-    imageUrl:
-      "https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM=",
-    alt: "Rahul Image",
-    name: "Rahul Iyer",
-    role: "Chief Technology Officer",
+    imageUrl:Akhilesh,
+    alt: "Akhilesh",
+    name: "Akhilesh",
+    role: "XXXXXX",
     description:
       "Architects and drives all technology initiatives while leading the engineering teams.",
   },

@@ -154,6 +154,7 @@ const Digital: React.FC = () => {
       <section
         ref={contactRef}
         className="contact-us-section text-center text-white py-5 fade-in-section"
+        style={{ backgroundColor: "#00ccd9 !important" }}
       >
         <div className="container">
           <h2 className="mb-3 fw-bold">Ready to Begin Your Digital Journey?</h2>

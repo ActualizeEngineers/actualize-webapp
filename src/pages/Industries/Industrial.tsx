@@ -4,6 +4,8 @@ import mining_truck from '../../assets/images/mining_truck.png'
 import energy_fuel from '../../assets/images/energy_fuel.png'
 import electricity_grid from '../../assets/images/electricity_grid.png'
 import satellite_dish from '../../assets/images/satellite_dish.png'
+import Navbar from '../../layouts/Navbar';
+import './industries.css'
 
 const industries = [
   {
@@ -26,6 +28,18 @@ const industries = [
 
 const Industrial: React.FC = () => {
   return (
+    <>
+    <div className="indus-container">
+        <Navbar />
+      </div>
+      <section className="industry-hero heavy-bg text-white d-flex align-items-center">
+        <div className="container text-center">
+          <h1 className="display-5 fw-bold">Industrial Engineering</h1>
+          <p className="lead">
+            Engineering excellence for large-scale, mission-critical industries
+          </p>
+        </div>
+      </section>
     <section className="industries-section">
       <h2 className="industries-heading">
         20 Years of Engineering Excellence<br />
@@ -43,6 +57,7 @@ const Industrial: React.FC = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 

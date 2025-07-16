@@ -11,14 +11,16 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container navbar-inside">
         <NavLink
           to="/"
           className="navbar-brand d-flex align-items-center gap-2"
         >
           <img src={logo} alt="Actualize Logo" height="30" />
-          <span style={{ fontWeight: 700, fontSize: "1.5rem" }}>Actualize</span>
+          <span style={{ fontWeight: 700, fontSize: "1.5rem", color: "white" }}>
+            Actualize
+          </span>
         </NavLink>
 
         <button
@@ -29,6 +31,7 @@ const Navbar: React.FC = () => {
           aria-controls="mainNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          style={{backgroundColor:'#00ccd9'}}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -96,10 +99,17 @@ const Navbar: React.FC = () => {
                 <li>
                   <NavLink
                     className="dropdown-item"
-                    to="/services/digital-transformation"
-                  >
-                    Digital Transformation
-                  </NavLink>
+                    to="/services/digital-transformation" > Digital Transformation </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/services/software-development" > Software Development </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/services/product-development" > Product Development </NavLink>
                 </li>
               </ul>
             </li>

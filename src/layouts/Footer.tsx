@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
         <div className="footer-contact">
           <h4>Contact</h4>
           <p>📧 contact@actualize.com</p>
-          <p>📞 +91-9876543210</p>
+          <p>📞 +91-9XX-XXX-XXXX</p>
         </div>
       </div>
 

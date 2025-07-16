@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/coreHighlights.css";
 
-import { FaCode, FaCloud } from "react-icons/fa";
+import { FaCode, FaCloud, FaMicrochip, FaDatabase } from "react-icons/fa";
 import { MdSupportAgent } from "react-icons/md";
 import { GiGears } from "react-icons/gi";
 
@@ -9,7 +9,16 @@ import softwareImage from "../../assets/icons/softwaredevelopment.jpg";
 import cloudImage from "../../assets/icons/cloud.png";
 import cadImage from "../../assets/icons/cad.jpg";
 import consultingImage from "../../assets/icons/consulting.jpg";
+import embeddedImage from "../../assets/icons/embedded_Systems.jpg";
+import dataImage from "../../assets/icons/data_engineering.png";
 const highlights = [
+  {
+    icon: GiGears,
+    imageUrl: cadImage,
+    alt: "PLM AND CAD Engineering",
+    title: "PLM AND CAD Engineering",
+    description: "Tailored solutions around Windchill, SolidWorks & more.",
+  },
   {
     icon: FaCode,
     imageUrl: softwareImage,
@@ -19,19 +28,28 @@ const highlights = [
       "Modern, scalable web & mobile apps built using Angular, React, .NET & cloud-native stacks.",
   },
   {
-    icon: GiGears,
-    imageUrl: cadImage,
-    alt: "PLM AND CAD Engineering",
-    title: "PLM AND CAD Engineering",
-    description: "Tailored solutions around Windchill, SolidWorks & more.",
-  },
-  {
     icon: FaCloud,
     imageUrl: cloudImage,
     alt: "Cloud AND DevOps",
     title: "Cloud AND DevOps",
     description:
       "CI/CD, containerization, and Azure/AWS/GCP cloud deployments.",
+  },
+  {
+    icon: FaDatabase, // import { FaDatabase } from "react-icons/fa"
+    imageUrl: dataImage, // your image path like "@/assets/data-analysis.jpg"
+    alt: "Data Engineering",
+    title: "Data Engineering",
+    description:
+      "Transforming raw data into actionable insights using modern ETL, BI, and analytics tools.",
+  },
+  {
+    icon: FaMicrochip, // import { FaMicrochip } from "react-icons/fa"
+    imageUrl: embeddedImage, // your image path like "@/assets/embedded.jpg"
+    alt: "Embedded Systems",
+    title: "Embedded Systems",
+    description:
+      "Real-time software, firmware, and hardware integration for intelligent devices.",
   },
   {
     icon: MdSupportAgent,
@@ -58,6 +76,7 @@ const CoreHighlights: React.FC = () => {
         <div className="highlight-sidebar">
           {highlights.map((item, index) => (
             <button
+              title="a"
               key={index}
               className={`highlight-icon-button ${
                 index === selectedIndex ? "active" : ""
