@@ -16,6 +16,8 @@ import Process from './pages/Industries/Process';
 
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import Software from './pages/Services/Software';
+import Product from './pages/Services/Product';
 
 const App: React.FC = () => {
   return (
@@ -29,6 +31,8 @@ const App: React.FC = () => {
           {/* Services */}
           <Route path="/services/engineering" element={<Engineering />} />
           <Route path="/services/digital-transformation" element={<Digital />} />
+          <Route path="/services/software-development" element={<Software />} />
+          <Route path="/services/product-development" element={<Product />} />
 
           {/* Industries */}
           <Route path="/industries/heavy-engineering" element={<Heavy />} />

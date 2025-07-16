@@ -120,7 +120,7 @@ const Home: React.FC = () => {
                 <p>Enterprise-grade applications for diverse industries.</p>
                 <button
                   className="btn btn-primary mt-3"
-                  onClick={() => navigate("/services/digital-transformation")}
+                  onClick={() => navigate("/services/software-development")}
                 >
                   Explore More
                 </button>
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
                 <p>From idea to market with full-cycle innovation.</p>
                 <button
                   className="btn btn-primary mt-3"
-                  onClick={() => navigate("/services/digital-transformation")}
+                  onClick={() => navigate("/services/product-development")}
                 >
                   Explore More
                 </button>
@@ -141,7 +141,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* <Industrial /> */}
         <section
           className="industries-section"
           style={{ backgroundColor: "#e5e5e5" }}

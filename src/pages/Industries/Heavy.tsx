@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "../../layouts/Navbar";
-import heavy_eng from "../../assets/industries/heavy eng.png";
+import heavy_eng from "../../assets/industries/heavy.jpg";
 import { Link } from "react-router-dom";
 import "./industries.css";
-
+import "../../styles/digital.css";
 const Heavy: React.FC = () => {
 
   const [showConstruction, setShowConstruction] = useState<boolean>(true);
@@ -64,18 +64,34 @@ const Heavy: React.FC = () => {
   }
   return (
     <>
-      <div className="heavy-container">
+      
+       {/* Hero Section */}
+      <section
+        className="hero-section text-white text-center"
+        style={{
+          backgroundImage: `url(${heavy_eng})`,
+        }}
+      >
+        <Navbar />
+        <div className="overlay">
+          <h1 className="display-4 fw-bold">Heavy Engineering</h1>
+          <p className="lead">
+             Engineering excellence for large-scale, mission-critical industries.
+          </p>
+        </div>
+      </section>
+
+      {/* <div className="heavy-container">
         <Navbar />
         <section className="industry-hero heavy-bg text-white d-flex align-items-center">
           <div className="container text-center mt-5">
-            <h1 className="display-5 fw-bold">Heavy Engineering</h1>
+            <h1 className="display-5 fw-bold"></h1>
             <p className="lead">
-              Engineering excellence for large-scale, mission-critical
-              industries
+             
             </p>
           </div>
         </section>
-      </div>
+      </div> */}
 
       <section className="py-5">
         <div className="container">

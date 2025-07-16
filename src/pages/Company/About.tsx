@@ -177,28 +177,30 @@ const About: React.FC = () => {
             </a>
           </div>
         </section>
-
-        {/* Services/Contact CTA */}
-        <section className="bg-primary text-white py-5 fade-in delay-5">
-          <div className="container text-center">
-            <h2 className="mb-3">Want to Know How We Work?</h2>
-            <p className="lead text-center">
-              Explore our services or reach out — we’d love to partner with you.
-            </p>
-            <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mt-3">
-              <a
-                href="/services/engineering"
-                className="btn btn-outline-light btn-lg"
-              >
-                <i className="fas fa-cogs me-2"></i> View Services
-              </a>
-              <a href="/contact" className="btn btn-light btn-lg text-primary">
-                <i className="fas fa-envelope me-2"></i> Get in Touch
-              </a>
-            </div>
-          </div>
-        </section>
       </div>
+      {/* Services/Contact CTA */}
+      <section
+        className="text-white py-5 fade-in delay-5"
+        style={{ backgroundColor: "#00ccd9" }}
+      >
+        <div className="container-fluid text-center">
+          <h2 className="mb-3">Want to Know How We Work?</h2>
+          <p className="lead text-center">
+            Explore our services or reach out — we’d love to partner with you.
+          </p>
+          <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mt-3">
+            <a
+              href="/services/engineering"
+              className="btn btn-outline-light btn-lg"
+            >
+              <i className="fas fa-cogs me-2"></i> View Services
+            </a>
+            <a href="/contact" className="btn btn-light btn-lg text-primary">
+              <i className="fas fa-envelope me-2"></i> Get in Touch
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

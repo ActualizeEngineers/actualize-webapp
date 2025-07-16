@@ -31,6 +31,7 @@ const Navbar: React.FC = () => {
           aria-controls="mainNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          style={{backgroundColor:'#00ccd9'}}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -98,10 +99,17 @@ const Navbar: React.FC = () => {
                 <li>
                   <NavLink
                     className="dropdown-item"
-                    to="/services/digital-transformation"
-                  >
-                    Digital Transformation
-                  </NavLink>
+                    to="/services/digital-transformation" > Digital Transformation </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/services/software-development" > Software Development </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/services/product-development" > Product Development </NavLink>
                 </li>
               </ul>
             </li>
