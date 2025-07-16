@@ -1,6 +1,7 @@
-.engineering-services {
-  background-color: #f9f9f9;
-}
+
+
+
+
 
 .section-title {
   font-size: 2.8rem;
@@ -44,54 +45,49 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
-}
-.video-container {
-  position: relative;
- height:60vh;
- 
-  overflow: hidden;
+  
 }
 
-.background-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
+
+.video-container
+
+{
   
-  object-fit: cover;
+ height:100vh;
+ width:100%;
+  overflow: hidden;
+  background-image: url('../assets//images/services1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .overlay-text {
-  position: relative;
-  height:30vh;
-  
-  z-index: 1;
-  color: white;
-  text-align: center;
-  top: 60%;
+  position: absolute;
+  top:40%;
   left:30%;
-  
-  width: 40%;
+  height:30vh;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
+  gap:10px;
+  background-color: rgb(243, 238, 238);
   
 }
 
 .overlay-text h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 1200;;
   color: #d14f81;
+  margin-bottom: 10px;
 }
 
 .overlay-text p {
-  font-size: 1.5rem;
+  
+  font-size: 1rem;
   color:blue;
+  font-size:1.5rem;
 }
 
 .icon-wrapper {
