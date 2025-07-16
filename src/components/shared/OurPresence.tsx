@@ -85,10 +85,9 @@ const OurPresence = () => {
         <div className="map-container">
             <img src={WorldMap} alt="world-map" className="world-map"/>
             {locations.map((loc, index) => (
-                <>
+                <div key={`tooltip-card-${index}`}>
                     {/* Dot */}
                     <div
-                        key={`dot-${index}`}
                         style={{
                             position: 'absolute',
                             top: loc.top,
@@ -115,7 +114,6 @@ const OurPresence = () => {
                     {hovered === index && (
                         <>
                             <div
-                                key={`tooltip-${index}`}
                                 style={{
                                     top: width > 767 ? `calc(${loc.top} - 88px)` : width <= 767 && width > 539 ? `calc(${loc.top} - 75px)` : `calc(${loc.top} - 67px)`,
                                     left: loc.left
@@ -140,7 +138,7 @@ const OurPresence = () => {
                             />
                         </>
                     )}
-                </>
+                </div>
             ))}
         </div>
     </div>
