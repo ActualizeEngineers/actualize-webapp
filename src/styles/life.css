@@ -1,10 +1,11 @@
 .life-container {
+  position: relative;
   height: 100vh;
   background-image: url("../assets/banners/lifebanner.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
-  margin-top: -90px;
+  overflow: hidden;
 }
 
 .life-section {

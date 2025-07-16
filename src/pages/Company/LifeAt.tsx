@@ -3,12 +3,13 @@ import "../../styles/life.css";
 import life1 from "../../assets/images/life-1.jpg";
 import life2 from "../../assets/images/life-2.jpg";
 import life3 from "../../assets/images/life-3.jpg";
+import Navbar from "../../layouts/Navbar";
 
 const LifeAt: React.FC = () => {
   return (
     <>
     <div className="life-container">
-
+    <Navbar />
     </div>
       <section className="life-section py-5">
         <div className="container">

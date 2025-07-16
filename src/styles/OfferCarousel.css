@@ -1,0 +1,52 @@
+
+.highlight-card {
+ padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+
+}
+
+.carousel-slide {
+  width: 100%!important; /* Force the card to fill the slide */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  background-color: #e6f0ff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.bounce-icon {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

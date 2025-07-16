@@ -11,142 +11,160 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark">
+      <div className="container navbar-inside">
         <NavLink
           to="/"
           className="navbar-brand d-flex align-items-center gap-2"
         >
-          <img src={logo} alt="Actualize Logo" height="36" />
-          <span style={{ fontWeight: 700, fontSize: "2rem" }}>Actualize</span>
+          <img src={logo} alt="Actualize Logo" height="30" />
+          <span style={{ fontWeight: 700, fontSize: "1.5rem" }}>Actualize</span>
         </NavLink>
 
-        <ul className="navbar-nav ms-auto" style={{}}>
-          <li className="nav-item">
-            <NavLink to="/" className="nav-link">
-              Home
-            </NavLink>
-          </li>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          <li
-            className={`nav-item dropdown ${
-              isActiveRoot(["/company"]) ? "active-root" : ""
-            }`}
-          >
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              data-bs-toggle="dropdown"
+        <div className="collapse navbar-collapse" id="mainNav">
+          <ul className="navbar-nav ms-auto" style={{}}>
+            <li className="nav-item">
+              <NavLink to="/" className="nav-link">
+                Home
+              </NavLink>
+            </li>
+
+            <li
+              className={`nav-item dropdown ${
+                isActiveRoot(["/company"]) ? "active-root" : ""
+              }`}
             >
-              Company
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <NavLink className="dropdown-item" to="/company/about">
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="dropdown-item" to="/company/team">
-                  Team
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="dropdown-item"
-                  to="/company/life-at-actualize"
-                >
-                  Life at Actualize
-                </NavLink>
-              </li>
-            </ul>
-          </li>
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Company
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink className="dropdown-item" to="/company/about">
+                    About
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/company/team">
+                    Team
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/company/life-at-actualize"
+                  >
+                    Life at Actualize
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
 
-          <li
-            className={`nav-item dropdown ${
-              isActiveRoot(["/services"]) ? "active-root" : ""
-            }`}
-          >
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              data-bs-toggle="dropdown"
+            <li
+              className={`nav-item dropdown ${
+                isActiveRoot(["/services"]) ? "active-root" : ""
+              }`}
             >
-              Services
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <NavLink className="dropdown-item" to="/services/engineering">
-                  Engineering Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="dropdown-item"
-                  to="/services/digital-transformation"
-                >
-                  Digital Transformation
-                </NavLink>
-              </li>
-            </ul>
-          </li>
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Services
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink className="dropdown-item" to="/services/engineering">
+                    Engineering Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/services/digital-transformation"
+                  >
+                    Digital Transformation
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
 
-          <li
-            className={`nav-item dropdown ${
-              isActiveRoot(["/industries"]) ? "active-root" : ""
-            }`}
-          >
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              data-bs-toggle="dropdown"
+            <li
+              className={`nav-item dropdown ${
+                isActiveRoot(["/industries"]) ? "active-root" : ""
+              }`}
             >
-              Industries
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <NavLink
-                  className="dropdown-item"
-                  to="/industries/heavy-engineering"
-                >
-                  Heavy Engineering
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="dropdown-item"
-                  to="/industries/automotive-engineering"
-                >
-                  Automotive Engineering
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="dropdown-item"
-                  to="/industries/Industrial-engineering"
-                >
-                  Industrial Engineering
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="dropdown-item"
-                  to="/industries/process-engineering"
-                >
-                  Process Engineering
-                </NavLink>
-              </li>
-            </ul>
-          </li>
-
-          <li className="nav-item">
-            <NavLink to="/contact" className="nav-link">
-              Contact Us
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Industries
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/industries/heavy-engineering"
+                  >
+                    Heavy Engineering
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/industries/automotive-engineering"
+                  >
+                    Automotive Engineering
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/industries/Industrial-engineering"
+                  >
+                    Industrial Engineering
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/industries/process-engineering"
+                  >
+                    Process Engineering
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/careers" className="nav-link">
+                Careers
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/contact" className="nav-link">
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 

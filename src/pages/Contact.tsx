@@ -1,10 +1,24 @@
 import React from "react";
 import "../styles/contact.css";
+import contactUsBanner from "../assets/banners/contactUsBanner.jpg";
+import Navbar from "../layouts/Navbar";
 import OurPresence from "../components/shared/OurPresence";
 
 const Contact: React.FC = () => {
   return (
     <>
+      <section
+        className="hero-section text-white text-center"
+        style={{
+          backgroundImage: `url(${contactUsBanner})`,
+        }}
+      >
+        <Navbar />
+        <div className="overlay">
+          <h1 className="display-4 fw-bold">Contact Us</h1>
+          <p className="lead">Get in Touch — Let's Build the Future Together</p>
+        </div>
+      </section>
       <div className="contact-wrapper">
         <section className="contact-intro">
           <h2>
@@ -51,59 +65,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* <section className="contact-locations">
-          <h3 className="location-title">🌍 Our Global Offices</h3>
-          <div className="location-grid">
-            <div className="location-card">
-              <h4>🇺🇸 OHIO, USA</h4>
-              <p>
-                <strong>Actualize Consulting Engineers</strong>
-              </p>
-              <p>
-                LLC 3100 East 45th Street, Suite 234#162,
-                <br />
-                Cleveland, Ohio – 44127
-              </p>
-            </div>
-
-            <div className="location-card">
-              <h4>🇩🇪 MUNICH, Germany</h4>
-              <p>
-                <strong>Actualize Consulting Engineers GmbH</strong>
-              </p>
-              <p>Weidenweg 6, 85764 Oberschleißheim, Munich</p>
-            </div>
-
-            <div className="location-card">
-              <h4>🇮🇳 BENGALURU, India</h4>
-              <p>
-                <strong>Actualize Consulting Engineers</strong>
-              </p>
-              <p>
-                91 Springboard, 6th Floor, Trifecta Adatto,
-                <br />
-                ITPL Main Road, Mahadevapura, Bengaluru – 560048
-              </p>
-            </div>
-
-            <div className="location-card">
-              <h4>🇮🇳 PUNE, India</h4>
-              <p>
-                <strong>Actualize Consulting Engineers (India) Pvt Ltd</strong>
-              </p>
-              <p>
-                1125, 1st Floor, JK Infotech 2,
-                <br />
-                Rajiv Gandhi Infotech Park, Phase I,
-                <br />
-                Hinjewadi, Pune – 411057
-              </p>
-            </div>
-          </div>
-        </section> */}
-        {/* <ActualizeMap /> */}
-      </div>
+      </div>    
       <OurPresence/>
     </>
   );
