@@ -19,7 +19,7 @@ const About: React.FC = () => {
         <Navbar />
       </div>
       <div className="container py-5">
-        <section className="py-5 fade-in pt-navbar-offset">
+        <section className="fade-in pt-navbar-offset">
           <div className="container text-center">
             <h1 className="display-5 fw-bold text-primary mb-3">
               About Actualize
