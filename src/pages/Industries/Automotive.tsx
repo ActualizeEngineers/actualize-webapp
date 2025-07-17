@@ -35,18 +35,8 @@ const Automotive: React.FC = () => {
       desc: "Developing sustainable, high-performance power trains that support a carbon-neutral future.",
     },
   ];
-  const [activeTab, setActiveTab] = useState(services[0].title);
+  const [activeTab, setActiveTab] = useState(services[0].short);
 
-  //   let showCardDetails = (showDetails: string) => {
-  //   if (showDetails == "CE" && !showConstruction) setShowConstruction(true);
-  //   else setShowConstruction(false);
-  //   if (showDetails == "MIN" && !showMining) setShowMining(true);
-  //   else setShowMining(false);
-  //   if (showDetails == "MH" && !showMaterial) setShowMaterial(true);
-  //   else setShowMaterial(false);
-  //   if (showDetails == "AGRI" && !showAgriculture) setShowAgriculture(true);
-  //   else setShowAgriculture(false);
-  // };
 
   return (
     <>
@@ -93,7 +83,7 @@ const Automotive: React.FC = () => {
                   className={`nav-link ${
                     activeTab === service.short ? "active" : ""
                   }`}
-                  onClick={() => setActiveTab(service.title)}
+                  onClick={() => setActiveTab(service.short)}
                 >
                   {service.title}
                 </button>
@@ -104,7 +94,7 @@ const Automotive: React.FC = () => {
           {/* Tab Content */}
           <div className="tab-content">
             {services.map((service) =>
-              activeTab === service.title ? (
+              activeTab === service.short ? (
                 <div key={service.short} className="tab-pane fade show active">
                   <div className="card shadow-sm border-0">
                     <div className="card-body">
