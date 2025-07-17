@@ -12,27 +12,32 @@ const Automotive: React.FC = () => {
     {
       title: "Interior",
       short: "INT",
-      desc: "Designing stylish, functional, and user-focused interiors using modern tech and cultural insights.",
+      desc: "The global trends in the automotive market demand interiors that are designed by balancing style and performance to deliver a superior cockpit experience to the users. At Actualize, we use research, cultural insights, and modern technology to design interiors that deliver on both style and performance fronts.",
+      image: "/src/assets/industries/automotive/Interior.png"
     },
     {
       title: "Exterior",
       short: "EXT",
-      desc: "Robust and functional exterior designs that reflect durability, performance, and aesthetics.",
+      desc: "Tough, practical, and functional are the words we associate with automobile exteriors. With our product development expertise and end-to-end engineering capabilities, we build exteriors like that.",
+      image: "/src/assets/industries/automotive/Exterior.png"
     },
     {
       title: "Seating",
       short: "SET",
-      desc: "End-to-end seating solutions focused on safety, comfort, and ergonomic excellence for OEMs.",
+      desc: "We provide automotive seats from concept to production using CAD, simulations, and reverse engineering. Our experience in combining different approaches and technologies help us exceed the standards of comfort and safety and provide full support to OEMs in building better seating for automobile application.",
+      image: "/src/assets/industries/automotive/Seating.png"
     },
     {
       title: "BIW",
       short: "BIW",
-      desc: "Engineering lightweight, rigid BIW structures using advanced tools and high-strength materials.",
+      desc: "The increased performance of vehicles and the dynamic conditions they operate in today demand lightweight BIW structures. We design BIWs that ensure the vehicle's rigidity without compromising performance or safety. Our designs are made precisely using the best hardware material available and the most advanced design and engineering tools.",
+      image: "/src/assets/industries/automotive/Biw.png"
     },
     {
       title: "Power Trains",
       short: "PWT",
-      desc: "Developing sustainable, high-performance power trains that support a carbon-neutral future.",
+      desc: "The world is moving towards a carbon-neutral future, and automotive powertrains play a major role. Our effort is to constantly innovate and play our part in developing environment-conscious and future-ready powertrains for our customers.",
+      image: "/src/assets/industries/automotive/Powertrain.png"
     },
   ];
   const [activeTab, setActiveTab] = useState(services[0].short);
@@ -96,10 +101,15 @@ const Automotive: React.FC = () => {
             {services.map((service) =>
               activeTab === service.short ? (
                 <div key={service.short} className="tab-pane fade show active">
-                  <div className="card shadow-sm border-0">
-                    <div className="card-body">
-                      <h5 className="fw-semibold mb-3">{service.title}</h5>
-                      <p className="text-muted">{service.desc}</p>
+                  <div className="card shadow-sm border-0" style={{width: '100%'}}>  
+                    <div className="card-body automotive-card-body"> 
+                      <div className="automotive-card-content">
+                        <h5 className="fw-semibold mb-3">{service.title}</h5>
+                        <p className="text-muted">{service.desc}</p>
+                      </div>
+                      <div className="automotive-card-image-container">
+                        <img src={service.image} alt={service.title}/> 
+                      </div>
                     </div>
                   </div>
                 </div>
