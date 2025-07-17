@@ -72,8 +72,8 @@
 }
 
 .nav-tabs .nav-link.active {
-  background-color: #007dc5;
-  color: #fff;
-  border-color: #007dc5;
+  background-color: #007dc5 !important;
+  color: #fff !important;
+  border-color: #007dc5 !important;
   font-weight: 600;
 }

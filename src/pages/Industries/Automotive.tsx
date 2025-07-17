@@ -35,7 +35,7 @@ const Automotive: React.FC = () => {
       desc: "Developing sustainable, high-performance power trains that support a carbon-neutral future.",
     },
   ];
-  const [activeTab, setActiveTab] = useState(services[0].short);
+  const [activeTab, setActiveTab] = useState(services[0].title);
 
   //   let showCardDetails = (showDetails: string) => {
   //   if (showDetails == "CE" && !showConstruction) setShowConstruction(true);
@@ -88,7 +88,7 @@ const Automotive: React.FC = () => {
           {/* Tab Navigation */}
           <ul className="nav nav-tabs mb-3">
             {services.map((service) => (
-              <li className="nav-item" key={service.title}>
+              <li className="nav-item" key={service.short}>
                 <button
                   className={`nav-link ${
                     activeTab === service.short ? "active" : ""
@@ -110,12 +110,6 @@ const Automotive: React.FC = () => {
                     <div className="card-body">
                       <h5 className="fw-semibold mb-3">{service.title}</h5>
                       <p className="text-muted">{service.desc}</p>
-                      {/* <button
-                  className="btn blue mt-3"
-                  onClick={() => showCardDetails(service.short)}
-                >
-                  View More Details
-                </button> */}
                     </div>
                   </div>
                 </div>
