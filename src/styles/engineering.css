@@ -1,7 +1,50 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
 
+.hero-section > .navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 
+.hero-section .overlay {
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
 
-
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 
 .section-title {
   font-size: 2.8rem;
@@ -22,7 +65,7 @@
 }
 
 .custom-list li::before {
-  content: '✔️';
+  content: "✔️";
   margin-right: 8px;
   color: #d14f81;
 }
@@ -45,49 +88,40 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
-  
 }
 
-
-.video-container
-
-{
-  
- height:100vh;
- width:100%;
+.video-container {
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
-  background-image: url('../assets//images/services1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .overlay-text {
   position: absolute;
-  top:40%;
-  left:30%;
-  height:30vh;
+  top: 40%;
+  left: 30%;
+  height: 30vh;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
   background-color: rgb(243, 238, 238);
-  
 }
 
 .overlay-text h1 {
   font-size: 3.5rem;
-  font-weight: 1200;;
+  font-weight: 1200;
   color: #d14f81;
   margin-bottom: 10px;
 }
 
 .overlay-text p {
-  
   font-size: 1rem;
-  color:blue;
-  font-size:1.5rem;
+  color: blue;
+  font-size: 1.5rem;
 }
 
 .icon-wrapper {
@@ -103,14 +137,20 @@
   animation: bounce 2s ease-in-out infinite;
 }
 
+.custom-hover-btn:hover {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 1px #fff solid !important;
+}
+
 /* Bouncing Animation Keyframes */
 @keyframes bounce {
-  0%,100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
-  50%,75% {
+  50%,
+  75% {
     transform: translateY(-30px);
   }
 }
-
-
