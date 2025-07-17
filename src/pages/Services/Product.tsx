@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "../../styles/digital.css";
 
 import digitalHero from "../../assets/icons/innovation.png";
@@ -121,7 +121,7 @@ const Product: React.FC = () => {
             Let’s build it together — from MVP to market launch.
           </p>
           <div className="d-flex justify-content-center gap-3 mt-3">
-            <Link to="/contact" className="btn btn-light btn-lg">
+            <Link to="/contact" className="btn btn-light btn-lg custom-hover-btn">
               Start a Conversation
             </Link>           
           </div>

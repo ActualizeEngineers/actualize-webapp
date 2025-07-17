@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "../../styles/digital.css";
 
 import digitalHero from "../../assets/services/software.jpg";
@@ -86,17 +86,19 @@ const Software: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-5 text-white" style={{backgroundColor: '#00ccd9'}}>
+      <section
+        className="py-5 text-white"
+        style={{ backgroundColor: "#00ccd9" }}
+      >
         <div className="container text-center">
           <h3 className="fw-bold">Need a custom software solution?</h3>
           <p className="lead">
             Talk to our engineers or explore our case studies.
           </p>
           <div className="d-flex justify-content-center gap-3 mt-3">
-            <Link to="/contact" className="btn btn-light btn-lg">
+            <Link to="/contact" className="btn btn-light btn-lg custom-hover-btn">
               Contact Us
             </Link>
-            
           </div>
         </div>
       </section>

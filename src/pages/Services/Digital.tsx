@@ -11,6 +11,7 @@ import industryImage from "../../assets/icons/industry.jpg";
 
 import Navbar from "../../layouts/Navbar";
 import CardCarousel from "../../components/shared/CardCarousel";
+import { Link } from "react-router-dom";
 
 const digitalServices = [
   {
@@ -72,8 +73,11 @@ const Digital: React.FC = () => {
     if (contactRef.current) observer.observe(contactRef.current);
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (overviewRef.current) observer.unobserve(overviewRef.current);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (servicesRef.current) observer.unobserve(servicesRef.current);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (contactRef.current) observer.unobserve(contactRef.current);
     };
   }, []);
@@ -137,7 +141,7 @@ const Digital: React.FC = () => {
         ref={servicesRef}
         className="our-services-section bg-light fade-in-section"
       >
-        <div className="container py-5">
+        <div className="container">
           <div className="text-center mb-5">
             <h2 className="fw-bold text-primary">Our Digital Services</h2>
             <p className="lead text-muted">
@@ -152,19 +156,24 @@ const Digital: React.FC = () => {
 
       {/* Contact Us */}
       <section
+        className="py-5 text-white"
+        style={{ backgroundColor: "#00ccd9" }}
         ref={contactRef}
-        className="contact-us-section text-center text-white py-5 fade-in-section"
-        style={{ backgroundColor: "#00ccd9 !important" }}
       >
-        <div className="container">
-          <h2 className="mb-3 fw-bold">Ready to Begin Your Digital Journey?</h2>
-          <p className="lead mb-4">
+        <div className="container text-center">
+          <h3 className="fw-bold">Ready to Begin Your Digital Journey?</h3>
+          <p className="lead">
             Connect with our experts to discuss your unique needs and how we can
             help you achieve your digital goals.
           </p>
-          <a href="/contact" className="btn btn-light btn-lg">
-            Contact Our Team
-          </a>
+          <div className="d-flex justify-content-center gap-3 mt-3">
+            <Link
+              to="/contact"
+              className="btn btn-light btn-lg custom-hover-btn"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
     </>
