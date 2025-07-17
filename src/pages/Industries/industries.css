@@ -53,3 +53,27 @@
     background-Color: #00ccd9 !important; 
     color: white !important;
 }
+
+
+
+.nav-tabs .nav-link {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #69abca;
+  margin-right: 5px;
+  padding: 8px 16px;
+  border-radius: 4px 4px 0 0;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #e2e6ea;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #007dc5;
+  color: #fff;
+  border-color: #007dc5;
+  font-weight: 600;
+}

@@ -5,12 +5,10 @@ import { Link } from "react-router-dom";
 import "./industries.css";
 import "../../styles/digital.css";
 const Heavy: React.FC = () => {
-
   const [showConstruction, setShowConstruction] = useState<boolean>(true);
   const [showMining, setShowMining] = useState<boolean>(false);
   const [showMaterial, setShowMaterial] = useState<boolean>(false);
   const [showAgriculture, setShowAgriculture] = useState<boolean>(false);
-
 
   const services = [
     {
@@ -32,40 +30,43 @@ const Heavy: React.FC = () => {
       title: "Agriculture",
       short: "AGRI",
       desc: "We provide smart engineering solutions that improve farm machinery efficiency and flexibility.",
-    }
+    },
   ];
   const equipmentList = [
-  {
-    name: "Cranes & Lifting Equipment",
-    shortDesc: "Support for hydraulic, mechanical, and telescopic cranes.",
-    fullDesc:
-      "We provide 3D modeling, structural analysis, and control system design for cranes used in construction and heavy industry, ensuring safety and load efficiency.",
-  },
-  {
-    name: "Mining & Earthmoving Equipment",
-    shortDesc: "Engineering support for excavators, bulldozers, and dumpers.",
-    fullDesc:
-      "From component modeling to fatigue analysis and lifecycle estimation, we support the complete design cycle for mining equipment used in harsh environments.",
-  },
-  {
-    name: "Pressure Vessels & Boilers",
-    shortDesc: "ASME-compliant design and validation services.",
-    fullDesc:
-      "We assist with thermal/stress analysis, fabrication drawings, and compliance documentation for high-pressure equipment across energy and manufacturing sectors.",
-  },
-  // Add more
+    {
+      name: "Cranes & Lifting Equipment",
+      shortDesc: "Support for hydraulic, mechanical, and telescopic cranes.",
+      fullDesc:
+        "We provide 3D modeling, structural analysis, and control system design for cranes used in construction and heavy industry, ensuring safety and load efficiency.",
+    },
+    {
+      name: "Mining & Earthmoving Equipment",
+      shortDesc: "Engineering support for excavators, bulldozers, and dumpers.",
+      fullDesc:
+        "From component modeling to fatigue analysis and lifecycle estimation, we support the complete design cycle for mining equipment used in harsh environments.",
+    },
+    {
+      name: "Pressure Vessels & Boilers",
+      shortDesc: "ASME-compliant design and validation services.",
+      fullDesc:
+        "We assist with thermal/stress analysis, fabrication drawings, and compliance documentation for high-pressure equipment across energy and manufacturing sectors.",
+    },
+    // Add more
   ];
 
   let showDetails = (showDetails: string) => {
-    if (showDetails == "CE" && !showConstruction) setShowConstruction(true); else setShowConstruction(false);
-    if (showDetails == "MIN" && !showMining) setShowMining(true); else setShowMining(false);
-    if (showDetails == "MH" && !showMaterial) setShowMaterial(true); else setShowMaterial(false);
-    if (showDetails == "AGRI" && !showAgriculture) setShowAgriculture(true); else setShowAgriculture(false);
-  }
+    if (showDetails == "CE" && !showConstruction) setShowConstruction(true);
+    else setShowConstruction(false);
+    if (showDetails == "MIN" && !showMining) setShowMining(true);
+    else setShowMining(false);
+    if (showDetails == "MH" && !showMaterial) setShowMaterial(true);
+    else setShowMaterial(false);
+    if (showDetails == "AGRI" && !showAgriculture) setShowAgriculture(true);
+    else setShowAgriculture(false);
+  };
   return (
     <>
-      
-       {/* Hero Section */}
+      {/* Hero Section */}
       <section
         className="hero-section text-white text-center"
         style={{
@@ -76,22 +77,10 @@ const Heavy: React.FC = () => {
         <div className="overlay">
           <h1 className="display-4 fw-bold">Heavy Engineering</h1>
           <p className="lead">
-             Engineering excellence for large-scale, mission-critical industries.
+            Engineering excellence for large-scale, mission-critical industries.
           </p>
         </div>
       </section>
-
-      {/* <div className="heavy-container">
-        <Navbar />
-        <section className="industry-hero heavy-bg text-white d-flex align-items-center">
-          <div className="container text-center mt-5">
-            <h1 className="display-5 fw-bold"></h1>
-            <p className="lead">
-             
-            </p>
-          </div>
-        </section>
-      </div> */}
 
       <section className="py-5">
         <div className="container">
@@ -111,12 +100,17 @@ const Heavy: React.FC = () => {
           <h2 className="mb-4">Our Expertise</h2>
           <div className="row g-4">
             {services.map((service, idx) => (
-              <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" key={idx}>
+              <div
+                className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+                key={idx}
+              >
                 <div className="card h-100 shadow-sm border-0">
                   <div className="card-body d-flex flex-column justify-content-between">
                     <h5 className="fw-semibold mb-2">{service.title}</h5>
-                    <p className="text-muted small flex-grow-1">{service.desc}</p>
-                    <button 
+                    <p className="text-muted small flex-grow-1">
+                      {service.desc}
+                    </p>
+                    <button
                       className="btn blue mt-3"
                       onClick={() => showDetails(service.short)}
                     >
@@ -127,126 +121,126 @@ const Heavy: React.FC = () => {
               </div>
             ))}
           </div>
-          
         </div>
       </section>
 
-      {showConstruction && (    
-      <section className="py-5" >
-        <div className="container">
-          <h2 className="mb-4">Construction Equipment We Support</h2>
-          <p className="mb-4 text-muted">
-            Actualize provides design, simulation, and lifecycle engineering
-            support for a wide range of heavy equipment. Below are some of the
-            major equipment types we specialize in.
-          </p>
+      {showConstruction && (
+        <section className="py-5">
+          <div className="container">
+            <h2 className="mb-4">Construction Equipment We Support</h2>
+            <p className="mb-4 text-muted">
+              Actualize provides design, simulation, and lifecycle engineering
+              support for a wide range of heavy equipment. Below are some of the
+              major equipment types we specialize in.
+            </p>
 
-          <div className="row g-4">
-            {equipmentList.map((item, idx) => (
-              <div className="col-md-6 col-lg-4" key={idx}>
-                <div className="card h-100 shadow-sm">
-                  <div className="card-body">
-                    <h5 className="fw-semibold">{item.name}</h5>
-                    <p className="text-muted small">{item.shortDesc}</p>
-                    <div className="mt-3">
-                      <p className="small">{item.fullDesc}</p>
+            <div className="row g-4">
+              {equipmentList.map((item, idx) => (
+                <div className="col-md-6 col-lg-4" key={idx}>
+                  <div className="card h-100 shadow-sm">
+                    <div className="card-body">
+                      <h5 className="fw-semibold">{item.name}</h5>
+                      <p className="text-muted small">{item.shortDesc}</p>
+                      <div className="mt-3">
+                        <p className="small">{item.fullDesc}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>)} 
+        </section>
+      )}
 
-      {showMining && (    
-      <section className="py-5" >
-        <div className="container">
-          <h2 className="mb-4">Mining Equipment We Support</h2>
-          <p className="mb-4 text-muted">
-            Actualize provides design, simulation, and lifecycle engineering
-            support for a wide range of heavy equipment. Below are some of the
-            major equipment types we specialize in.
-          </p>
+      {showMining && (
+        <section className="py-5">
+          <div className="container">
+            <h2 className="mb-4">Mining Equipment We Support</h2>
+            <p className="mb-4 text-muted">
+              Actualize provides design, simulation, and lifecycle engineering
+              support for a wide range of heavy equipment. Below are some of the
+              major equipment types we specialize in.
+            </p>
 
-          <div className="row g-4">
-            {equipmentList.map((item, idx) => (
-              <div className="col-md-6 col-lg-4" key={idx}>
-                <div className="card h-100 shadow-sm">
-                  <div className="card-body">
-                    <h5 className="fw-semibold">{item.name}</h5>
-                    <p className="text-muted small">{item.shortDesc}</p>
-                    <div className="mt-3">
-                      <p className="small">{item.fullDesc}</p>
+            <div className="row g-4">
+              {equipmentList.map((item, idx) => (
+                <div className="col-md-6 col-lg-4" key={idx}>
+                  <div className="card h-100 shadow-sm">
+                    <div className="card-body">
+                      <h5 className="fw-semibold">{item.name}</h5>
+                      <p className="text-muted small">{item.shortDesc}</p>
+                      <div className="mt-3">
+                        <p className="small">{item.fullDesc}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>)}
+        </section>
+      )}
 
-      {showMaterial && (    
-      <section className="py-5" >
-        <div className="container">
-          <h2 className="mb-4">Material Handling We Support</h2>
-          <p className="mb-4 text-muted">
-            Actualize provides design, simulation, and lifecycle engineering
-            support for a wide range of heavy equipment. Below are some of the
-            major equipment types we specialize in.
-          </p>
+      {showMaterial && (
+        <section className="py-5">
+          <div className="container">
+            <h2 className="mb-4">Material Handling We Support</h2>
+            <p className="mb-4 text-muted">
+              Actualize provides design, simulation, and lifecycle engineering
+              support for a wide range of heavy equipment. Below are some of the
+              major equipment types we specialize in.
+            </p>
 
-          <div className="row g-4">
-            {equipmentList.map((item, idx) => (
-              <div className="col-md-6 col-lg-4" key={idx}>
-                <div className="card h-100 shadow-sm">
-                  <div className="card-body">
-                    <h5 className="fw-semibold">{item.name}</h5>
-                    <p className="text-muted small">{item.shortDesc}</p>
-                    <div className="mt-3">
-                      <p className="small">{item.fullDesc}</p>
+            <div className="row g-4">
+              {equipmentList.map((item, idx) => (
+                <div className="col-md-6 col-lg-4" key={idx}>
+                  <div className="card h-100 shadow-sm">
+                    <div className="card-body">
+                      <h5 className="fw-semibold">{item.name}</h5>
+                      <p className="text-muted small">{item.shortDesc}</p>
+                      <div className="mt-3">
+                        <p className="small">{item.fullDesc}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>)}
+        </section>
+      )}
 
-      {showAgriculture && (    
-      <section className="py-5" >
-        <div className="container">
-          <h2 className="mb-4">Agriculture Equipment We Support</h2>
-          <p className="mb-4 text-muted">
-            Actualize provides design, simulation, and lifecycle engineering
-            support for a wide range of heavy equipment. Below are some of the
-            major equipment types we specialize in.
-          </p>
+      {showAgriculture && (
+        <section className="py-5">
+          <div className="container">
+            <h2 className="mb-4">Agriculture Equipment We Support</h2>
+            <p className="mb-4 text-muted">
+              Actualize provides design, simulation, and lifecycle engineering
+              support for a wide range of heavy equipment. Below are some of the
+              major equipment types we specialize in.
+            </p>
 
-          <div className="row g-4">
-            {equipmentList.map((item, idx) => (
-              <div className="col-md-6 col-lg-4" key={idx}>
-                <div className="card h-100 shadow-sm">
-                  <div className="card-body">
-                    <h5 className="fw-semibold">{item.name}</h5>
-                    <p className="text-muted small">{item.shortDesc}</p>
-                    <div className="mt-3">
-                      <p className="small">{item.fullDesc}</p>
+            <div className="row g-4">
+              {equipmentList.map((item, idx) => (
+                <div className="col-md-6 col-lg-4" key={idx}>
+                  <div className="card h-100 shadow-sm">
+                    <div className="card-body">
+                      <h5 className="fw-semibold">{item.name}</h5>
+                      <p className="text-muted small">{item.shortDesc}</p>
+                      <div className="mt-3">
+                        <p className="small">{item.fullDesc}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>)}
+        </section>
+      )}
 
-      <section
-        className="py-5 text-white blue"
-        
-      >
+      <section className="py-5 text-white blue">
         <div className="container text-center">
           <h3 className="fw-bold">Looking for a Heavy Engineering partner?</h3>
           <p className="lead">
