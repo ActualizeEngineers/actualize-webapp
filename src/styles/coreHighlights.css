@@ -1,6 +1,6 @@
 .core-highlights-section {
-  padding: 60px 20px;
-  background-color: #ddf3f3;
+  padding: 60px 0;
+  background-color: #000000;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -8,188 +8,123 @@
 }
 
 .section-title-h2 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 40px;
-  color: #d14f81;
+  margin-bottom: 2%;
+  color: #fff;
 }
 
 .brand-name {
   color: #007dc5;
 }
 
-.core-highlight-card {
+.highlight-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+/* Base card style */
+.highlight-card {
   position: relative;
-  width: 90%;
-  max-width: 1200px;
+  width: 13%;
+  height: 55vh;
+  border-radius: 16px;
+  transition: width 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.highlight-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  transform-origin: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Hovered card expands */
+.highlight-card:hover {
+  width: 40%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transform: scale(1.05);
   background-size: cover;
-  border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  padding: 40px;
-  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.highlight-card:hover .highlight-heading {
+  display: none;
+}
+
+.highlight-cards-container:hover .highlight-card:not(:hover) {
+  width: 8%;
+  opacity: 0.8;
+  transform: scale(0.95);
+  transition: width 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.highlight-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  color: #000;
+  text-align: left;
+  overflow: hidden;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
 }
 
-.highlight-sidebar {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translate(-100%, -50%);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 8px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  z-index: 2;
+.highlight-card:hover .highlight-card-overlay {
+  transform: translateY(0);
 }
 
-.highlight-icon-button {
-  background: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.highlight-card-overlay h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.highlight-card-overlay p {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.overlay-arrow-button {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.highlight-icon-button.active {
-  background: #cccbcb;
-}
-
-.highlight-icon-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
-}
-
-.highlight-icon-button img {
-  width: 24px;
-  height: 24px;
-}
-
-.highlight-content {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.highlight-text {
-  display: flex;
-  flex-direction: column;
-  width: 48%;
-  text-align: left;
-  margin-left: 2%;
-  gap: 10px;
-}
-
-.highlight-text h3 {
-  font-family: "Arial Black", "Arial Bold", sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  color: #000;
-  text-transform: uppercase;
-  margin: 0;
-  line-height: 1;
-}
-
-.highlight-text p {
-  font-family: "Anton", sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-}
-
-.highlight-image {
-  width: 45%;
-  border-radius: 5%;
-}
-
-/* ===========================
-   Responsive Styles
-=========================== */
-@media (max-width: 992px) {
-  .highlight-text h3 {
-    font-size: 2rem;
-  }
-
-  .highlight-text {
-    width: 100%;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .highlight-image {
-    width: 100%;
-  }
-
-  .highlight-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .highlight-sidebar {
-    position: absolute;
-    bottom: -6%;
-    left: 0;
-    width: 100%;
-    transform: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 0 0 10px 10px;
-    z-index: 2;
-  }
-
-  .highlight-image {
-    width: 50%;
-    height: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .section-title-h2 {
-    font-size: 2rem;
-  }
-
-  .highlight-text h3 {
-    font-size: 1.5rem;
-  }
-
-  .highlight-text p {
-    font-size: 1rem;
-  }
-
-  .core-highlight-card {
-    padding: 20px;
-  }
-
-  .highlight-icon-button {
-    width: 25px;
-    height: 25px;
-    padding: 8px;
-  }
-
-  .highlight-icon-button img {
-    width: 20px;
-    height: 20px;
-  }
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
