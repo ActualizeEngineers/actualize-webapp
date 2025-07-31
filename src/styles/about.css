@@ -19,10 +19,6 @@
   color: #d14f81;
 }
 
-.pt-navbar-offset {
-  padding-top: 70px;
-}
-
 .fade-in {
   opacity: 0;
   transform: translateY(20px);

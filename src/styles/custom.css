@@ -1,6 +1,5 @@
 .navbar {
   top: 0;
-  width: 100vw !important;
   padding: 1% 2% 0 2% !important;
   z-index: 10;
   background: transparent;
@@ -18,8 +17,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* backdrop-filter:  grayscale(50%); */
-  /* background: rgba(255, 255, 255, 0.05); */
   z-index: -1;
 }
 
@@ -226,7 +223,6 @@
 .service-tile.software {
   background-image: url("../assets/services/software.jpg");
 }
-
 
 .service-tile.innovation {
   background-image: url("../assets/icons/innovation.png");

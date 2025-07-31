@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "../assets/images/logo.png";
+// import logo from "../assets/images/logo.png";
 import "../styles/custom.css";
-import { useNavigate } from "react-router-dom";
+
+// import { useNavigate } from "react-router-dom";
 
 import CustomerCarousel from "../components/shared/CustomerCarousel";
 import WhyChoose from "../components/shared/WhyChoose";
@@ -15,37 +16,37 @@ import process from "../assets/industries/process.jpg";
 import PlatformInnovationPage from "../components/shared/PlatformInnovationPage";
 
 const Home: React.FC = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const industries = [
-    {
-      title: "Heavy Engineering",
-      image: mining_truck,
-      short: "Heavy",
-    },
-    {
-      title: "Industrial Engineering",
-      image: industrial,
-      short: "Industrial",
-    },
-    {
-      title: "Automotive Engineering",
-      image: automotive,
-      short: "Automotive",
-    },
-    {
-      title: "Process Engineering",
-      image: process,
-      short: "Process",
-    },
-  ];
+  // const industries = [
+  //   {
+  //     title: "Heavy Engineering",
+  //     image: mining_truck,
+  //     short: "Heavy",
+  //   },
+  //   {
+  //     title: "Industrial Engineering",
+  //     image: industrial,
+  //     short: "Industrial",
+  //   },
+  //   {
+  //     title: "Automotive Engineering",
+  //     image: automotive,
+  //     short: "Automotive",
+  //   },
+  //   {
+  //     title: "Process Engineering",
+  //     image: process,
+  //     short: "Process",
+  //   },
+  // ];
 
-  let navigateT0 = (state: string) => {
-    if (state == "Heavy") navigate("/industries/heavy-engineering");
-    if (state == "Industrial") navigate("/industries/industrial-engineering");
-    if (state == "Automotive") navigate("/industries/automotive-engineering");
-    if (state == "Process") navigate("/industries/process-engineering");
-  };
+  // let navigateT0 = (state: string) => {
+  //   if (state == "Heavy") navigate("/industries/heavy-engineering");
+  //   if (state == "Industrial") navigate("/industries/industrial-engineering");
+  //   if (state == "Automotive") navigate("/industries/automotive-engineering");
+  //   if (state == "Process") navigate("/industries/process-engineering");
+  // };
 
   return (
     <>
@@ -251,7 +252,6 @@ const Home: React.FC = () => {
     </div>
   </div>
 </section>
-
 
         <CustomerCarousel />
       </div>

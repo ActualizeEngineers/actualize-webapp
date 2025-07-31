@@ -133,7 +133,7 @@ const Careers: React.FC = () => {
             <div className="col-md-4">
               <i className="bi bi-laptop benefit-icon"></i>
               <h5 className="mt-2">Remote Friendly</h5>
-              <p>We are in hybrid more.</p>
+              <p>We are in hybrid mode.</p>
             </div>
             <div className="col-md-4">
               <i className="bi bi-person-heart benefit-icon"></i>
@@ -142,7 +142,7 @@ const Careers: React.FC = () => {
             </div>
             <div className="col-md-4">
               <i className="bi bi-mortarboard benefit-icon"></i>
-              <h5 className="mt-2">Upskilling</h5>
+              <h5 className="mt-2">Up Skilling</h5>
               <p>Access to courses, certifications, and mentoring.</p>
             </div>
           </div>
