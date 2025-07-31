@@ -50,3 +50,57 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+.automotive-card-body {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.automotive-card-content {
+  width: 35%;
+
+  p {
+    text-align: justify;
+  }
+}
+
+.automotive-card-image-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 375px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    height: 600px !important;
+    overflow-y: scroll;
+  }
+
+  .automotive-card-body {
+    flex-direction: column;
+  }
+
+  .automotive-card-content {
+    width: 100%;
+  }
+
+  .automotive-card-image-container {
+    width: 100%;
+    overflow: visible;         /* Make sure container does not hide content */
+    display: flex;
+    justify-content: center;
+    align-items: center;       /* Optional: vertically center image */
+    
+    img {
+      width: auto;
+      max-width: 100%;         /* Prevent overflow in width */
+      height: auto;            /* Maintain aspect ratio */
+      max-height: unset;       /* Remove any implicit constraints */
+      object-fit: contain;     /* Ensure full image is shown (not cropped) */
+    }
+  }
+}

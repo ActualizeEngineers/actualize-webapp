@@ -58,7 +58,7 @@ const Home: React.FC = () => {
         </video>
         <Navbar />
 
-        <div className="banner-overlay">
+        {/* <div className="banner-overlay">
           <div className="hero-card">
             <h4 className="hero-title">
               <img src={logo} alt="Actualize Logo" className="hero-logo" />
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
               Learn More
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div>
