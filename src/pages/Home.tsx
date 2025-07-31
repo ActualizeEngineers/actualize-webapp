@@ -14,6 +14,8 @@ import industrial from "../assets/industries/industrial2.jpg";
 import automotive from "../assets/industries/automotive2.jpg";
 import process from "../assets/industries/process.jpg";
 import PlatformInnovationPage from "../components/shared/PlatformInnovationPage";
+import MegaTrends from "../components/shared/MegaTrends";
+import GlobalClients from "../components/shared/GlobalClients";
 
 const Home: React.FC = () => {
   // const navigate = useNavigate();
@@ -178,82 +180,11 @@ const Home: React.FC = () => {
     <PlatformInnovationPage/>
 
 {/* Mega Trends Section */}
-<section className="mega-trends-section py-5 text-center bg-white">
-  <div className="container">
-    <h2 className="section-title">We Align With <span className="highlight">Mega Trends</span></h2>
-    <p className="mb-5 lead">We innovate in areas that shape the future of engineering and technology.</p>
-    <div className="row g-4 justify-content-center">
-      <div className="col-6 col-md-3 animate__animated animate__zoomIn">
-        <div className="trend-card bg-light p-4 rounded shadow-sm hover-animate">
-          <img src="/icons/smart-factory.svg" alt="Smart Manufacturing" width="50" className="mb-3" />
-          <h6>Smart Manufacturing</h6>
-          <span className="badge bg-secondary mt-2">2025 Ready</span>
-          <p className="small mt-2">End-to-end automation and digital twin solutions.</p>
-        </div>
-      </div>
-      <div className="col-6 col-md-3 animate__animated animate__zoomIn animate__delay-1s">
-        <div className="trend-card bg-light p-4 rounded shadow-sm hover-animate">
-          <img src="/icons/ai.svg" alt="AI Integration" width="50" className="mb-3" />
-          <h6>AI & ML</h6>
-          <span className="badge bg-warning text-dark mt-2">Industry 4.0</span>
-          <p className="small mt-2">Embedded intelligence and data-driven insights.</p>
-        </div>
-      </div>
-      <div className="col-6 col-md-3 animate__animated animate__zoomIn animate__delay-2s">
-        <div className="trend-card bg-light p-4 rounded shadow-sm hover-animate">
-          <img src="/icons/sustainability.svg" alt="Sustainability" width="50" className="mb-3" />
-          <h6>Sustainability</h6>
-          <span className="badge bg-success mt-2">Eco Focus</span>
-          <p className="small mt-2">Green tech, energy efficiency, and circular design.</p>
-        </div>
-      </div>
-      <div className="col-6 col-md-3 animate__animated animate__zoomIn animate__delay-3s">
-        <div className="trend-card bg-light p-4 rounded shadow-sm hover-animate">
-          <img src="/icons/ev.svg" alt="EV and Mobility" width="50" className="mb-3" />
-          <h6>EV & Mobility</h6>
-          <span className="badge bg-info text-dark mt-2">Smart Future</span>
-          <p className="small mt-2">EV platforms, battery optimization, and ADAS solutions.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{/* Global Clients Section */}
-<section className="global-clients-section py-5 text-white" style={{ background: "linear-gradient(to right, #0b2239, #1a3c61)" }}>
-  <div className="container text-center">
-    <h2 className="section-title text-white">Trusted by <span className="text-warning">Global Clients</span></h2>
-    <p className="mb-5 lead">From startups to Fortune 500s — Actualize delivers excellence worldwide.</p>
-    <div className="row g-4 justify-content-center">
-      <div className="col-6 col-md-3">
-        <div className="p-4 bg-dark rounded-4 shadow hover-grow">
-          <h3 className="text-warning">20+</h3>
-          <p className="mb-0 small">Global Clients</p>
-        </div>
-      </div>
-      <div className="col-6 col-md-3">
-        <div className="p-4 bg-dark rounded-4 shadow hover-grow">
-          <h3 className="text-warning">3</h3>
-          <p className="mb-0 small">Continents Served</p>
-        </div>
-      </div>
-      <div className="col-6 col-md-3">
-        <div className="p-4 bg-dark rounded-4 shadow hover-grow">
-          <h3 className="text-warning">50+</h3>
-          <p className="mb-0 small">Projects Delivered</p>
-        </div>
-      </div>
-      <div className="col-6 col-md-3">
-        <div className="p-4 bg-dark rounded-4 shadow hover-grow">
-          <h3 className="text-warning">98%</h3>
-          <p className="mb-0 small">Client Retention</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<MegaTrends />
 
         <CustomerCarousel />
+        {/* Global Clients Section */}
+<GlobalClients/>
       </div>
     </>
   );
