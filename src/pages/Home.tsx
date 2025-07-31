@@ -1,50 +1,51 @@
 import React from "react";
-import logo from "../assets/images/logo.png";
+// import logo from "../assets/images/logo.png";
 import "../styles/custom.css";
-import { useNavigate } from "react-router-dom";
+
+// import { useNavigate } from "react-router-dom";
 
 import CustomerCarousel from "../components/shared/CustomerCarousel";
 import WhyChoose from "../components/shared/WhyChoose";
 import CoreHighlights from "../components/shared/CoreHighlights";
 import Navbar from "../layouts/Navbar";
 
-import mining_truck from "../assets/images/mining_truck.png";
-import industrial from "../assets/industries/industrial2.jpg";
-import automotive from "../assets/industries/automotive2.jpg";
-import process from "../assets/industries/process.jpg";
+// import mining_truck from "../assets/images/mining_truck.png";
+// import industrial from "../assets/industries/industrial2.jpg";
+// import automotive from "../assets/industries/automotive2.jpg";
+// import process from "../assets/industries/process.jpg";
 
 const Home: React.FC = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const industries = [
-    {
-      title: "Heavy Engineering",
-      image: mining_truck,
-      short: "Heavy",
-    },
-    {
-      title: "Industrial Engineering",
-      image: industrial,
-      short: "Industrial",
-    },
-    {
-      title: "Automotive Engineering",
-      image: automotive,
-      short: "Automotive",
-    },
-    {
-      title: "Process Engineering",
-      image: process,
-      short: "Process",
-    },
-  ];
+  // const industries = [
+  //   {
+  //     title: "Heavy Engineering",
+  //     image: mining_truck,
+  //     short: "Heavy",
+  //   },
+  //   {
+  //     title: "Industrial Engineering",
+  //     image: industrial,
+  //     short: "Industrial",
+  //   },
+  //   {
+  //     title: "Automotive Engineering",
+  //     image: automotive,
+  //     short: "Automotive",
+  //   },
+  //   {
+  //     title: "Process Engineering",
+  //     image: process,
+  //     short: "Process",
+  //   },
+  // ];
 
-  let navigateT0 = (state: string) => {
-    if (state == "Heavy") navigate("/industries/heavy-engineering");
-    if (state == "Industrial") navigate("/industries/industrial-engineering");
-    if (state == "Automotive") navigate("/industries/automotive-engineering");
-    if (state == "Process") navigate("/industries/process-engineering");
-  };
+  // let navigateT0 = (state: string) => {
+  //   if (state == "Heavy") navigate("/industries/heavy-engineering");
+  //   if (state == "Industrial") navigate("/industries/industrial-engineering");
+  //   if (state == "Automotive") navigate("/industries/automotive-engineering");
+  //   if (state == "Process") navigate("/industries/process-engineering");
+  // };
 
   return (
     <>
@@ -79,7 +80,7 @@ const Home: React.FC = () => {
       <div>
         <WhyChoose />
         <CoreHighlights />
-        <section className="services-showcase">
+        {/* <section className="services-showcase">
           <h2 className="section-title">
             Our <span className="highlight">Services</span>
           </h2>
@@ -170,7 +171,7 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
         <CustomerCarousel />
       </div>
     </>
