@@ -1,0 +1,63 @@
+/* Platform-Based Innovation Page CSS */
+.platform-innovation-section {
+  background: linear-gradient(to right, #f9fbff, #eaf2fb);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.platform-innovation-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0b2239;
+}
+
+.platform-innovation-section .highlight {
+  color: #007dc5;
+}
+
+.platform-innovation-section .lead {
+  color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f4f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.card h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0b2239;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .platform-innovation-section .section-title {
+    font-size: 2rem;
+  }
+  .platform-innovation-section .lead {
+    font-size: 1rem;
+  }
+}
