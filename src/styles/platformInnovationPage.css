@@ -22,34 +22,49 @@
   margin-bottom: 40px;
 }
 
-.icon-circle {
-  width: 60px;
-  height: 60px;
-  background-color: #f0f4f8;
+/* Neumorphic Card Style */
+.custom-neo-card {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 40px 20px;
+}
+
+.custom-neo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.neo-icon {
+  background: #e7f0fb;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 
-.card h5 {
+.neo-icon i {
+  color: #007bff;
+}
+
+.custom-neo-card h5 {
   font-size: 1.25rem;
-  font-weight: 600;
-  color: #0b2239;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
-.card p {
+.custom-neo-card p {
   font-size: 0.95rem;
-  color: #6c757d;
-}
-
-.hover-grow {
-  transition: transform 0.3s ease;
-}
-
-.hover-grow:hover {
-  transform: scale(1.05);
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
 /* Responsive Adjustments */

@@ -1,7 +1,7 @@
 import React from "react";
 import "animate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../../styles/platformInnovationPage.css'
+import "../../styles/platformInnovationPage.css";
 
 const PlatformInnovationPage = () => {
   const innovationSteps = [
@@ -26,31 +26,29 @@ const PlatformInnovationPage = () => {
   ];
 
   return (
-    <section
-      className="platform-innovation-section py-5 text-center"
-      style={{ background: "linear-gradient(to right, #f9fbff, #eaf2fb)" }}
-    >
+    <section className="platform-innovation-section py-5 text-center">
       <div className="container">
         <h2 className="section-title mb-4">
-          Platform-Based <span className="text-primary">Innovation</span>
+          Platform-Based <span className="highlight">Innovation</span>
         </h2>
-        <p className="lead mb-5 px-md-5">
+        <p className="lead mb-5 px-lg-5">
           At Actualize, we build reusable and scalable platforms from scratch—
-          transforming disruptive ideas into future-ready, high-impact digital ecosystems.
+          transforming disruptive ideas into future-ready, high-impact digital
+          ecosystems.
         </p>
 
-        <div className="row g-4 justify-content-center">
+        <div className="row gy-4 justify-content-center">
           {innovationSteps.map((step, i) => (
             <div
               key={i}
-              className={`col-md-4 animate__animated animate__fadeInUp animate__delay-${i}s`}
+              className={`col-12 col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center animate__animated animate__fadeInUp animate__delay-${i}s`}
             >
-              <div className="card border-0 shadow-lg p-5 bg-white rounded h-100">
-                <div className="icon-circle mb-4">
+              <div className="custom-neo-card text-center p-5 bg-white rounded-4 shadow-sm">
+                <div className="neo-icon mb-4">
                   <i className={`${step.icon} fa-3x ${step.color}`}></i>
                 </div>
-                <h4 className="fw-bold">{step.title}</h4>
-                <p className="text-muted mt-3">{step.desc}</p>
+                <h5 className="fw-bold text-dark">{step.title}</h5>
+                <p className="text-muted mt-3 small">{step.desc}</p>
               </div>
             </div>
           ))}
