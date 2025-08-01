@@ -6,14 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/custom.css';
 import Footer from './layouts/Footer';
-import FloatingActions from './components/shared/FloatingActions';
+// import FloatingActions from './components/shared/FloatingActions';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
       <Footer />
-      <FloatingActions />
+      {/* <FloatingActions /> */}
     </BrowserRouter>
   </React.StrictMode>
 );
