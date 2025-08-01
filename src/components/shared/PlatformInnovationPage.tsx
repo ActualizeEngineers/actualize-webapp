@@ -1,5 +1,3 @@
-import React from "react";
-import "animate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/platformInnovationPage.css";
 
