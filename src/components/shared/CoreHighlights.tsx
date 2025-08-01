@@ -1,11 +1,11 @@
 import "../../styles/coreHighlights.css";
 
 import softwareImage from "../../assets/icons/softwaredevelopment.jpg";
-import cloudImage from "../../assets/icons/cloud.webp";
+import cloudImage from "../../assets/icons/cloud.jpg";
 import cadImage from "../../assets/icons/cad.jpg";
 import consultingImage from "../../assets/icons/consulting.webp";
 import embeddedImage from "../../assets/icons/embedded_Systems.jpg";
-import dataImage from "../../assets/icons/data_engineering.png";
+import dataImage from "../../assets/icons/dataengineering.webp";
 
 import { FaArrowRight } from "react-icons/fa";
 
@@ -67,7 +67,7 @@ const CoreHighlights: React.FC = () => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <button className="overlay-arrow-button">
-                  <FaArrowRight color="#000"/>
+                  <FaArrowRight color="#fff"/>
                 </button>
               </div>
             </div>

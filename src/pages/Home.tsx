@@ -9,13 +9,8 @@ import WhyChoose from "../components/shared/WhyChoose";
 import CoreHighlights from "../components/shared/CoreHighlights";
 import Navbar from "../layouts/Navbar";
 
-import mining_truck from "../assets/images/mining_truck.png";
-import industrial from "../assets/industries/industrial2.jpg";
-import automotive from "../assets/industries/automotive2.jpg";
-import process from "../assets/industries/process.jpg";
 import PlatformInnovationPage from "../components/shared/PlatformInnovationPage";
 import MegaTrends from "../components/shared/MegaTrends";
-import GlobalClients from "../components/shared/GlobalClients";
 
 const Home: React.FC = () => {
   // const navigate = useNavigate();
@@ -176,15 +171,17 @@ const Home: React.FC = () => {
           </div>
         </section> */}
 
-    {/* Platform-Based Innovation Section */}
-    <PlatformInnovationPage/>
+        {/* Platform-Based Innovation Section */}
+        <PlatformInnovationPage />
 
-{/* Mega Trends Section */}
-<MegaTrends />
+        {/* Mega Trends Section */}
+        <MegaTrends />
 
+        {/* Our Customers */}
         <CustomerCarousel />
+
         {/* Global Clients Section */}
-<GlobalClients/>
+        {/* <GlobalClients /> */}
       </div>
     </>
   );

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .section-title-h2 {
@@ -117,9 +118,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   background-color: transparent;
-  color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
   margin-top: 12px;
@@ -127,4 +127,109 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* === Responsive Styles === */
+
+/* Tablets and below (between 600px and 1024px) */
+@media (max-width: 1024px) {
+  .highlight-cards-container {
+    gap: 2vw;
+    width: 99vw;
+  }
+  .highlight-card {
+    width: 26vw;
+    min-width: 165px;
+    height: 38vh;
+  }
+  .highlight-card:hover {
+    width: 55vw;
+  }
+  .highlight-cards-container:hover .highlight-card:not(:hover) {
+    width: 9vw;
+  }
+}
+
+/* Small tablets and large phones (between 420px and 599px) */
+@media (max-width: 599px) {
+  .section-title-h2 {
+    font-size: 2rem;
+    margin-bottom: 5vw;
+  }
+  .highlight-cards-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5vw;
+    width: 100vw;
+    min-width: unset;
+  }
+  .highlight-card,
+  .highlight-card:hover,
+  .highlight-cards-container:hover .highlight-card:not(:hover) {
+    width: 94vw !important;
+    min-width: unset;
+    height: 35vh;
+    margin: 0 auto;
+    transform: none !important;
+  }
+  .highlight-heading,
+  .highlight-card:hover .highlight-heading {
+    left: 24px;
+    top: 26px;
+    transform: none;
+    rotate: none;
+    font-size: 1.1rem;
+    position: absolute;
+    text-align: left;
+    display: block !important;
+  }
+  .highlight-card:hover .highlight-heading {
+    display: none !important;
+  }
+  .highlight-card-overlay {
+    padding: 13px;
+  }
+  .highlight-card-overlay h3 {
+    font-size: 1.2rem;
+  }
+  .highlight-card-overlay p {
+    font-size: 1.05rem;
+  }
+  .overlay-arrow-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices (less than 420px) */
+@media (max-width: 419px) {
+  .section-title-h2 {
+    font-size: 1.4rem;
+    margin-bottom: 6vw;
+  }
+  .highlight-card,
+  .highlight-card:hover,
+  .highlight-cards-container:hover .highlight-card:not(:hover) {
+    width: 98vw !important;
+    height: 25vh;
+  }
+}
+
+/* Optional: avoid horizontal scroll on tiny viewports */
+@media (max-width: 720px) {
+  .core-highlights-section {
+    padding: 34px 0;
+  }
+}
+
+/* Optional improvement for all viewports to handle overflow */
+.highlight-cards-container {
+  box-sizing: border-box;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.highlight-cards-container::-webkit-scrollbar {
+  display: none;
 }
