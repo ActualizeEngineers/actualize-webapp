@@ -1,75 +1,124 @@
-/* Mega Trends Page Styles */
-.mega-trends-section {
-  background: linear-gradient(to right, #f4f9fc, #fefefe);
-  padding: 60px 20px;
-  text-align: center;
+.mega-trends-section-dark {
+  background: #0e0e0e;
+  padding: 3% 0;
 }
 
-.mega-trends-section .section-title {
-  font-size: 2.5rem;
+.section-title-dark {
+  font-size: 2.4rem;
   font-weight: 700;
   color: #0b2239;
-  margin-bottom: 20px;
+  margin-bottom: 0.75em;
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 
-.mega-trends-section .highlight {
+.section-title-dark .accent {
   color: #007dc5;
+  font-weight: 700;
 }
 
-.mega-trends-section .lead {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 40px;
+.trends-mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(220px, auto);
+  gap: 20px;
+  grid-template-areas:
+    "aiAutomation aiAutomation workflow mlops"
+    "bots analytics workflow security";
 }
 
-.trend-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
-
-.trend-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.trend-card img {
-  height: 60px;
-  margin-bottom: 16px;
-}
-
-.trend-card h6 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #0b2239;
-}
-
-.trend-card .badge {
-  font-size: 0.75rem;
-  padding: 5px 10px;
-  margin-top: 10px;
+.trend-card-mosaic {
+  position: relative;
   border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 36px rgba(14, 19, 28, 0.25);
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  transition: transform 0.22s cubic-bezier(0.4, 2.3, 0.3, 1), box-shadow 0.22s;
+  background: #232323;
+  cursor: pointer;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s ease;
 }
 
-.trend-card p {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: 15px;
+.trend-card-mosaic:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(229, 176, 117, 0.15);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .mega-trends-section .section-title {
-    font-size: 2rem;
+.trend-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.78);
+  transition: filter 0.3s ease;
+}
+
+.trend-card-mosaic:hover .trend-image {
+  filter: brightness(1);
+}
+
+.card-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 3%;
+  color: #fff;
+}
+
+.trend-card-mosaic h5 {
+  margin: 0 0 0.4em;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.trend-card-mosaic p {
+  font-size: 0.8rem;
+  color: #d0d3d8;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.trend-card-mosaic.wide {
+  grid-area: aiAutomation;
+  height: 100%;
+}
+
+.trend-card-mosaic.tall {
+  grid-area: workflow;
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .trends-mosaic-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(180px, auto);
+    grid-template-areas:
+      "kitchen living"
+      "bedroom living"
+      "steps dining"
+      "office office";
   }
-  .trend-card {
-    padding: 24px 16px;
+}
+
+@media (max-width: 575px) {
+  .trends-mosaic-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(160px, auto);
+    grid-template-areas:
+      "kitchen"
+      "living"
+      "bedroom"
+      "steps"
+      "dining"
+      "office";
+    gap: 16px;
+  }
+  .trend-card-mosaic {
+    height: auto;
   }
 }

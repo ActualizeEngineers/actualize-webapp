@@ -1,19 +1,19 @@
 .why-choose-section {
-  padding: 100px 20px;
-  background: linear-gradient(to bottom right, #f0f7ff, #d0eaff);
+  padding: 3% 0;
+  background: #0e0e0e;
   text-align: center;
   overflow: hidden;
 }
 
-.section-title {
-  font-size: 2.7rem;
+.why-choose-section-title {
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 60px;
-  color: #333;
+  color: #0b2239;
 }
 
 .highlight {
-  color: #B33791;
+  color: #007dc5;
 }
 
 .why-carousel {
@@ -24,10 +24,28 @@
   padding: 20px 0;
 }
 
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .why-card {
   min-width: 420px;
   max-width: 420px;
-  background: linear-gradient(145deg, #ffffff, #f3f9ff);
+  background: rgba(255, 255, 255, 0.9);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-blend-mode: overlay;
+  background-size: cover;
   padding: 60px 40px;
   border-radius: 24px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
@@ -35,9 +53,7 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
-  background-blend-mode: overlay;
-  background-size: cover;
+  cursor: pointer;
 }
 
 .why-card:hover {
@@ -73,13 +89,22 @@
 }
 
 @keyframes scrollCards {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @media (max-width: 768px) {

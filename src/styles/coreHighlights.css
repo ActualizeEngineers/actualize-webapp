@@ -1,21 +1,22 @@
 .core-highlights-section {
-  padding: 60px 0;
-  background-color: #000000;
+  padding: 3% 0;
+  background-color: #0e0e0e;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  border: none !important;
 }
 
-.section-title-h2 {
+.core-highlights-section-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 2%;
-  color: #fff;
+  color: #0b2239;
 }
 
-.brand-name {
+.core-highlights-section-title .highlights {
   color: #007dc5;
 }
 

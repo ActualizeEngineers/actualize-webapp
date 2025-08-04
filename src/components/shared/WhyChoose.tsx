@@ -4,7 +4,7 @@ import "../../styles/whyChoose.css";
 const WhyChoose: React.FC = () => {
   return (
 <section className="why-choose-section">
-  <h2 className="section-title">Why Choose <span className="highlight">Actualize?</span></h2>
+  <h2 className="why-choose-section-title">Why Choose <span className="highlight">Actualize?</span></h2>
   <div className="why-carousel">
     {/* Repeat the same card multiple times */}
     <div className="why-card slide">

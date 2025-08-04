@@ -51,7 +51,7 @@ const highlights = [
 const CoreHighlights: React.FC = () => {
   return (
     <section className="core-highlights-section">
-      <h2 className="section-title-h2">Core Highlights</h2>
+      <h2 className="core-highlights-section-title">Core <span className="highlights">Highlights</span></h2>
 
       <div className="highlight-cards-container">
         {highlights.map((item, index) => {

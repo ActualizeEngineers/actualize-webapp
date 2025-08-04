@@ -1,11 +1,12 @@
 import React from 'react';
-import '../../styles/industries.css';
+import Navbar from '../../layouts/Navbar';
+
 import mining_truck from '../../assets/images/mining_truck.png'
 import energy_fuel from '../../assets/images/energy_fuel.png'
 import electricity_grid from '../../assets/images/electricity_grid.png'
 import satellite_dish from '../../assets/images/satellite_dish.png'
-import Navbar from '../../layouts/Navbar';
-import './industries.css'
+
+import '../../styles/industrial.css';
 
 const industries = [
   {

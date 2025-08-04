@@ -1,14 +1,14 @@
-/* Platform-Based Innovation Page CSS */
+/* SECTION BASE STYLES */
 .platform-innovation-section {
-  background: linear-gradient(to right, #f9fbff, #eaf2fb);
-  padding: 60px 0;
+  background-color: #0e0e0e;
+  padding: 3% 0;
   text-align: center;
 }
 
-.platform-innovation-section .section-title {
-  font-size: 2.8rem;
+.section-title-platform-innovation {
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   color: #0b2239;
 }
 
@@ -18,60 +18,114 @@
 
 .platform-innovation-section .lead {
   color: #555;
-  font-size: 1.2rem;
-  margin-bottom: 40px;
+  font-size: 1.4rem;
 }
 
-/* Neumorphic Card Style */
+/* SLIDER CARD LAYOUT */
 .custom-neo-card {
-  width: 100%;
-  max-width: 320px;
-  background: #ffffff;
+  width: 100vw;
+  height: 60vh !important;
+  gap: 10%;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 40px 20px;
+  padding: 3% 0;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
 }
 
-.custom-neo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+/* LEFT SIDE: CONTENT */
+.custom-neo-card-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+  width: 20%;
+  height: 100%;
 }
 
-.neo-icon {
-  background: #e7f0fb;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.milestone-item {
+  display: flex;
+  align-items: flex-start;
+  color: white;
+}
+
+.milestone-icon {
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.8rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  margin-right: 12px;
 }
 
-.neo-icon i {
-  color: #007bff;
+.milestone-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-.custom-neo-card h5 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-top: 20px;
+.milestone-desc {
+  color: #c0c0c0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-top: 4px;
 }
 
-.custom-neo-card p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 10px;
-  line-height: 1.6;
+/* RIGHT SIDE: IMAGE */
+.custom-neo-card-right {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Responsive Adjustments */
+.milestone-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* SLIDER FIX */
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 991px) {
+  .custom-neo-card {
+    max-width: 90%;
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .custom-neo-card-left,
+  .custom-neo-card-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .milestone-image {
+    border-radius: 18px 18px 0 0;
+  }
+}
+
 @media (max-width: 768px) {
   .platform-innovation-section .section-title {
     font-size: 2rem;
   }
+
   .platform-innovation-section .lead {
     font-size: 1rem;
   }

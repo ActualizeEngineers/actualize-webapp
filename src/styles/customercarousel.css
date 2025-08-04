@@ -1,6 +1,6 @@
 .frameworks-section {
   background-color: #0e0e0e;
-  padding: 3% 0;
+  padding: 3%;
   color: #fff;
   text-align: center;
   position: relative;
@@ -8,15 +8,19 @@
 }
 
 .frameworks-section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 2%;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1%;
+  color: #0b2239;
+}
+
+.frameworks-section-title span {
+  color: #007dc5;
 }
 
 .frameworks-wrapper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -48,8 +52,7 @@
 .frameworks-grid {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
-  grid-auto-rows: 25%;
-  width: 100vw;
+  grid-auto-rows: 33%;
   padding: 0 0;
   box-sizing: border-box;
   justify-items: center;
@@ -146,6 +149,28 @@
   padding: 0 10px;
 }
 
+.slick-prev,
+.slick-next {
+  width: 48px !important;
+  height: 48px !important;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: -45px;
+}
+
+.slick-next {
+  right: -45px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important;
+}
+
 /* Testimonial Cards */
 .testimonial-card {
   background: #fff;
@@ -153,7 +178,7 @@
   padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   text-align: left;
-  height: 35vh;
+  height: 30vh;
 }
 
 .testimonial-card .country-flag {
