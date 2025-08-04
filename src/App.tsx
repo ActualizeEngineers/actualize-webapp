@@ -21,29 +21,33 @@ import Product from './pages/Services/Product';
 
 const App: React.FC = () => {
   return (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* Company */}
-          <Route path="/company/about" element={<About />} />
-          <Route path="/company/team" element={<Team />} />
-          <Route path="/company/life-at-actualize" element={<LifeAt />} />
+    <>
+      <Routes>
+        
+        <Route path="/" element={<Home />} />
+        {/* Company */}
+        <Route path="/company/about" element={<About />} />
+        <Route path="/company/team" element={<Team />} />
+        <Route path="/company/life-at-actualize" element={<LifeAt />} />
 
-          {/* Services */}
-          <Route path="/services/engineering" element={<Engineering />} />
-          <Route path="/services/digital-transformation" element={<Digital />} />
-          <Route path="/services/software-development" element={<Software />} />
-          <Route path="/services/product-development" element={<Product />} />
+        {/* Services */}
 
-          {/* Industries */}
-          <Route path="/industries/heavy-engineering" element={<Heavy />} />
-          <Route path="/industries/industrial-engineering" element={<Industrial />} />
-          <Route path="/industries/automotive-engineering" element={<Automotive />} />
-          <Route path="/industries/process-engineering" element={<Process />} />
+        <Route path="/services/engineering" element={<Engineering />} />
+        <Route path="/services/digital-transformation" element={<Digital />} />
+        <Route path="/services/software-development" element={<Software />} />
+        <Route path="/services/product-development" element={<Product />} />
 
-          {/* Other */}
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        {/* Industries */}
+        <Route path="/industries/heavy-engineering" element={<Heavy />} />
+        <Route path="/industries/industrial-engineering" element={<Industrial />} />
+        <Route path="/industries/automotive-engineering" element={<Automotive />} />
+        <Route path="/industries/process-engineering" element={<Process />} />
+
+        {/* Other */}
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 };
 
