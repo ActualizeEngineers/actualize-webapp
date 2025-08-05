@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../../layouts/Navbar";
 import heavy_eng from "../../assets/industries/heavy.jpg";
 import { Link } from "react-router-dom";
-import "./industries.css";
-import "../../styles/digital.css";
+import "../../styles/industries.css";
+
 const Heavy: React.FC = () => {
   const [showConstruction, setShowConstruction] = useState<boolean>(true);
   const [showMining, setShowMining] = useState<boolean>(false);

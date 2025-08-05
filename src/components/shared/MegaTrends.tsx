@@ -1,67 +1,79 @@
-import React from "react";
 import "animate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/megaTrends.css";
 
+import cloudImage from "../../assets/icons/cloud.jpg";
+import aiDriven from "../../assets/icons/ai-driven.jpg";
+import cybersecurityImage from "../../assets/icons/cybersecurity.jpg";
+import lowCodeImage from "../../assets/icons/lowcode.jpg";
+import conversationImage from "../../assets/icons/conversation-ai.jpg";
+import aiAutomation from "../../assets/icons/ai-automation.jpg";
+
 const trends = [
   {
-    icon: "/icons/cloud-native.svg",
+    imageUrl: cloudImage,
     title: "Cloud-Native",
-    badge: "Kubernetes Ready",
-    badgeColor: "primary",
     desc: "Microservices, containerization, and scalable cloud infrastructure.",
+    className: "wide",
   },
   {
-    icon: "/icons/ai-dev.svg",
+    imageUrl: aiDriven,
     title: "AI-Driven Dev",
-    badge: "Next Gen",
-    badgeColor: "warning",
     desc: "ML-assisted coding, automation, and predictive analytics in dev lifecycle.",
+    className: "",
   },
   {
-    icon: "/icons/cybersecurity.svg",
+    imageUrl: cybersecurityImage,
     title: "Cybersecurity",
-    badge: "Zero Trust",
-    badgeColor: "danger",
     desc: "Security-first design with compliance, encryption, and monitoring.",
+    className: "",
   },
   {
-    icon: "/icons/lowcode.svg",
+    imageUrl: lowCodeImage,
     title: "Low-Code/No-Code",
-    badge: "Citizen Dev",
-    badgeColor: "success",
     desc: "Accelerated app development using visual workflow-based platforms.",
+    className: "tall",
+  },
+  {
+    imageUrl: conversationImage,
+    title: "Conversational AI Agents",
+    desc: "Unified voice, chat & WhatsApp agents that can execute tasks across channels.",
+    className: "",
+  },
+  {
+    imageUrl: aiAutomation,
+    title: "AI-Powered Workflow Automation",
+    desc: "Agentic workflows automate business logic from intent to execution.",
+    className: "",
   },
 ];
 
-const MegaTrends = () => {
-  return (
-    <section className="mega-trends-section py-5 text-center bg-white">
-      <div className="container">
-        <h2 className="section-title mb-4">
-          We Align With <span className="highlight">Software Mega Trends</span>
+const MegaTrends = () => (
+  <section className="mega-trends-section-dark">
+    <div className="container">
+      <div className="mb-5 text-center">
+        <h2 className="section-title-dark">
+          Our Expert Rate And Custom <br />
+          Furnishing <span className="accent">For Every Room</span>
         </h2>
-        <p className="mb-5 lead">
-          Embracing the technologies that redefine the future of software engineering and digital ecosystems.
-        </p>
-        <div className="row g-4 justify-content-center">
-          {trends.map((trend, i) => (
-            <div
-              className={`col-12 col-sm-6 col-md-3 animate__animated animate__zoomIn animate__delay-${i}s`}
-              key={i}
-            >
-              <div className="trend-card bg-light p-4 rounded shadow-sm hover-animate h-100">
-                {/* <img src={trend.icon} alt={trend.title} width="50" className="mb-3" /> */}
-                <h6>{trend.title}</h6>
-                <span className={`badge bg-${trend.badgeColor} mt-2`}>{trend.badge}</span>
-                <p className="small mt-2">{trend.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
-    </section>
-  );
-};
+      <div className="trends-mosaic-grid">
+        {trends.map((trend, i) => (
+          <div
+            className={`trend-card-mosaic ${trend.className}`}
+            key={i}
+            style={{ backgroundImage: `url(${trend.imageUrl})` }}
+          >
+            <div className="card-overlay">
+              <h5>{trend.title}</h5>
+
+              {trend.desc && <p className="small mt-1">{trend.desc}</p>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default MegaTrends;

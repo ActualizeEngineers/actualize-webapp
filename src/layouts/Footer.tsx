@@ -51,8 +51,8 @@ const Footer: React.FC = () => {
         {/* Contact Info */}
         <div className="footer-links">
           <h4>Contact</h4>
-          <NavLink to="" style={{ margin: 0, fontWeight: 0 }}>📧 contact@actualize.com</NavLink>
-          <NavLink to="" style={{ margin: 0 }}>📞 +91-9XX-XXX-XXXX</NavLink>
+          <NavLink to="/contact" target="_top" style={{ margin: 0, fontWeight: 0 }}>📧 contact@actualize.com</NavLink>
+          <NavLink to="/contact" target="_top" style={{ margin: 0 }}>📞 +91-9XX-XXX-XXXX</NavLink>
           <NavLink to="/contact" target="_top"> ➡️ Contact-US</NavLink>
         </div>
       </div>

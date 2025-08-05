@@ -1,106 +1,79 @@
-.industries-section {
-  padding: 50px 20px;
-  background: #fff;
-  text-align: center;
-}
+/* .industry-hero.heavy-bg {
+  background: url('../../assets/images//heavy.jpg') center center / cover no-repeat;
+  height: 60vh;
+} */
 
-.industries-heading {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.industries-heading .highlight {
-  color: #00bcd4;
-}
-
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.industry-card {
-  position: relative;
-  overflow: hidden;
+/* .card {
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
+.card:hover {
+  transform: translateY(-5px);
+} */
 
-.industry-image {
+.heavy-container {
+ position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/heavy.jpg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
+  overflow: hidden;
 }
 
-.industry-card:hover .industry-image {
-  transform: scale(1.1);
-}
-
-.industry-overlay {
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+.auto-container {
+ position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/automotive.jpg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  color: #fff;
-  padding: 20px;
-  text-align: left;
-  font-size: 1.2rem;
+  overflow: hidden;
+}
+.indus-container{
+  position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/industrial.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+.process-container{
+  position: relative;
+  height: 70vh;
+  background-image: url("../../assets/industries/process.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.blue {
+    background-Color: #00ccd9 !important; 
+    color: white !important;
+}
+
+
+
+.nav-tabs .nav-link {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #69abca;
+  margin-right: 5px;
+  padding: 8px 16px;
+  border-radius: 4px 4px 0 0;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #e2e6ea;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #007dc5 !important;
+  color: #fff !important;
+  border-color: #007dc5 !important;
   font-weight: 600;
-}
-
-.automotive-card-body {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.automotive-card-content {
-  width: 35%;
-
-  p {
-    text-align: justify;
-  }
-}
-
-.automotive-card-image-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-
-  img {
-    height: 375px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .card {
-    height: 600px !important;
-    overflow-y: scroll;
-  }
-
-  .automotive-card-body {
-    flex-direction: column;
-  }
-
-  .automotive-card-content {
-    width: 100%;
-  }
-
-  .automotive-card-image-container {
-    width: 100%;
-    overflow: visible;         /* Make sure container does not hide content */
-    display: flex;
-    justify-content: center;
-    align-items: center;       /* Optional: vertically center image */
-    
-    img {
-      width: auto;
-      max-width: 100%;         /* Prevent overflow in width */
-      height: auto;            /* Maintain aspect ratio */
-      max-height: unset;       /* Remove any implicit constraints */
-      object-fit: contain;     /* Ensure full image is shown (not cropped) */
-    }
-  }
 }

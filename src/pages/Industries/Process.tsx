@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../layouts/Navbar';
-import './industries.css'
+import "../../styles/industries.css";
 
 const Process : React.FC = () => {
   return (

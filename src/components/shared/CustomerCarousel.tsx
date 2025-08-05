@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "../../styles/customercarousel.css";
-
-//Global
-// import "../../styles/globalClients.css";
+import React, { useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
+import CountUp from "react-countup";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CountUp from "react-countup";
+import "../../styles/customercarousel.css";
 
 const imageModules = import.meta.glob("../../assets/customers/*.png", {
   eager: true,
@@ -14,7 +12,6 @@ const imageModules = import.meta.glob("../../assets/customers/*.png", {
   import: "default",
 });
 
-//Global
 const testimonials = [
   {
     name: "John Smith",
@@ -95,7 +92,6 @@ const testimonials = [
   },
 ];
 
-//Global
 const stats = [
   { end: 20, suffix: "+", label: "Global Clients" },
   { end: 3, suffix: "", label: "Continents Served" },
@@ -117,7 +113,7 @@ const GLOW_COLORS = [
   "#3178c6",
 ];
 
-const TOTAL_CELLS_LARGE = 44;
+const TOTAL_CELLS_LARGE = 33;
 const TOTAL_CELLS_MEDIUM = 30;
 const TOTAL_CELLS_SMALL_MEDIUM = 20;
 const TOTAL_CELLS_SMALL = 16;
@@ -168,6 +164,8 @@ function useResponsiveLayout() {
 const CustomerCarousel: React.FC = () => {
   const [logos, setLogos] = useState<string[]>([]);
   const { logoPositions, totalCells } = useResponsiveLayout();
+  const [startCount, setStartCount] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   const maxLogoLength = Math.max(
     LOGO_POSITIONS_LARGE.length,
@@ -178,9 +176,23 @@ const CustomerCarousel: React.FC = () => {
   useEffect(() => {
     const logoList = Object.values(imageModules) as string[];
     setLogos(logoList.slice(0, maxLogoLength));
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setStartCount(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+    return () => observer.disconnect();
   }, []);
 
-  //global
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -199,7 +211,9 @@ const CustomerCarousel: React.FC = () => {
 
   return (
     <section className="frameworks-section">
-      <h2 className="framework-section-title">Trusted by Global Clients</h2>
+      <h2 className="frameworks-section-title">
+        Trusted by <span>Global Clients</span>
+      </h2>
       <p className="lead mb-4">
         From startups to Fortune 500s — Actualize delivers excellence worldwide.
       </p>
@@ -235,9 +249,9 @@ const CustomerCarousel: React.FC = () => {
         </div>
       </div>
 
-      <div className="container text-center">
+      <div className="p-5 pt-0 text-center">
         {/* Logo Carousel */}
-        <Slider {...sliderSettings} className="testimonial-slider mb-5">
+        <Slider {...sliderSettings} className="testimonial-slider">
           {testimonials.map((t, i) => (
             <div key={i} className="testimonial-slide">
               <div className="testimonial-card bg-white p-4 shadow-sm rounded">
@@ -258,20 +272,27 @@ const CustomerCarousel: React.FC = () => {
             </div>
           ))}
         </Slider>
-
-        {/* Stats */}
-        <div className="row g-4 justify-content-center">
-          {stats.map((s, i) => (
-            <div className="col-6 col-md-3" key={i}>
-              <div className="stat-card p-4 bg-gradient shadow rounded text-white h-100">
-                <h3>
-                  <CountUp end={s.end} suffix={s.suffix} duration={5} />
-                </h3>
-                <p className="small mb-0">{s.label}</p>
-              </div>
+      </div>
+      {/* Stats */}
+      <div
+        ref={statsRef}
+        className="row g-4 p-5 pt-0 justify-content-center rounded text-white h-100"
+      >
+        {stats.map((s, i) => (
+          <div className="col-6 col-md-3" key={i}>
+            <div className="p-4 bg-dark bg-gradient shadow rounded text-white h-100">
+              <h3>
+                <CountUp
+                  start={0}
+                  end={startCount ? s.end : 0}
+                  suffix={s.suffix}
+                  duration={2}
+                />
+              </h3>
+              <p className="small mb-0">{s.label}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
