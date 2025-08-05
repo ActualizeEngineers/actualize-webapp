@@ -1,7 +1,7 @@
 .about-container {
  position: relative;
   height: 70vh;
-  background-image: url("../assets/banners/aboutbanner1.jpg");
+  background-image: url("../assets/banners/aboutbanner.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;

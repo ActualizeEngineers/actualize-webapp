@@ -1,63 +1,49 @@
-import React from "react";
-// import logo from "../assets/images/logo.png";
+import React, { useState, useEffect } from "react";
+
 import "../styles/custom.css";
 
-// import { useNavigate } from "react-router-dom";
+import oneBgVideo from "../assets/banners/one.mp4";
+import twoBgVideo from "../assets/banners/two.mp4";
 
-import CustomerCarousel from "../components/shared/CustomerCarousel";
+import Navbar from "../layouts/Navbar";
 import WhyChoose from "../components/shared/WhyChoose";
 import CoreHighlights from "../components/shared/CoreHighlights";
-import Navbar from "../layouts/Navbar";
-
 import PlatformInnovationPage from "../components/shared/PlatformInnovationPage";
 import MegaTrends from "../components/shared/MegaTrends";
+import CustomerCarousel from "../components/shared/CustomerCarousel";
+
+const videos = [oneBgVideo, twoBgVideo];
 
 const Home: React.FC = () => {
-  // const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const industries = [
-  //   {
-  //     title: "Heavy Engineering",
-  //     image: mining_truck,
-  //     short: "Heavy",
-  //   },
-  //   {
-  //     title: "Industrial Engineering",
-  //     image: industrial,
-  //     short: "Industrial",
-  //   },
-  //   {
-  //     title: "Automotive Engineering",
-  //     image: automotive,
-  //     short: "Automotive",
-  //   },
-  //   {
-  //     title: "Process Engineering",
-  //     image: process,
-  //     short: "Process",
-  //   },
-  // ];
-
-  // let navigateT0 = (state: string) => {
-  //   if (state == "Heavy") navigate("/industries/heavy-engineering");
-  //   if (state == "Industrial") navigate("/industries/industrial-engineering");
-  //   if (state == "Automotive") navigate("/industries/automotive-engineering");
-  //   if (state == "Process") navigate("/industries/process-engineering");
-  // };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % videos.length);
+    }, 5000); // Change video every 8 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
       <div className="video-banner">
-        <video autoPlay loop muted playsInline>
-          <source
-            src="https://res.cloudinary.com/dcyuick4m/video/upload/v1752494954/homebanner_d5iiqk.mp4"
-            type="video/mp4"
+        {videos.map((video, index) => (
+          <video
+            key={index}
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={`carousel-video ${
+              index === currentIndex ? "active" : ""
+            }`}
           />
-          Your browser does not support the video tag.
-        </video>
+        ))}
         <Navbar />
+      </div>
 
-        {/* <div className="banner-overlay">
+      {/* <div className="banner-overlay">
           <div className="hero-card">
             <h4 className="hero-title">
               <img src={logo} alt="Actualize Logo" className="hero-logo" />
@@ -73,7 +59,6 @@ const Home: React.FC = () => {
             </a>
           </div>
         </div> */}
-      </div>
 
       <div>
         <WhyChoose />

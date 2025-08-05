@@ -9,7 +9,7 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 60px;
-  color: #0b2239;
+  color: #fff;
 }
 
 .highlight {
@@ -24,36 +24,28 @@
   padding: 20px 0;
 }
 
-.why-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.why-card {
+  min-width: 420px;
+  max-width: 420px;
+  --bs-bg-opacity: 1;
+  background-color: rgba(33, 37, 41, var(--bs-bg-opacity));
+  background-image: linear-gradient(
+    180deg,
+    #212529 0%,
+    #181a1b 100%
+  );
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 1.5% 1%;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.7);
-  pointer-events: none;
-  z-index: 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
 }
 
 .why-card > * {
   position: relative;
   z-index: 1;
-}
-
-.why-card {
-  min-width: 420px;
-  max-width: 420px;
-  background: rgba(255, 255, 255, 0.9);
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  background-blend-mode: overlay;
-  background-size: cover;
-  padding: 60px 40px;
-  border-radius: 24px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-  flex-shrink: 0;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  cursor: pointer;
 }
 
 .why-card:hover {
@@ -84,7 +76,7 @@
 
 .why-card p {
   font-size: 1.2rem;
-  color: #444;
+  color: #e6e5e5;
   line-height: 1.7;
 }
 
