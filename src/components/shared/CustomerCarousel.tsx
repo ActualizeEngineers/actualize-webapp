@@ -254,7 +254,7 @@ const CustomerCarousel: React.FC = () => {
         <Slider {...sliderSettings} className="testimonial-slider">
           {testimonials.map((t, i) => (
             <div key={i} className="testimonial-slide">
-              <div className="testimonial-card bg-white p-4 shadow-sm rounded">
+              <div className="testimonial-card rounded">
                 <div className="d-flex align-items-center mb-2">
                   <img
                     src={t.flag}
@@ -264,10 +264,10 @@ const CustomerCarousel: React.FC = () => {
                     loading="lazy"
                   />
                   <h6 className="mb-0">{t.name}</h6>
-                  <small className="text-muted ms-2">({t.location})</small>
+                  <small className="ms-2">({t.location})</small>
                 </div>
                 <div className="stars text-warning mb-2">★★★★★</div>
-                <p className="small text-muted mb-0">"{t.feedback}"</p>
+                <p className="small mb-0">"{t.feedback}"</p>
               </div>
             </div>
           ))}

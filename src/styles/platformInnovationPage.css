@@ -8,8 +8,7 @@
 .section-title-platform-innovation {
   font-size: 3rem;
   font-weight: 700;
-  /* margin-bottom: 20px; */
-  color: #0b2239;
+  color: #fff;
 }
 
 .platform-innovation-section .highlight {
@@ -67,7 +66,7 @@
 }
 
 .milestone-title {
-  font-size: 1rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #ffffff;
 }
