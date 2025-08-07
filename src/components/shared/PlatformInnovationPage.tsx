@@ -7,28 +7,52 @@ import "../../styles/platformInnovationPage.css";
 import ideationImage from "../../assets/images/ideation.jpg";
 import architectureImage from "../../assets/images/architecture.jpg";
 import deploymentImage from "../../assets/images/deployment.jpeg";
+import developmentImage from "../../assets/images/development.png";
+import testingImage from "../../assets/images/testing.jpg";
+import supportImage from "../../assets/images/support.png";
 
 const innovationSteps = [
   {
     icon: "fas fa-lightbulb",
-    title: "Ideation",
+    title: "IDEATION",
     color: "text-primary",
     desc: "Our ideation phase ensures alignment with user needs, market gaps, and business goals.",
     image: ideationImage,
   },
   {
     icon: "fas fa-project-diagram",
-    title: "Architecture",
+    title: "ARCHITECTURE",
     color: "text-success",
     desc: "We architect robust and secure platforms using scalable microservices, event-driven designs.",
     image: architectureImage,
   },
   {
     icon: "fas fa-cogs",
-    title: "Deployment",
+    title: "DEPLOYMENT",
     color: "text-danger",
     desc: "End-to-end CI/CD pipelines, containerized delivery, and seamless multi-cloud deployments.",
     image: deploymentImage,
+  },
+  {
+    icon: "fas fa-code",
+    title: "DEVELOPMENT",
+    color: "text-info",
+    desc: "Agile development with clean, testable code and rapid iteration based on user feedback.",
+    image: developmentImage,
+  },
+  {
+    icon: "fas fa-shield-alt",
+    title: "TESTING & QA",
+    color: "text-secondary",
+    desc: "Comprehensive automated and manual testing to ensure reliability, performance, and security.",
+    image: testingImage,
+  },
+  {
+    icon: "fas fa-users-cog",
+    title: "SUPPORT",
+    color: "text-warning",
+    desc: "Ongoing support and scaling strategies tailored for growth and changing business needs.",
+    image: supportImage,
   },
 ];
 
@@ -39,8 +63,13 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4000,
   arrows: false,
+  autoplaySpeed: 2500,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  pauseOnDotsHover: false,
+  swipe: true,
+  draggable: true,
 };
 
 const PlatformInnovationPage = () => {
@@ -67,7 +96,7 @@ const PlatformInnovationPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="custom-neo-card-right d-flex align-items-center justify-content-center">
+              <div className="custom-neo-card-right d-flex align-items-center justify-content-center bg-white">
                 <img
                   className="milestone-image"
                   src={step.image}

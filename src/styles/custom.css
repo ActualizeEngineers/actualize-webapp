@@ -22,7 +22,7 @@
 .nav-link {
   color: #000 !important;
   margin: 0;
-  font-size: 1rem !important;
+  font-size: 1.3rem !important;
   padding: 5px !important;
   font-weight: 450 !important;
 }
@@ -49,8 +49,8 @@
 }
 
 .navbar-nav .nav-link.active {
-  color: #00ccd9 !important;
-  border-bottom: #00ccd9 2px solid !important;
+  color: #007dc5 !important;
+  border-bottom: #007dc5 2px solid !important;
   font-weight: bold;
 }
 
@@ -62,15 +62,15 @@
 .dropdown-item.active,
 .dropdown-item:focus {
   text-decoration: none;
-  color: #00ccd9 !important;
+  color: #007dc5 !important;
   background-color: #e0e0e0 !important;
   border: none !important;
   font-weight: bold !important;
 }
 
 .nav-item.active-root > .nav-link {
-  color: #00ccd9 !important;
-  border-bottom: #00ccd9 2px solid !important;
+  color: #007dc5 !important;
+  border-bottom: #007dc5 2px solid !important;
   font-weight: bold;
 }
 
