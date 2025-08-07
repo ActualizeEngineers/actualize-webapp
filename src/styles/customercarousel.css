@@ -77,22 +77,22 @@
 
 .framework-box.active::before {
   position: absolute;
-  inset: -16px;
-  border-radius: 20px;
+  inset: -24px;
+  border-radius: 24px;
   background: radial-gradient(
     circle,
-    var(--glow-color, rgba(255, 255, 255, 0.25)) 0%,
+    var(--glow-color, rgba(255, 255, 255, 0.45)) 0%,
     transparent 70%
   );
   opacity: 0;
-  transition: opacity 0.25s ease;
-  filter: blur(18px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  filter: blur(28px);
   z-index: -1;
 }
 
 .framework-box.placeholder {
-  opacity: 0.5; 
-  background-color: rgba(255, 255, 255, 0.03); 
+  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0.03);
   pointer-events: none;
   filter: grayscale(60%) blur(0.5px);
   transition: background-color 0.3s ease;
@@ -100,29 +100,14 @@
 
 .framework-box.active:hover::before {
   opacity: 1;
+  transform: scale(1.1);
 }
-
 .framework-box.active:hover {
   background-color: rgba(255, 255, 255, 0.08);
   transform: scale(1.06);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
     0 0 20px var(--glow-color, rgba(255, 255, 255, 0.15));
 }
-
-/* Extra zoom-animate on the 5th framework-box (index 5) */
-/* .framework-box.special-hover.active:hover {
-  transform: scaleX(3.2);
-  border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
-    0 0 10px var(--glow-color, rgba(255, 255, 255, 0.15));
-}
-
-.framework-box.special-hover.active:hover img {
-  transform: scaleX(1);
-  transform: scaleY(2);
-  filter: brightness(1.05);
-} */
 
 .framework-box.placeholder:hover {
   transform: scale(1.03);
@@ -180,7 +165,7 @@
   padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   text-align: left;
-  height: 30vh;
+  height: 35vh;
   --bs-bg-opacity: 1;
   background-color: rgba(33, 37, 41, var(--bs-bg-opacity));
   background-image: linear-gradient(180deg, #212529 0%, #181a1b 100%);
@@ -201,6 +186,14 @@
 
 .testimonial-card small {
   color: #e6e5e5;
+}
+
+.review-image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {

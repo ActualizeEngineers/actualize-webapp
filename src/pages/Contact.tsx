@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/contact.css";
-import contactUsBanner from "../assets/banners/contactUsBanner.jpg";
+import contactUsBanner from "../assets/banners/contactUsBanner.png";
 import Navbar from "../layouts/Navbar";
 import OurPresence from "../components/shared/OurPresence";
 
