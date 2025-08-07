@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import CountUp from "react-countup";
 
@@ -100,10 +100,10 @@ const stats = [
 ];
 
 const GLOW_COLORS = [
-  "#ffffff",
+  "#008AC2",
   "#ffe600",
   "#ff0000",
-  "#008AC2",
+  "#ffffff",
   "#ed1c24",
   "#ffe600",
   "#00a5df",
@@ -124,12 +124,12 @@ const LOGO_POSITIONS_SMALL_MEDIUM = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14];
 const LOGO_POSITIONS_SMALL = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function useResponsiveLayout() {
-  const [layout, setLayout] = React.useState({
+  const [layout, setLayout] = useState({
     logoPositions: LOGO_POSITIONS_LARGE,
     totalCells: TOTAL_CELLS_LARGE,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 600) {
         setLayout({
@@ -153,7 +153,7 @@ function useResponsiveLayout() {
         });
       }
     }
-    handleResize(); // Call on mount
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -164,33 +164,25 @@ function useResponsiveLayout() {
 const CustomerCarousel: React.FC = () => {
   const [logos, setLogos] = useState<string[]>([]);
   const { logoPositions, totalCells } = useResponsiveLayout();
-  const [startCount, setStartCount] = useState(false);
-  const statsRef = useRef<HTMLDivElement>(null);
-
   const maxLogoLength = Math.max(
     LOGO_POSITIONS_LARGE.length,
     LOGO_POSITIONS_MEDIUM.length,
     LOGO_POSITIONS_SMALL.length
   );
 
+  const [resetTrigger, setResetTrigger] = useState(0);
+
   useEffect(() => {
     const logoList = Object.values(imageModules) as string[];
     setLogos(logoList.slice(0, maxLogoLength));
-    const observer = new window.IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setStartCount(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setResetTrigger((prev) => prev + 1);
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const sliderSettings = {
@@ -217,6 +209,7 @@ const CustomerCarousel: React.FC = () => {
       <p className="lead mb-4">
         From startups to Fortune 500s — Actualize delivers excellence worldwide.
       </p>
+
       <div className="frameworks-wrapper mb-5">
         <div className="frameworks-grid">
           {Array.from({ length: totalCells }).map((_, idx) => {
@@ -249,8 +242,8 @@ const CustomerCarousel: React.FC = () => {
         </div>
       </div>
 
+      {/* Testimonial Carousel */}
       <div className="p-5 pt-0 text-center">
-        {/* Logo Carousel */}
         <Slider {...sliderSettings} className="testimonial-slider">
           {testimonials.map((t, i) => (
             <div key={i} className="testimonial-slide">
@@ -273,20 +266,19 @@ const CustomerCarousel: React.FC = () => {
           ))}
         </Slider>
       </div>
-      {/* Stats */}
-      <div
-        ref={statsRef}
-        className="row g-4 p-5 pt-0 justify-content-center rounded text-white h-100"
-      >
+
+      {/* CountUp Stats */}
+      <div className="row g-4 p-5 pt-0 justify-content-center rounded text-white h-100">
         {stats.map((s, i) => (
           <div className="col-6 col-md-3" key={i}>
             <div className="p-4 bg-dark bg-gradient shadow rounded text-white h-100">
               <h3>
                 <CountUp
+                  key={`${resetTrigger}-${i}`}
                   start={0}
-                  end={startCount ? s.end : 0}
+                  end={s.end}
                   suffix={s.suffix}
-                  duration={2}
+                  duration={1}
                 />
               </h3>
               <p className="small mb-0">{s.label}</p>

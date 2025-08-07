@@ -91,8 +91,11 @@
 }
 
 .framework-box.placeholder {
-  opacity: 0.02;
+  opacity: 0.5; 
+  background-color: rgba(255, 255, 255, 0.03); 
   pointer-events: none;
+  filter: grayscale(60%) blur(0.5px);
+  transition: background-color 0.3s ease;
 }
 
 .framework-box.active:hover::before {

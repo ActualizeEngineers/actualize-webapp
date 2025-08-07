@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
           className="navbar-brand d-flex align-items-center gap-2"
         >
           <img src={logo} alt="Actualize Logo" height="30" />
-          <span style={{ fontWeight: 700, fontSize: "1.5rem", color: "white" }}>
+          <span style={{ fontWeight: 700, fontSize: "1.8rem", color: "white", letterSpacing: "0.1rem" }}>
             Actualize
           </span>
         </NavLink>
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
           aria-controls="mainNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          style={{backgroundColor:'#00ccd9'}}
+          style={{ backgroundColor: "#00ccd9" }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -99,17 +99,29 @@ const Navbar: React.FC = () => {
                 <li>
                   <NavLink
                     className="dropdown-item"
-                    to="/services/digital-transformation" > Digital Transformation </NavLink>
+                    to="/services/digital-transformation"
+                  >
+                    {" "}
+                    Digital Transformation{" "}
+                  </NavLink>
                 </li>
                 <li>
                   <NavLink
                     className="dropdown-item"
-                    to="/services/software-development" > Software Development </NavLink>
+                    to="/services/software-development"
+                  >
+                    {" "}
+                    Software Development{" "}
+                  </NavLink>
                 </li>
                 <li>
                   <NavLink
                     className="dropdown-item"
-                    to="/services/product-development" > Product Development </NavLink>
+                    to="/services/product-development"
+                  >
+                    {" "}
+                    Product Development{" "}
+                  </NavLink>
                 </li>
               </ul>
             </li>
