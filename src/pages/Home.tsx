@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % videos.length);
-    }, 5000); // Change video every 8 seconds
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
           </div>
         </div> */}
 
-      <div>
+      <div style={{ backgroundColor: "#0e0e0e" }}>
         <WhyChoose />
         <CoreHighlights />
         {/* <section className="services-showcase">

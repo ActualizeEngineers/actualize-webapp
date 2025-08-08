@@ -23,7 +23,8 @@
   gap: 20px;
   grid-template-areas:
     "aiAutomation aiAutomation workflow mlops"
-    "bots analytics workflow security";
+    "bots analytics workflow security"
+    "aiWorkflow aiPlatform aiPlatform dataAnalytics";
 }
 
 .trend-card-mosaic {
@@ -72,6 +73,16 @@
 
 .trend-card-mosaic.tall {
   grid-area: workflow;
+}
+
+.trend-card-mosaic.workflow-automation {
+  grid-area: aiWorkflow;
+}
+.trend-card-mosaic.platform-engineering {
+  grid-area: aiPlatform;
+}
+.trend-card-mosaic.data-analytics {
+  grid-area: dataAnalytics;
 }
 
 @media (max-width: 991px) {

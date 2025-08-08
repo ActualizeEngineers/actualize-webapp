@@ -9,12 +9,15 @@ import cybersecurityImage from "../../assets/icons/cybersecurity.jpg";
 import lowCodeImage from "../../assets/icons/lowcode.jpg";
 import conversationImage from "../../assets/icons/conversation-ai.jpg";
 import aiAutomation from "../../assets/icons/ai-automation.jpg";
+import devopsImage from "../../assets/icons/devops.avif";
+import metaverseImage from "../../assets/icons/metaverse.jpg";
+import dataEcosystemsImage from "../../assets/icons/data-ecosystem.jpg";
 
 const trends = [
   {
     imageUrl: cloudImage,
-    title: "Cloud-Native",
-    desc: "Microservices, containerization, and scalable cloud infrastructure.",
+    title: "Cloud 2.0 / Edge & Hybrid Cloud ",
+    desc: "Decentralized cloud with edge computing. Real-time processing at edge (e.g., autonomous vehicles, IoT)",
     className: "wide",
     direction: "from-top",
   },
@@ -23,7 +26,7 @@ const trends = [
     title: "AI-Driven Dev",
     desc: "ML-assisted coding, automation, and predictive analytics in dev lifecycle.",
     className: "",
-    direction: "from-right",
+    direction: "from-top",
   },
   {
     imageUrl: cybersecurityImage,
@@ -44,13 +47,34 @@ const trends = [
     title: "Conversational AI Agents",
     desc: "Unified voice, chat & WhatsApp agents that can execute tasks across channels.",
     className: "",
-    direction: "from-bottom",
+    direction: "",
   },
   {
     imageUrl: aiAutomation,
     title: "AI-Powered Workflow Automation",
     desc: "Agentic workflows automate business logic from intent to execution.",
+    className: "workflow-automation",
+    direction: "from-left",
+  },
+  {
+    imageUrl: devopsImage,
+    title: " DevOps Evolution",
+    desc: "Focus on IDPs and self-service environments. Tools like Kubernetes, GitOps, Backstage, Terraform, ArgoCD.",
+    className: "platform-engineering", 
+    direction: "from-bottom",
+  },
+  {
+    imageUrl: metaverseImage,
+    title: "XR & Metaverse for Enterprise",
+    desc: "Enterprise shift to XR: virtual training, remote assistance, digital collaboration.",
     className: "",
+    direction: "from-right",
+  },
+  {
+    imageUrl: dataEcosystemsImage,
+    title: "Data Analytics",
+    desc: "Trends include data mesh, real-time analytics, synthetic data.",
+    className: "data-analytics",
     direction: "from-right",
   },
 ];
@@ -71,7 +95,7 @@ const MegaTrends = () => {
         });
       },
       {
-        threshold: 0.4, // trigger when ~40% is visible
+        threshold: 0.8,
       }
     );
 

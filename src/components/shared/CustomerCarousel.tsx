@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/customercarousel.css";
 
+import customerImage from "../../assets/icons/customer.webp";
+
 const imageModules = import.meta.glob("../../assets/customers/*.png", {
   eager: true,
   query: "?url",
@@ -248,17 +250,27 @@ const CustomerCarousel: React.FC = () => {
           {testimonials.map((t, i) => (
             <div key={i} className="testimonial-slide">
               <div className="testimonial-card rounded">
-                <div className="d-flex align-items-center mb-2">
+                <div className="d-flex align-items-center justify-content-between mb-2">
+                  <div className="d-flex align-items-center">
+                    <img
+                      src={t.flag}
+                      alt={t.location}
+                      className="me-2"
+                      width="24"
+                      loading="lazy"
+                    />
+                    <h6 className="mb-0">{t.name}</h6>
+                  </div>
                   <img
-                    src={t.flag}
+                    src={customerImage}
                     alt={t.location}
-                    className="me-2"
-                    width="24"
+                    className="review-image"
+                    width="40"
+                    height="40"
                     loading="lazy"
                   />
-                  <h6 className="mb-0">{t.name}</h6>
-                  <small className="ms-2">({t.location})</small>
                 </div>
+                <small>{t.location}</small>
                 <div className="stars text-warning mb-2">★★★★★</div>
                 <p className="small mb-0">"{t.feedback}"</p>
               </div>
