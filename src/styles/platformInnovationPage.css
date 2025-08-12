@@ -1,5 +1,5 @@
 .platform-innovation-container {
-  background-image: url(https://solutek-wp.laralink.com/wp-content/uploads/2024/08/faq-bg.png);
+  background-image: url('https://solutek-wp.laralink.com/wp-content/uploads/2024/08/about3-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position: center; */
@@ -20,15 +20,23 @@
   font-weight: 450;
 }
 
+/* Card wrapper */
 .custom-neo-card {
+  /* Prefer min-height for short viewports; keep behavior on larger screens */
+  min-height: 360px;              /* new: ensures space on small devices */
   height: 45vh;
+  max-height: 640px;              /* new: avoids excessive growth on large screens */
   gap: 10%;
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex !important;
   flex-direction: row;
   justify-content: center;
+  align-items: stretch;            /* new: make columns equal height */
   margin: 0;
+  width: 100%;                     /* new */
+  box-sizing: border-box;          /* new */
+  padding: 20px;                   /* new: gentle inner spacing at all sizes */
 }
 
 /* LEFT SIDE: CONTENT */
@@ -36,41 +44,49 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 15%;
-  width: 30%;
+  align-items: center;        
+  gap: 12px;                      
+  width: 40%;                      
+  max-width: 560px;                
   height: 100%;
+  padding: 10px 16px;       
+  text-align: center;       
 }
 
 .milestone-item {
   display: flex;
   align-items: center;
   color: white;
+  gap: 12px;                       /* new: spacing between icon and text */
 }
 
 .milestone-icon {
   background: #000;
   color: #222;
   font-weight: bold;
-  font-size: 1.8rem;
-  width: 70px;
-  height: 70px;
+  font-size: 1.6rem;               /* slightly smaller for balance */
+  width: 64px;
+  height: 64px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;                  /* prevent stretching */
 }
 
 .milestone-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 650;
+  line-height: 1.2;                /* new */
+  color: #111;                     /* ensure contrast on light bg */
 }
 
 .milestone-desc {
   color: #3f3c3c;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  margin-top: 4px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-top: 6px;
+  max-width: 40ch;                 /* new: readable line length */
 }
 
 /* RIGHT SIDE: IMAGE */
@@ -79,25 +95,36 @@
   align-items: center;
   justify-content: center;
   background: transparent;
+  width: 60%;                      /* complementary to left 40% */
+  min-width: 0;                    /* new: prevent overflow in flex */
 }
 
 .milestone-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 16px;             /* subtle rounding by default */
 }
 
+/* Slick slide alignment */
 .slick-slide {
   display: flex !important;
   justify-content: center;
   align-items: stretch;
 }
 
+/* ====== Medium screens (tablets, small laptops) ====== */
 @media (max-width: 991px) {
+  .platform-innovation-section .lead {
+    font-size: 1.2rem;             /* slightly smaller */
+  }
+
   .custom-neo-card {
-    max-width: 90%;
-    flex-direction: column;
-    padding: 20px 10px;
+    flex-direction: column;        /* stack */
+    padding: 16px 14px;
+    gap: 16px;                     /* tighten vertical spacing */
+    height: auto;                  /* allow content to define height */
+    min-height: 0;
   }
 
   .custom-neo-card-left,
@@ -106,13 +133,84 @@
     padding: 0;
   }
 
+  .custom-neo-card-left {
+    align-items: center;
+    text-align: left;
+  }
+
+  .milestone-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+  }
+
+  .milestone-title {
+    font-size: 1.4rem;
+  }
+
+  .milestone-desc {
+    font-size: 0.95rem;
+  }
+
   .milestone-image {
-    border-radius: 18px 18px 0 0;
+    border-radius: 14px;
+    max-height: 360px;             /* keep image visible without pushing content */
   }
 }
 
+/* ====== Small screens (phones) ====== */
 @media (max-width: 768px) {
   .platform-innovation-section .lead {
     font-size: 1rem;
+  }
+
+  .custom-neo-card {
+    padding: 14px 12px;
+    gap: 12px;
+  }
+
+  .milestone-item {
+    gap: 10px;
+  }
+
+  .milestone-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .milestone-title {
+    font-size: 1.15rem;
+  }
+
+  .milestone-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .milestone-image {
+    border-radius: 12px;
+    max-height: 300px;
+  }
+}
+
+/* ====== Extra small screens (narrow phones) ====== */
+@media (max-width: 420px) {
+  .custom-neo-card {
+    padding: 12px 10px;
+  }
+
+  .milestone-title {
+    font-size: 1.05rem;
+  }
+
+  .milestone-desc {
+    font-size: 0.86rem;
+  }
+
+  .milestone-image {
+    border-radius: 10px;
+    max-height: 240px;
   }
 }

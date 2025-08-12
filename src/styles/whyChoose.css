@@ -1,9 +1,11 @@
-/* .why-choose-container {
-  background-image: url('../assets/banners/background.png');
+.why-choose-container {
+  background-image: url("../assets/banners/card-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right center;
-} */
+  background-position: center;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 .why-choose-section {
   padding: 3% 0;
@@ -17,6 +19,8 @@
   animation: scrollCards 40s linear infinite;
   width: max-content;
   margin-top: 3%;
+  flex-wrap: nowrap; /* keep items in a single row */
+  justify-content: flex-start;
 }
 
 .why-card {
@@ -29,9 +33,8 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  background-image: url("../assets/banners/card-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #fff;
+  flex-shrink: 0; /* prevents shrinking in flex container */
 }
 
 .why-card > * {
@@ -103,13 +106,72 @@
   }
 }
 
+/* Responsive settings */
+
+@media (max-width: 1024px) {
+  .why-carousel {
+    gap: 30px;
+  }
+  .why-card {
+    min-width: 320px;
+    max-width: 320px;
+  }
+  .why-card h3 {
+    font-size: 1.6rem;
+  }
+  .why-card p {
+    font-size: 1rem;
+  }
+  .icon-circle {
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  .icon-circle::before {
+    width: 95px;
+    height: 95px;
+    top: -8px;
+    left: -8px;
+  }
+}
+
 @media (max-width: 768px) {
   .why-carousel {
     flex-wrap: wrap;
     animation: none;
     justify-content: center;
+    gap: 20px;
+    width: 100%;
   }
   .why-card {
+    min-width: 90vw;
+    max-width: 90vw;
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .why-card {
+    min-width: 95vw;
+    max-width: 95vw;
+  }
+  .why-card h3 {
+    font-size: 1.3rem;
+  }
+  .why-card p {
+    font-size: 0.9rem;
+  }
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  .icon-circle::before {
+    width: 80px;
+    height: 80px;
+    top: -6px;
+    left: -6px;
   }
 }

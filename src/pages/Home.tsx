@@ -44,22 +44,18 @@ const Home: React.FC = () => {
       </div>
 
       <div className="home-content">
-        {/* Core Highlights Section */}
-        <div className="core-highlights-container">
-          <CoreHighlights />
-        </div>
-        
         {/* Platform-Based Innovation Section */}
-        <div className="platform-innovation-container"> 
-          <PlatformInnovationPage />
-        </div>
+        <PlatformInnovationPage />
 
+        {/* Core Highlights Section */}
+        <CoreHighlights />
 
         {/* Why Choose Us Section */}
         <WhyChoose />
         
         {/* Mega Trends Section */}
         <MegaTrends />
+
 
         {/* Our Customers */}
         <CustomerCarousel />

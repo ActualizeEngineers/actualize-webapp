@@ -1,9 +1,11 @@
 .core-highlights-container {
-  background-image: url('https://solutek-wp.laralink.com/wp-content/uploads/2024/08/about3-bg.png');
+  background-image: url("https://solutek-wp.laralink.com/wp-content/uploads/2024/08/faq-bg.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .core-highlights-section {
   padding: 3% 0;
   text-align: center;
@@ -12,11 +14,15 @@
   align-items: center;
   overflow-x: hidden;
   border: none !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.highlights-container{
+.highlights-container {
   display: flex;
   gap: 2rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .highlight-cards-container {
@@ -25,7 +31,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
-  width: 38vw;
+  width: 90vw;
+  max-width: 560px;
   margin: 0 auto;
   padding: 0;
   transition: all 0.4s;
@@ -37,11 +44,13 @@
   position: relative;
   width: 100%;
   height: 20vh;
+  min-height: 120px;
+  max-width: 560px;
   border-radius: 17px;
   transition: height 0.4s cubic-bezier(0.41, 1, 0.41, 1), box-shadow 0.3s,
     transform 0.3s;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,8 +59,8 @@
 }
 
 .highlight-card:hover {
-  height: 45vh;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  height: 44vh;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
   transform: scale(1.01);
   z-index: 2;
   background-size: cover;
@@ -65,12 +74,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   pointer-events: none;
   transition: opacity 0.25s;
+  max-width: 90%;
 }
 
 .highlight-card:hover .highlight-heading {
@@ -90,6 +100,10 @@
   opacity: 0;
   visibility: hidden;
   top: 30%;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  box-sizing: border-box;
   text-align: left;
 }
 
@@ -100,85 +114,31 @@
 }
 
 .highlight-card-overlay h3 {
-  font-size: 1.32rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 10px 0;
   color: #fff;
 }
 
 .highlight-card-overlay p {
-  font-size: 1.07rem;
+  font-size: 0.97rem;
   margin: 0;
   line-height: 1.3;
   color: #fff;
 }
 
 .overlay-arrow-button {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 1px solid #fff;
   background: transparent;
-  font-size: 1.1rem;
-  margin-top: 12px;
+  font-size: 1rem;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s, transform 0.2s;
-}
-
-@media (max-width: 800px) {
-  .highlight-cards-container {
-    width: 80vw;
-    max-width: unset;
-    gap: 2vw;
-  }
-  .highlight-card {
-    height: 22vh;
-    min-height: 120px;
-    border-radius: 12px;
-  }
-  .highlight-card:hover {
-    height: 36vh;
-  }
-  .highlight-heading {
-    font-size: 1.1rem;
-    left: 16px;
-    top: 18px;
-  }
-}
-
-@media (max-width: 500px) {
-  .highlight-card,
-  .highlight-card:hover {
-    border-radius: 8px;
-    height: 16vh;
-    min-height: 80px;
-    max-height: 250px;
-  }
-  .highlight-card:hover {
-    height: 27vh;
-  }
-  .highlight-heading {
-    left: 10px;
-    top: 10px;
-    font-size: 1.02rem;
-  }
-  .highlight-card-overlay {
-    padding: 10px;
-  }
-  .highlight-card-overlay h3 {
-    font-size: 1rem;
-  }
-  .highlight-card-overlay p {
-    font-size: 0.93rem;
-  }
-  .overlay-arrow-button {
-    width: 27px;
-    height: 27px;
-    font-size: 0.94rem;
-    margin-top: 7px;
-  }
 }
 
 .animate-on-scroll {
@@ -195,8 +155,102 @@
   transform: translateX(50px);
 }
 
-
 .animate-on-scroll.in-view {
   opacity: 1;
   transform: translateX(0) translateY(0);
+}
+
+/* Responsive Media Queries */
+
+@media (min-width: 1500px) {
+  .highlight-cards-container {
+    gap: 1; /* possibly 1rem if intended */
+    width: 90vw;
+  }
+
+  .highlight-card {
+    height: 15vh;
+  }
+
+  .highlight-card:hover {
+    height: 34vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .highlight-cards-container {
+    width: 98vw;
+    max-width: 99vw;
+    gap: 2vw;
+  }
+  .highlight-card {
+    height: 19vh;
+    min-height: 100px;
+    border-radius: 14px;
+    max-width: 98vw;
+  }
+  .highlight-card:hover {
+    height: 33vh;
+  }
+  .highlight-heading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .highlight-cards-container {
+    width: 99vw;
+    max-width: 100vw;
+    gap: 3vw;
+  }
+  .highlight-card {
+    height: 17vh;
+    min-height: 80px;
+    border-radius: 12px;
+    max-width: 97vw;
+  }
+  .highlight-card:hover {
+    height: 28vh;
+  }
+  .highlight-heading {
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .highlights-container{
+    flex-wrap: wrap;
+  }
+  .highlight-cards-container {
+    width: 100vw;
+    max-width: 100vw;
+    gap: 10px;
+    padding: 0 2vw;
+  }
+  .highlight-card {
+    border-radius: 8px;
+    height: 13vh;
+    max-width: 99vw;
+  }
+  .highlight-card:hover {
+    height: 25vh;
+  }
+  .highlight-heading {
+    font-size: 0.84rem;
+  }
+  .highlight-card-overlay {
+    padding: 6px;
+  }
+  .highlight-card-overlay h3 {
+    font-size: 0.94rem;
+  }
+  .highlight-card-overlay p {
+    font-size: 0.85rem;
+  }
+  .overlay-arrow-button {
+    width: 23px;
+    height: 23px;
+    font-size: 0.8rem;
+    margin-top: 6px;
+  }
 }
