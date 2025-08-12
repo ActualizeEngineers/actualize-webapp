@@ -110,7 +110,7 @@ const GLOW_COLORS = [
   "#ffe600",
   "#00a5df",
   "#e60000",
-  "#c9c9c9ff",
+  "#424141ff",
   "#c8102e",
   "#3178c6",
 ];
@@ -195,7 +195,7 @@ const CustomerCarousel: React.FC = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
-    pauseOnHover: false,
+    pauseOnHover: true,
     responsive: [
       { breakpoint: 992, settings: { slidesToShow: 3 } },
       { breakpoint: 768, settings: { slidesToShow: 2 } },
@@ -204,101 +204,108 @@ const CustomerCarousel: React.FC = () => {
   };
 
   return (
-    <section className="frameworks-section">
-      <h2 className="frameworks-section-title">
-        Trusted by <span>Global Clients</span>
-      </h2>
-      <p className="lead mb-4">
-        From startups to Fortune 500s — Actualize delivers excellence worldwide.
-      </p>
+    <div className="customer-carousel-container">
+      <div className="container">
+        <section className="frameworks-section">
+          <h2 className="section-title">
+            Trusted by <span className="highlight">Global Clients</span>
+          </h2>
+          <p className="lead mb-4">
+            From startups to Fortune 500s — Actualize delivers excellence
+            worldwide.
+          </p>
 
-      <div className="frameworks-wrapper mb-5">
-        <div className="frameworks-grid">
-          {Array.from({ length: totalCells }).map((_, idx) => {
-            const logoIndex = logoPositions.indexOf(idx);
-            const isLogo = logoIndex !== -1;
-            const glowColor = GLOW_COLORS[logoIndex] || "#ffffff";
+          <div className="frameworks-wrapper mb-5">
+            <div className="frameworks-grid">
+              {Array.from({ length: totalCells }).map((_, idx) => {
+                const logoIndex = logoPositions.indexOf(idx);
+                const isLogo = logoIndex !== -1;
+                const glowColor = GLOW_COLORS[logoIndex] || "#000";
 
-            return (
-              <div
-                key={idx}
-                className={`framework-box ${
-                  isLogo ? "active" : "placeholder"
-                } ${idx === 5 ? "special-hover" : ""}`}
-                style={
-                  isLogo
-                    ? ({ "--glow-color": glowColor } as React.CSSProperties)
-                    : {}
-                }
-              >
-                {isLogo && logos[logoIndex] && (
-                  <img
-                    src={logos[logoIndex]}
-                    alt={`Framework ${logoIndex + 1}`}
-                    loading="lazy"
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Testimonial Carousel */}
-      <div className="p-5 pt-0 text-center">
-        <Slider {...sliderSettings} className="testimonial-slider">
-          {testimonials.map((t, i) => (
-            <div key={i} className="testimonial-slide">
-              <div className="testimonial-card rounded">
-                <div className="d-flex align-items-center justify-content-between mb-2">
-                  <div className="d-flex align-items-center">
-                    <img
-                      src={t.flag}
-                      alt={t.location}
-                      className="me-2"
-                      width="24"
-                      loading="lazy"
-                    />
-                    <h6 className="mb-0">{t.name}</h6>
+                return (
+                  <div
+                    key={idx}
+                    className={`framework-box ${
+                      isLogo ? "active" : "placeholder"
+                    }`}
+                    style={
+                      isLogo
+                        ? ({ "--glow-color": glowColor } as React.CSSProperties)
+                        : {}
+                    }
+                  >
+                    {isLogo && logos[logoIndex] && (
+                      <img
+                        src={logos[logoIndex]}
+                        alt={`Framework ${logoIndex + 1}`}
+                        loading="lazy"
+                      />
+                    )}
                   </div>
-                  <img
-                    src={customerImage}
-                    alt={t.location}
-                    className="review-image"
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                  />
-                </div>
-                <small>{t.location}</small>
-                <div className="stars text-warning mb-2">★★★★★</div>
-                <p className="small mb-0">"{t.feedback}"</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* CountUp Stats */}
-      <div className="row g-4 p-5 pt-0 justify-content-center rounded text-white h-100">
-        {stats.map((s, i) => (
-          <div className="col-6 col-md-3" key={i}>
-            <div className="p-4 bg-dark bg-gradient shadow rounded text-white h-100">
-              <h3>
-                <CountUp
-                  key={`${resetTrigger}-${i}`}
-                  start={0}
-                  end={s.end}
-                  suffix={s.suffix}
-                  duration={1}
-                />
-              </h3>
-              <p className="small mb-0">{s.label}</p>
+                );
+              })}
             </div>
           </div>
-        ))}
+
+          {/* Testimonial Carousel */}
+          <div className="p-5 text-center d-flex">
+            <Slider {...sliderSettings} className="testimonial-slider">
+              {testimonials.map((t, i) => (
+                <div key={i} className="testimonial-slide">
+                  <div className="testimonial-card rounded">
+                    <div className="d-flex align-items-center justify-content-between mb-2">
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={t.flag}
+                          alt={t.location}
+                          className="me-2"
+                          width="24"
+                          loading="lazy"
+                        />
+                        <h6 className="mb-0">{t.name}</h6>
+                      </div>
+                      <img
+                        src={customerImage}
+                        alt={t.location}
+                        className="review-image"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      />
+                    </div>
+                    <small style={{ color: "#000" }}>{t.location}</small>
+                    <div className="stars text-warning mb-2">★★★★★</div>
+                    <p className="small" style={{ color: "#000" }}>
+                      "{t.feedback}"
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+
+          {/* CountUp Stats */}
+          <div className="row g-4 p-5 pt-0 justify-content-center rounded text-white h-100">
+            {stats.map((s, i) => (
+              <div className="col-6 col-md-3" key={i} >
+                <div className="p-4 shadow rounded text-dark h-100" style={{ backgroundColor: "#007dc55e" }}>
+                  <h3>
+                    <CountUp
+                      key={`${resetTrigger}-${i}`}
+                      start={0}
+                      end={s.end}
+                      suffix={s.suffix}
+                      duration={1}
+                    />
+                  </h3>
+                  <p className="small mb-0">{s.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 

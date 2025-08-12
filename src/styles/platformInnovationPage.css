@@ -1,13 +1,13 @@
-.platform-innovation-section {
-  background-color: #0e0e0e;
-  padding: 3% 0;
-  text-align: center;
+.platform-innovation-container {
+  background-image: url(https://solutek-wp.laralink.com/wp-content/uploads/2024/08/faq-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
 }
 
-.section-title-platform-innovation {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
+.platform-innovation-section {
+  padding: 3% 0;
+  text-align: center;
 }
 
 .platform-innovation-section .highlight {
@@ -15,18 +15,16 @@
 }
 
 .platform-innovation-section .lead {
-  color: #dddddd;
+  color: #3f3c3c;
   font-size: 1.4rem;
+  font-weight: 450;
 }
 
-/* SLIDER CARD LAYOUT */
 .custom-neo-card {
-  width: 100vw;
-  height: 60vh !important;
+  height: 45vh;
   gap: 10%;
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* padding: 3% 0; */
   display: flex !important;
   flex-direction: row;
   justify-content: center;
@@ -46,12 +44,12 @@
 
 .milestone-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   color: white;
 }
 
 .milestone-icon {
-  background: #fff;
+  background: #000;
   color: #222;
   font-weight: bold;
   font-size: 1.8rem;
@@ -61,29 +59,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
 }
 
 .milestone-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 650;
-  color: #ffffff;
 }
 
 .milestone-desc {
-  color: #c0c0c0;
+  color: #3f3c3c;
   font-size: 0.85rem;
-  line-height: 1.4;
+  line-height: 1.2;
   margin-top: 4px;
 }
 
 /* RIGHT SIDE: IMAGE */
 .custom-neo-card-right {
-  width: 45%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 }
 
 .milestone-image {
@@ -92,14 +87,12 @@
   object-fit: cover;
 }
 
-/* SLIDER FIX */
 .slick-slide {
   display: flex !important;
   justify-content: center;
   align-items: stretch;
 }
 
-/* RESPONSIVE STYLES */
 @media (max-width: 991px) {
   .custom-neo-card {
     max-width: 90%;
@@ -119,10 +112,6 @@
 }
 
 @media (max-width: 768px) {
-  .platform-innovation-section .section-title {
-    font-size: 2rem;
-  }
-
   .platform-innovation-section .lead {
     font-size: 1rem;
   }

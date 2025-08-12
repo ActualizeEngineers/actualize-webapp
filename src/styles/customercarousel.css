@@ -1,52 +1,13 @@
+/* .customer-carousel-container {
+  background-image: url("https://solutek-wp.laralink.com/wp-content/uploads/2024/08/test-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+} */
+
 .frameworks-section {
-  background-color: #0e0e0e;
   padding: 3% 0;
-  color: #fff;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.frameworks-section-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1%;
-  color: #fff;
-}
-
-.frameworks-section-title span {
-  color: #007dc5;
-}
-
-.frameworks-wrapper {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.frameworks-wrapper::before,
-.frameworks-wrapper::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.frameworks-wrapper::before {
-  top: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(14, 14, 14, 1),
-    rgba(14, 14, 14, 0)
-  );
-}
-
-.frameworks-wrapper::after {
-  bottom: 0;
-  background: linear-gradient(to top, rgba(14, 14, 14, 1), rgba(14, 14, 14, 0));
 }
 
 .frameworks-grid {
@@ -61,7 +22,7 @@
 
 .framework-box {
   position: relative;
-  background: rgba(255, 255, 255, 0.04);
+  background: #007dc55e;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -71,7 +32,8 @@
     background-color 0.25s ease;
   height: 90%;
   width: 90%;
-  overflow: visible;
+  overflow: hidden;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
   z-index: 1;
 }
 
@@ -81,59 +43,47 @@
   border-radius: 24px;
   background: radial-gradient(
     circle,
-    var(--glow-color, rgba(255, 255, 255, 0.45)) 0%,
+    var(--glow-color, rgba(0, 200, 255, 0.7)) 0%,
     transparent 70%
   );
   opacity: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
-  filter: blur(28px);
+  filter: blur(50px);
   z-index: -1;
 }
 
 .framework-box.placeholder {
-  opacity: 0.5;
-  background-color: rgba(255, 255, 255, 0.03);
-  pointer-events: none;
-  filter: grayscale(60%) blur(0.5px);
-  transition: background-color 0.3s ease;
+  background: transparent;
+  cursor: default;
 }
 
 .framework-box.active:hover::before {
   opacity: 1;
-  transform: scale(1.1);
-}
-.framework-box.active:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  transform: scale(1.06);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
-    0 0 20px var(--glow-color, rgba(255, 255, 255, 0.15));
+  transform: scale(1.15);
 }
 
-.framework-box.placeholder:hover {
-  transform: scale(1.03);
-  background-color: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
-    0 0 8px rgba(255, 255, 255, 0.08);
+.framework-box.active:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 20px var(--glow-color, rgba(255, 255, 255, 0.15)),
+    0 0 40px var(--glow-color, rgba(255, 255, 255, 0.15));
 }
 
 .framework-box img {
-  width: 80%;
+  width: 75%;
   height: auto;
   filter: brightness(0.9);
   transition: transform 0.25s ease, filter 0.25s ease;
-  will-change: transform;
 }
 
 .framework-box.active:hover img {
   transform: scale(1.08);
-  filter: brightness(1);
+  filter: brightness(0.8);
 }
 
-/* Client logo carousel */
 .testimonial-slider .slick-slide {
   display: flex;
   justify-content: center;
-  /* For consistent spacing */
   padding: 0 10px;
 }
 
@@ -159,18 +109,17 @@
   font-size: 30px !important;
 }
 
-/* Testimonial Cards */
 .testimonial-card {
   border-radius: 12px;
   padding: 30px;
+  margin: 10px 0;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   text-align: left;
   min-height: 230px;
-  height: 100%;
+  height: 30vh;
   --bs-bg-opacity: 1;
-  background-color: rgba(33, 37, 41, var(--bs-bg-opacity));
-  background-image: linear-gradient(180deg, #212529 0%, #181a1b 100%);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-card .country-flag {
@@ -182,11 +131,7 @@
 
 .testimonial-card h6 {
   font-weight: 600;
-  color: #e6e5e5;
-}
-
-.testimonial-card small {
-  color: #e6e5e5;
+  color: #000;
 }
 
 .review-image {
@@ -198,10 +143,6 @@
 }
 
 @media (max-width: 768px) {
-  .framework-section-title {
-    font-size: 3rem;
-  }
-
   .lead {
     font-size: 1rem;
   }
@@ -219,7 +160,6 @@
   transform: scale(1.05);
 }
 
-/* Frameworks Grid: Stack rows and reduce grid when on mobile/tablet */
 @media (max-width: 1200px) {
   .frameworks-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -261,7 +201,6 @@
   }
 }
 
-/* Testimonial slider & cards responsive tweaks */
 @media (max-width: 900px) {
   .testimonial-slider .slick-slide {
     padding: 0 2vw;
@@ -290,7 +229,6 @@
   }
 }
 
-/* Prevent horizontal overflow at all times for section/grid */
 .frameworks-section,
 .frameworks-wrapper,
 .frameworks-grid {
@@ -299,7 +237,6 @@
   max-width: 100vw;
 }
 
-/* If .testimonial-slider overflows on mobile, fix: */
 .testimonial-slider {
   overflow-x: visible;
   width: 100%;

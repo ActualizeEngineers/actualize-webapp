@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo.png";
-import "../styles/custom.css";
+import "../styles/navbar.css";
 
 const Navbar: React.FC = () => {
   const location = useLocation();

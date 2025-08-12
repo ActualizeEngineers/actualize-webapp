@@ -14,8 +14,8 @@ const LifeAt: React.FC = () => {
       <section className="life-section py-5">
         <div className="container">
           <div className="text-center mb-4">
-            <h2 className="section-title text-primary">
-              Life at <span className="brand-name">Actualize</span>
+            <h2 className="section-title">
+              Life at <span className="highlight">Actualize</span>
             </h2>
             <p className="lead text-muted">
               Where innovation, collaboration, and growth thrive together.
