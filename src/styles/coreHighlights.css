@@ -129,9 +129,9 @@
 
 @media (max-width: 800px) {
   .highlight-cards-container {
-    width: 95vw;
+    width: 80vw;
     max-width: unset;
-    gap: 4vw;
+    gap: 2vw;
   }
   .highlight-card {
     height: 22vh;

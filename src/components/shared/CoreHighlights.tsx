@@ -100,55 +100,55 @@ const CoreHighlights: React.FC = () => {
   }, []);
 
   return (
-    <div className="core-highlights-container">
-      <div className="container">
-        <section className="core-highlights-section">
-          <h2 className="section-title">
-            Core <span className="highlight">Highlights</span>
-          </h2>
-          <div className="highlights-container">
-            <div className="highlight-cards-container">
-              {highlights.slice(0, 4).map((item, index) => (
-                <div
-                  key={index}
-                  ref={(el) => (cardRefs.current[index] = el)}
-                  className={`highlight-card animate-on-scroll ${item.direction}`}
-                  style={{ backgroundImage: `url(${item.imageUrl})` }}
-                >
-                  <div className="highlight-heading">{item.title}</div>
-                  <div className="highlight-card-overlay">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <button className="overlay-arrow-button">
-                      <FaArrowRight color="#fff" />
-                    </button>
-                  </div>
+    // <div className="core-highlights-container">
+    <div className="container-xl">
+      <section className="core-highlights-section">
+        <h2 className="section-title">
+          Core <span className="highlight">Highlights</span>
+        </h2>
+        <div className="highlights-container">
+          <div className="highlight-cards-container">
+            {highlights.slice(0, 4).map((item, index) => (
+              <div
+                key={index}
+                ref={(el) => (cardRefs.current[index] = el)}
+                className={`highlight-card animate-on-scroll ${item.direction}`}
+                style={{ backgroundImage: `url(${item.imageUrl})` }}
+              >
+                <div className="highlight-heading">{item.title}</div>
+                <div className="highlight-card-overlay">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <button className="overlay-arrow-button">
+                    <FaArrowRight color="#fff" />
+                  </button>
                 </div>
-              ))}
-            </div>
-            <div className="highlight-cards-container">
-              {highlights.slice(4, 8).map((item, index) => (
-                <div
-                  key={index + 5}
-                  ref={(el) => (cardRefs.current[index + 5] = el)}
-                  className={`highlight-card animate-on-scroll ${item.direction}`}
-                  style={{ backgroundImage: `url(${item.imageUrl})` }}
-                >
-                  <div className="highlight-heading">{item.title}</div>
-                  <div className="highlight-card-overlay">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <button className="overlay-arrow-button">
-                      <FaArrowRight color="#fff" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
-      </div>
+          <div className="highlight-cards-container">
+            {highlights.slice(4, 8).map((item, index) => (
+              <div
+                key={index + 5}
+                ref={(el) => (cardRefs.current[index + 5] = el)}
+                className={`highlight-card animate-on-scroll ${item.direction}`}
+                style={{ backgroundImage: `url(${item.imageUrl})` }}
+              >
+                <div className="highlight-heading">{item.title}</div>
+                <div className="highlight-card-overlay">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <button className="overlay-arrow-button">
+                    <FaArrowRight color="#fff" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
+    // </div>
   );
 };
 

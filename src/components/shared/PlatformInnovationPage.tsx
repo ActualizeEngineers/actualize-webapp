@@ -70,7 +70,7 @@ const PlatformInnovationPage = () => {
   const sliderRef = useRef<Slider | null>(null);
 
   return (
-    <div className="platform-innovation-container"> 
+
       <div className="container">
         <section className="platform-innovation-section">
           <h2 className="section-title">
@@ -112,7 +112,6 @@ const PlatformInnovationPage = () => {
           </div>
         </section>
       </div>
-    </div>
   );
 };
 
