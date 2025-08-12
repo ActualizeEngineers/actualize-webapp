@@ -1,19 +1,12 @@
+.mega-trends-container {
+  background-image: url('https://img.freepik.com/premium-photo/white-background-with-white-background-with-white-background-with-pattern-dots-whit_1277297-38849.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .mega-trends-section-dark {
-  background: #0e0e0e;
   padding: 3% 0;
-}
-
-.section-title-dark {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 0.75em;
-  line-height: 1.2;
-  letter-spacing: -1px;
-}
-
-.section-title-dark .accent {
-  color: #007dc5;
 }
 
 .trends-mosaic-grid {
@@ -40,11 +33,13 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
-
 .trend-card-mosaic:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(229, 176, 117, 0.15);
+  box-shadow: 0 12px 24px rgb(41, 124, 219);
 }
+
+
+
 
 .card-overlay {
   position: relative;

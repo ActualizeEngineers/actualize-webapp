@@ -8,17 +8,6 @@
   overflow: hidden;
 }
 
-.section-title {
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.brand-name {
-  color: #d14f81;
-}
-
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -105,10 +94,6 @@ img.img-fluid.rounded {
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
   .core-value-card {
     padding: 25px 15px;
   }

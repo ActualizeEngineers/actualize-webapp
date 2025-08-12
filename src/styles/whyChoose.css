@@ -1,19 +1,14 @@
+/* .why-choose-container {
+  background-image: url('../assets/banners/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+} */
+
 .why-choose-section {
   padding: 3% 0;
-  background: #0e0e0e;
   text-align: center;
   overflow: hidden;
-}
-
-.why-choose-section-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 60px;
-  color: #fff;
-}
-
-.highlight {
-  color: #007dc5;
 }
 
 .why-carousel {
@@ -21,26 +16,22 @@
   gap: 50px;
   animation: scrollCards 40s linear infinite;
   width: max-content;
-  padding: 20px 0;
+  margin-top: 3%;
 }
 
 .why-card {
   min-width: 420px;
   max-width: 420px;
   --bs-bg-opacity: 1;
-  background-color: rgba(33, 37, 41, var(--bs-bg-opacity));
-  background-image: linear-gradient(
-    180deg,
-    #212529 0%,
-    #181a1b 100%
-  );
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   padding: 1.5% 1%;
   border-radius: 24px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   cursor: pointer;
+  background-image: url("../assets/banners/card-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .why-card > * {
@@ -65,7 +56,21 @@
   margin: 0 auto 30px;
   font-size: 2.6rem;
   box-shadow: 0 6px 20px rgba(0, 125, 197, 0.3);
-  animation: bounce 2s infinite;
+  position: relative;
+}
+
+/* Rotating circular line */
+.icon-circle::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #007dc5; /* The line color */
+  border-radius: 50%;
+  border-top-color: transparent; /* Optional: creates a stylish gap */
+  animation: rotateCircle 3s linear infinite;
 }
 
 .why-card h3 {
@@ -76,7 +81,7 @@
 
 .why-card p {
   font-size: 1.2rem;
-  color: #e6e5e5;
+  color: #0e0c0c;
   line-height: 1.7;
 }
 
@@ -89,13 +94,12 @@
   }
 }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    transform: translateY(-6px);
+  to {
+    transform: rotate(360deg);
   }
 }
 

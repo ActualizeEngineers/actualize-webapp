@@ -43,130 +43,21 @@ const Home: React.FC = () => {
         <Navbar />
       </div>
 
-      {/* <div className="banner-overlay">
-          <div className="hero-card">
-            <h4 className="hero-title">
-              <img src={logo} alt="Actualize Logo" className="hero-logo" />
-              About <span className="brand-name">Actualize</span>
-            </h4>
-            <p className="hero-text">
-              We are a global technology company offering engineering and
-              digital transformation services to enterprises across various
-              industries.
-            </p>
-            <a href="/company/about" className="hero-button">
-              Learn More
-            </a>
-          </div>
-        </div> */}
-
-      <div style={{ backgroundColor: "#0e0e0e" }}>
-        <WhyChoose />
-        <CoreHighlights />
-        {/* <section className="services-showcase">
-          <h2 className="section-title">
-            Our <span className="highlight">Services</span>
-          </h2>
-          <div className="services-grid">
-            <div className="service-tile engineering">
-              <div className="overlay">
-                <div className="icon">🛠️</div>
-                <h3>Engineering Services</h3>
-                <p>
-                  Design, simulation, and validation across the product
-                  lifecycle.
-                </p>
-                <button
-                  className="btn btn-primary mt-3"
-                  onClick={() => navigate("/services/engineering")}
-                >
-                  Explore More
-                </button>
-              </div>
-            </div>
-            <div className="service-tile digital">
-              <div className="overlay">
-                <div className="icon">💡</div>
-                <h3>Digital Transformation</h3>
-                <p>AI, cloud, and automation-driven process improvements.</p>
-                <button
-                  className="btn btn-primary mt-3"
-                  onClick={() => navigate("/services/digital-transformation")}
-                >
-                  Explore More
-                </button>
-              </div>
-            </div>
-            <div className="service-tile software">
-              <div className="overlay">
-                <div className="icon">💻</div>
-                <h3>Software Solutions</h3>
-                <p>Enterprise-grade applications for diverse industries.</p>
-                <button
-                  className="btn btn-primary mt-3"
-                  onClick={() => navigate("/services/software-development")}
-                >
-                  Explore More
-                </button>
-              </div>
-            </div>
-            <div className="service-tile product">
-              <div className="overlay">
-                <div className="icon">🚀</div>
-                <h3>Product Development</h3>
-                <p>From idea to market with full-cycle innovation.</p>
-                <button
-                  className="btn btn-primary mt-3"
-                  onClick={() => navigate("/services/product-development")}
-                >
-                  Explore More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          className="industries-section"
-          style={{ backgroundColor: "#e5e5e5" }}
-        >
-          <h2 className="industries-heading">
-            20 Years of Engineering Excellence
-            <br />
-            <span className="highlight">Across Industries</span>
-          </h2>
-          <div className="industries-grid">
-            {industries.map((industry, index) => (
-              <div className="industry-card" key={index}>
-                <img
-                  src={industry.image}
-                  alt={industry.title}
-                  className="industry-image"
-                />
-                <div className="industry-overlay">
-                  <h3>{industry.title}</h3>
-                  <button
-                    className="btn btn-primary mt-2"
-                    onClick={() => navigateT0(industry.short)}
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section> */}
-
+      <div className="home-content">
         {/* Platform-Based Innovation Section */}
         <PlatformInnovationPage />
 
+        {/* Core Highlights Section */}
+        <CoreHighlights />
+
+        {/* Why Choose Us Section */}
+        <WhyChoose />
+        
         {/* Mega Trends Section */}
         <MegaTrends />
 
         {/* Our Customers */}
         <CustomerCarousel />
-
-        {/* Global Clients Section */}
-        {/* <GlobalClients /> */}
       </div>
     </>
   );

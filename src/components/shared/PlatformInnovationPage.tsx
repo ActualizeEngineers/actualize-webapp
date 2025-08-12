@@ -11,7 +11,6 @@ import architectureImage from "../../assets/images/architecture.jpg";
 import deploymentImage from "../../assets/images/deployment.jpeg";
 import developmentImage from "../../assets/images/development.png";
 import testingImage from "../../assets/images/testing.jpg";
-import supportImage from "../../assets/images/support.png";
 
 const innovationSteps = [
   {
@@ -49,13 +48,6 @@ const innovationSteps = [
     desc: "Comprehensive automated and manual testing to ensure reliability, performance, and security. Real-world scenarios are simulated to catch edge cases and enhance user experience.",
     image: testingImage,
   },
-  {
-    icon: "fas fa-users-cog",
-    title: "SUPPORT",
-    color: "text-warning",
-    desc: "Ongoing support and scaling strategies tailored for growth and changing business needs. Proactive monitoring and feedback loops drive continuous improvement and customer satisfaction.",
-    image: supportImage,
-  },
 ];
 
 const settings = {
@@ -78,45 +70,49 @@ const PlatformInnovationPage = () => {
   const sliderRef = useRef<Slider | null>(null);
 
   return (
-    <section className="platform-innovation-section">
-      <h2 className="section-title-platform-innovation">
-        Platform-Based <span className="highlight">Innovation</span>
-      </h2>
-      <p className="lead">Explore our journey and achievements.</p>
-      <div className="container-fluid milestone-bg">
-        <Slider ref={sliderRef} {...settings}>
-          {innovationSteps.map((step, i) => (
-            <div
-              key={i}
-              className="custom-neo-card"
-              onMouseEnter={() => sliderRef.current?.slickPause()}
-              onMouseLeave={() => sliderRef.current?.slickPlay()}
-            >
-              <div className="custom-neo-card-left">
-                <div className={`milestone-icon ${step.color}`}>
-                  <i className={`${step.icon}`}></i>
-                </div>
-                <div className="milestone-item">
-                  <div className="milestone-text">
-                    <div className={`milestone-title ${step.color}`}>
-                      {step.title}
+    <div className="platform-innovation-container"> 
+      <div className="container">
+        <section className="platform-innovation-section">
+          <h2 className="section-title">
+            Platform-Based <span className="highlight">Innovation</span>
+          </h2>
+          <p className="lead">Explore our journey and achievements.</p>
+          <div className="container-fluid milestone-bg">
+            <Slider ref={sliderRef} {...settings}>
+              {innovationSteps.map((step, i) => (
+                <div
+                  key={i}
+                  className="custom-neo-card"
+                  onMouseEnter={() => sliderRef.current?.slickPause()}
+                  onMouseLeave={() => sliderRef.current?.slickPlay()}
+                >
+                  <div className="custom-neo-card-left">
+                    <div className={`milestone-icon ${step.color}`}>
+                      <i className={`${step.icon}`}></i>
                     </div>
-                    <div className="milestone-desc">{step.desc}</div>
+                    <div className="milestone-item">
+                      <div className="milestone-text">
+                        <div className={`milestone-title ${step.color}`}>
+                          {step.title}
+                        </div>
+                        <div className="milestone-desc">{step.desc}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="custom-neo-card-right d-flex align-items-center justify-content-center bg-white">
+                    <img
+                      className="milestone-image"
+                      src={step.image}
+                      alt={step.title}
+                    />
                   </div>
                 </div>
-              </div>
-              <div className="custom-neo-card-right d-flex align-items-center justify-content-center bg-white">
-                <img
-                  className="milestone-image"
-                  src={step.image}
-                  alt={step.title}
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
+              ))}
+            </Slider>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 

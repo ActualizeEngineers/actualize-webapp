@@ -60,7 +60,7 @@ const trends = [
     imageUrl: devopsImage,
     title: " DevOps Evolution",
     desc: "Focus on IDPs and self-service environments. Tools like Kubernetes, GitOps, Backstage, Terraform, ArgoCD.",
-    className: "platform-engineering", 
+    className: "platform-engineering",
     direction: "from-bottom",
   },
   {
@@ -111,30 +111,34 @@ const MegaTrends = () => {
   }, []);
 
   return (
-    <section className="mega-trends-section-dark">
+    <div className="mega-trends-container">
       <div className="container">
-        <div className="mb-5 text-center">
-          <h2 className="section-title-dark">
-            Mega <span className="accent">Trends</span>
-          </h2>
-        </div>
-        <div className="trends-mosaic-grid">
-          {trends.map((trend, i) => (
-            <div
-              key={i}
-              ref={(el) => (trendRefs.current[i] = el)}
-              className={`trend-card-mosaic ${trend.className} animate-on-scroll ${trend.direction}`}
-              style={{ backgroundImage: `url(${trend.imageUrl})` }}
-            >
-              <div className="card-overlay">
-                <h5>{trend.title}</h5>
-                {trend.desc && <p className="small mt-1">{trend.desc}</p>}
-              </div>
+        <section className="mega-trends-section-dark">
+          <div className="container">
+            <div className="mb-5 text-center">
+              <h2 className="section-title">
+                Mega <span className="highlight">Trends</span>
+              </h2>
             </div>
-          ))}
-        </div>
+            <div className="trends-mosaic-grid">
+              {trends.map((trend, i) => (
+                <div
+                  key={i}
+                  ref={(el) => (trendRefs.current[i] = el)}
+                  className={`trend-card-mosaic ${trend.className} animate-on-scroll ${trend.direction}`}
+                  style={{ backgroundImage: `url(${trend.imageUrl})` }}
+                >
+                  <div className="card-overlay">
+                    <h5>{trend.title}</h5>
+                    {trend.desc && <p className="small mt-1">{trend.desc}</p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 export default MegaTrends;
