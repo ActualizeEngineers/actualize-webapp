@@ -85,7 +85,7 @@ const CoreHighlights: React.FC = () => {
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.6 }
     );
 
     cardRefs.current.forEach((ref) => {
@@ -100,8 +100,8 @@ const CoreHighlights: React.FC = () => {
   }, []);
 
   return (
-    // <div className="core-highlights-container">
-    <div className="container-xl">
+    <div className="core-highlights-container">
+    <div className="container">
       <section className="core-highlights-section">
         <h2 className="section-title">
           Core <span className="highlight">Highlights</span>
@@ -148,7 +148,7 @@ const CoreHighlights: React.FC = () => {
         </div>
       </section>
     </div>
-    // </div>
+    </div>
   );
 };
 

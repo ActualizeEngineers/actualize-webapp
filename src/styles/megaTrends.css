@@ -1,8 +1,10 @@
 .mega-trends-container {
-  background-image: url('https://img.freepik.com/premium-photo/white-background-with-white-background-with-white-background-with-pattern-dots-whit_1277297-38849.jpg');
+  background-image: url('https://solutek-wp.laralink.com/wp-content/uploads/2024/08/test-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mega-trends-section-dark {
@@ -33,13 +35,11 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
+
 .trend-card-mosaic:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 24px rgb(41, 124, 219);
+  box-shadow: 0 12px 24px rgb(41 124 219);
 }
-
-
-
 
 .card-overlay {
   position: relative;
@@ -73,17 +73,22 @@
 .trend-card-mosaic.workflow-automation {
   grid-area: aiWorkflow;
 }
+
 .trend-card-mosaic.platform-engineering {
   grid-area: aiPlatform;
 }
+
 .trend-card-mosaic.data-analytics {
   grid-area: dataAnalytics;
 }
+
+/* Responsive Layout */
 
 @media (max-width: 991px) {
   .trends-mosaic-grid {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(180px, auto);
+    gap: 18px;
     grid-template-areas:
       "kitchen living"
       "bedroom living"
@@ -98,16 +103,20 @@
     grid-auto-rows: minmax(160px, auto);
     gap: 16px;
     grid-template-areas:
-      "kitchen"
-      "living"
-      "bedroom"
-      "steps"
-      "dining"
-      "office";
+      "aiAutomation"
+      "workflow"
+      "mlops"
+      "bots"
+      "analytics"
+      "security"
+      "aiWorkflow"
+      "aiPlatform"
+      "dataAnalytics";
   }
 
   .trend-card-mosaic {
     height: auto;
+    min-height: 160px; 
   }
 }
 
@@ -117,7 +126,6 @@
   transition: transform 0.9s ease, opacity 0.9s ease;
 }
 
-/* Direction-specific initial states */
 .from-top {
   transform: translateY(-40px);
 }
@@ -131,7 +139,6 @@
   transform: translateX(40px);
 }
 
-/* Final state when in view */
 .in-view {
   opacity: 1;
   transform: none;

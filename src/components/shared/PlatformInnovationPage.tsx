@@ -70,6 +70,7 @@ const PlatformInnovationPage = () => {
   const sliderRef = useRef<Slider | null>(null);
 
   return (
+    <div className="platform-innovation-container">
 
       <div className="container">
         <section className="platform-innovation-section">
@@ -91,7 +92,7 @@ const PlatformInnovationPage = () => {
                       <i className={`${step.icon}`}></i>
                     </div>
                     <div className="milestone-item">
-                      <div className="milestone-text">
+                      <div className="text-center">
                         <div className={`milestone-title ${step.color}`}>
                           {step.title}
                         </div>
@@ -112,6 +113,7 @@ const PlatformInnovationPage = () => {
           </div>
         </section>
       </div>
+    </div>
   );
 };
 
