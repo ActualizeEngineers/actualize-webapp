@@ -1,5 +1,5 @@
 .customer-carousel-container {
-  background-image: url("../assets/banners/customer-bg.jpeg");
+  background-image: url("https://solutek-wp.laralink.com/wp-content/uploads/2024/08/project-bg3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -142,6 +142,23 @@
   height: 40px;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
 }
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-slider {
+  overflow-x: visible;
+  width: 100%;
+}
+
+.custom-shadow {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
 
 @media (max-width: 768px) {
   .lead {
@@ -151,14 +168,6 @@
   .testimonial-card {
     padding: 20px;
   }
-}
-
-.hover-grow {
-  transition: transform 0.3s ease;
-}
-
-.hover-grow:hover {
-  transform: scale(1.05);
 }
 
 @media (max-width: 1200px) {
@@ -228,14 +237,4 @@
     padding: 7px;
     font-size: 0.9rem;
   }
-}
-
-.testimonial-slider {
-  overflow-x: visible;
-  width: 100%;
-}
-
-.custom-shadow {
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
