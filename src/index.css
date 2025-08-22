@@ -1,6 +1,0 @@
-html, body {
-    overflow-x: hidden; /* <-- CRITICAL: Prevents horizontal scrolling for the entire page */
-    width: 100%; /* <-- Ensures body takes up 100% of available width */
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
-}

@@ -34,7 +34,7 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background-color: #007dc5;
+  background-color: var(--brand-color);
   color: white;
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@
   left: -10px;
   width: 110px;
   height: 110px;
-  border: 2px dashed #007dc5; 
+  border: 2px dashed var(--brand-color); 
   border-radius: 50%;
   border-top-color: transparent; 
   animation: rotateCircle 3s linear infinite;
@@ -81,7 +81,7 @@
 .why-card h3 {
   font-size: 1.9rem;
   margin-bottom: 16px;
-  color: #007dc5;
+  color: var(--brand-color);
 }
 
 .why-card p {

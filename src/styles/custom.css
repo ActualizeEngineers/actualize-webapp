@@ -1,3 +1,7 @@
+:root {
+  --brand-color: #007dc5;
+}
+
 .video-banner {
   position: relative;
   width: 100%;
@@ -36,39 +40,14 @@
   border-radius: 8px;
 }
 
-.hero-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.hero-logo {
-  height: 25px;
-  margin-right: 10px;
-}
-
 .brand-name {
-  color: #007dc5;
+  color: var(--brand-color);
 }
 
 .hero-text {
   font-size: 0.8rem;
   color: #333;
   line-height: 1.5;
-}
-
-.hero-button {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #00a9e0;
-  color: #fff;
-  text-decoration: none;
-  padding: 2%;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 1rem;
 }
 
 .home-content-offset {
@@ -95,7 +74,7 @@
 }
 
 .section-title .highlight {
-  color: #007dc5;
+  color: var(--brand-color);
 }
 
 .card {

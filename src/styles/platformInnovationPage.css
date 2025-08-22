@@ -11,7 +11,7 @@
 }
 
 .platform-innovation-section .highlight {
-  color: #007dc5;
+  color: var(--brand-color);
 }
 
 .platform-innovation-section .lead {
