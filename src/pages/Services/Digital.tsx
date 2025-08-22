@@ -73,11 +73,8 @@ const Digital: React.FC = () => {
     if (contactRef.current) observer.observe(contactRef.current);
 
     return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (overviewRef.current) observer.unobserve(overviewRef.current);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (servicesRef.current) observer.unobserve(servicesRef.current);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (contactRef.current) observer.unobserve(contactRef.current);
     };
   }, []);
@@ -100,64 +97,68 @@ const Digital: React.FC = () => {
         </div>
       </section>
 
-      {/* Digital Transformation Overview */}
-      <section
-        ref={overviewRef}
-        className="digital-overview-section py-5 fade-in-section"
-      >
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <h2 className="fw-bold text-primary mb-4">
-                Digital Transformation Overview
+      <div className="digital-page-section">
+        {/* Digital Transformation Overview */}
+        <section
+          ref={overviewRef}
+          className="digital-overview-section py-5 fade-in-section"
+        >
+          <div className="container">
+            <div className="row align-items-center">
+              <h2 className="section-title text-center mb-4">
+                Digital{" "}
+                <span className="highlight">Transformation Overview</span>
               </h2>
-              <p className="lead mb-4">
-                In today's rapidly evolving digital landscape, businesses must
-                transform to stay competitive. Our digital transformation
-                services empower organizations to innovate, optimize processes,
-                and enhance customer experiences.
-              </p>
-              <p className="mb-4">
-                We leverage cutting-edge technologies and strategic insights to
-                drive meaningful change, ensuring a seamless transition to a
-                future-ready enterprise.
-              </p>
-            </div>
-            <div className="col-lg-6 text-center">
-              {/* Optional: Add an image or illustration related to digital transformation */}
-              <img
-                src={digitalHero}
-                alt="Digital Transformation"
-                className="img-fluid rounded shadow-lg"
-                style={{ maxHeight: "400px" }}
-              />
+              <div className="col-lg-6">
+                <p className="mb-4">
+                  In today's rapidly evolving digital landscape, businesses must
+                  transform to stay competitive. Our digital transformation
+                  services empower organizations to innovate, optimize
+                  processes, and enhance customer experiences.
+                  <hr />
+                  We leverage cutting-edge technologies and strategic insights
+                  to drive meaningful change, ensuring a seamless transition to
+                  a future-ready enterprise.
+                </p>
+              </div>
+              <div className="col-lg-6 text-center">
+                {/* Optional: Add an image or illustration related to digital transformation */}
+                <img
+                  src={digitalHero}
+                  alt="Digital Transformation"
+                  className="img-fluid rounded shadow-lg"
+                  style={{ maxHeight: "400px" }}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Our Services */}
-      <section
-        ref={servicesRef}
-        className="our-services-section bg-light fade-in-section"
-      >
-        <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="fw-bold text-primary">Our Digital Services</h2>
-            <p className="lead text-muted">
-              Driving digital outcomes through cloud modernization, data
-              intelligence, and agile delivery.
-            </p>
+        {/* Our Services */}
+        <section
+          ref={servicesRef}
+          className="our-services-section fade-in-section"
+        >
+          <div className="container">
+            <div className="text-center mb-1">
+              <h2 className="section-title text-center mb-4">
+                Our <span className="highlight">Digital Services</span>
+              </h2>
+              <p className="lead text-muted m-0">
+                Driving digital outcomes through cloud modernization, data
+                intelligence, and agile delivery.
+              </p>
+            </div>
+
+            <CardCarousel services={digitalServices} />
           </div>
-
-          <CardCarousel services={digitalServices} />
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Contact Us */}
       <section
         className="py-5 text-white"
-        style={{ backgroundColor: "#00ccd9" }}
+        style={{ backgroundColor: "var(--brand-color)" }}
         ref={contactRef}
       >
         <div className="container text-center">

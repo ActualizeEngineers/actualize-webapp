@@ -1,8 +1,8 @@
 import React from "react";
 import "../../styles/team.css";
 import Navbar from "../../layouts/Navbar";
-import Harish from '../../assets/team/Harish.jpg'
-import Akhilesh from '../../assets/team/Akhilesh.jpg'
+import Harish from "../../assets/team/Harish.jpg";
+import Akhilesh from "../../assets/team/Akhilesh.jpg";
 
 type TeamMember = {
   imageUrl: string;
@@ -14,7 +14,7 @@ type TeamMember = {
 
 const teamData: TeamMember[] = [
   {
-    imageUrl:Harish,
+    imageUrl: Harish,
     alt: "Harish",
     name: "Harish",
     role: "XXXXXX",
@@ -22,7 +22,7 @@ const teamData: TeamMember[] = [
       "Leads the company with a strategic vision and ensures sustainable growth across all departments.",
   },
   {
-    imageUrl:Akhilesh,
+    imageUrl: Akhilesh,
     alt: "Akhilesh",
     name: "Akhilesh",
     role: "XXXXXX",
@@ -52,24 +52,28 @@ const teamData: TeamMember[] = [
 const Team: React.FC = () => {
   return (
     <>
-    <div className="team-container">
-      <Navbar />
-    </div>
+      <div className="team-container">
+        <Navbar />
+      </div>
       <div className="leaders-container">
-        <h1 className="leaders-heading">Meet Our Members</h1>
-        <div className="leaders-image-con">
-          {teamData.map((leader, idx) => (
-            <div className="image-card" key={idx}>
-              <img src={leader.imageUrl} alt={leader.alt} />
-              <div className="card-description-overlay">
-                <p>{leader.description}</p>
+        <div className="container">
+          <h2 className="section-title text-center mb-5">
+            Meet Our <span className="highlight">Members</span>
+          </h2>
+          <div className="leaders-image-con">
+            {teamData.map((leader, idx) => (
+              <div className="image-card" key={idx}>
+                <img src={leader.imageUrl} alt={leader.alt} />
+                <div className="card-description-overlay">
+                  <p>{leader.description}</p>
+                </div>
+                <div className="image-label">
+                  <h3>{leader.name}</h3>
+                  <p>{leader.role}</p>
+                </div>
               </div>
-              <div className="image-label">
-                <h3>{leader.name}</h3>
-                <p>{leader.role}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

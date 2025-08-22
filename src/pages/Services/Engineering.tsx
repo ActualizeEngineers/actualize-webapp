@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/engineering.css";
+
 import EngineeringServicesHero from "../../assets/images/services1.jpg";
 import EngineeringCarousel from "../../components/shared/EngineeeringCarousel";
 import OfferCarousel from "../../components/shared/OfferCarousel";
@@ -25,13 +26,15 @@ const Engineering: React.FC = () => {
           </p>
         </div>
       </section>
+      <div className="engineering-carousel">
 
       <OfferCarousel />
       <EngineeringCarousel />
+      </div>
 
       <section
         className="py-5 text-white"
-        style={{ backgroundColor: "#00ccd9" }}
+        style={{ backgroundColor: "var(--brand-color)" }}
       >
         <div className="container text-center">
           <h3 className="fw-bold">

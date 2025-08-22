@@ -8,16 +8,17 @@ import LifeAt from './pages/Company/LifeAt';
 
 import Engineering from './pages/Services/Engineering';
 import Digital from './pages/Services/Digital';
+import Software from './pages/Services/Software';
+import Product from './pages/Services/Product';
 
 import Heavy from './pages/Industries/Heavy';
 import Industrial from './pages/Industries/Industrial';
 import Automotive from './pages/Industries/Automotive';
 import Process from './pages/Industries/Process';
 
+import Blog from './pages/Blog';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
-import Software from './pages/Services/Software';
-import Product from './pages/Services/Product';
 
 const App: React.FC = () => {
   return (
@@ -44,6 +45,7 @@ const App: React.FC = () => {
         <Route path="/industries/process-engineering" element={<Process />} />
 
         {/* Other */}
+        <Route path="/blog" element={<Blog />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

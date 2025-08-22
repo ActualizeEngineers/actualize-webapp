@@ -6,34 +6,34 @@ import digitalHero from "../../assets/services/software.jpg";
 import Navbar from "../../layouts/Navbar";
 import { Link } from "react-router-dom";
 
-const Software: React.FC = () => {
-  const softwareServices = [
-    {
-      title: "Custom Web Applications",
-      desc: "Robust, scalable, and secure apps tailored to your workflow.",
-    },
-    {
-      title: "Mobile App Development",
-      desc: "iOS & Android apps designed for usability, speed, and performance.",
-    },
-    {
-      title: "Enterprise Solutions",
-      desc: "CRMs, ERPs, and process automation tailored for enterprise needs.",
-    },
-    {
-      title: "API & Integration",
-      desc: "Seamless integration with internal and third-party systems.",
-    },
-    {
-      title: "Cloud Migration",
-      desc: "Migrate legacy apps to modern cloud-native platforms.",
-    },
-    {
-      title: "Support & Maintenance",
-      desc: "Ongoing support, optimization, and tech upgrades.",
-    },
-  ];
+const softwareServices = [
+  {
+    title: "Custom Web Applications",
+    desc: "Robust, scalable, and secure apps tailored to your workflow.",
+  },
+  {
+    title: "Mobile App Development",
+    desc: "iOS & Android apps designed for usability, speed, and performance.",
+  },
+  {
+    title: "Enterprise Solutions",
+    desc: "CRMs, ERPs, and process automation tailored for enterprise needs.",
+  },
+  {
+    title: "API & Integration",
+    desc: "Seamless integration with internal and third-party systems.",
+  },
+  {
+    title: "Cloud Migration",
+    desc: "Migrate legacy apps to modern cloud-native platforms.",
+  },
+  {
+    title: "Support & Maintenance",
+    desc: "Ongoing support, optimization, and tech upgrades.",
+  },
+];
 
+const Software: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
@@ -53,9 +53,10 @@ const Software: React.FC = () => {
       </section>
 
       {/* Overview */}
-      <section className="py-5">
+      <section className="py-5 text-center">
         <div className="container">
-          <h2 className="mb-4">Overview</h2>
+          {/* <h2 className="mb-4">Overview</h2> */}
+          <h2 className="section-title mb-2">Overview</h2>
           <p>
             At Actualize, we build scalable, secure, and performance-driven
             software solutions tailored to your needs — whether it's a web
@@ -67,9 +68,11 @@ const Software: React.FC = () => {
       </section>
 
       {/* Key Offerings */}
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-light text-center">
         <div className="container">
-          <h2 className="mb-4">Our Core Offerings</h2>
+          <h2 className="section-title mb-5">
+            Our <span className="highlight">Core Offerings</span>
+          </h2>
           <div className="row g-4">
             {softwareServices.map((item, idx) => (
               <div className="col-md-6 col-lg-4" key={idx}>
@@ -88,7 +91,7 @@ const Software: React.FC = () => {
       {/* CTA */}
       <section
         className="py-5 text-white"
-        style={{ backgroundColor: "#00ccd9" }}
+        style={{ backgroundColor: "var(--brand-color)" }}
       >
         <div className="container text-center">
           <h3 className="fw-bold">Need a custom software solution?</h3>
@@ -96,7 +99,10 @@ const Software: React.FC = () => {
             Talk to our engineers or explore our case studies.
           </p>
           <div className="d-flex justify-content-center gap-3 mt-3">
-            <Link to="/contact" className="btn btn-light btn-lg custom-hover-btn">
+            <Link
+              to="/contact"
+              className="btn btn-light btn-lg custom-hover-btn"
+            >
               Contact Us
             </Link>
           </div>

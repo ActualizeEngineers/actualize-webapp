@@ -77,7 +77,7 @@ const locations: Location[] = [
 const WorldMap: React.FC = () => {
   return (
     <div className='map-wrapper'>
-    <MapContainer center={[20, 0]} zoom={3} style={{ height: '100%', width: '100%' }}  zoomControl={false}
+    <MapContainer center={[20, 0] as [number, number]} zoom={3} style={{ height: '100%', width: '100%' }}  zoomControl={false}
   dragging={false}
   scrollWheelZoom={false}
   doubleClickZoom={false}
