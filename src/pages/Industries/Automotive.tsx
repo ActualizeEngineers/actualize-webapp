@@ -76,7 +76,7 @@ const Automotive: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-5 bg-light">
+      <section className="py-5">
         <div className="container">
           <h2 className="mb-4">Our Expertise</h2>
 
