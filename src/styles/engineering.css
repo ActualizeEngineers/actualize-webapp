@@ -1,3 +1,12 @@
+.engineering-carousel {
+  background-image: url(/src/assets/banners/engineering-bg-png.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  box-sizing: border-box;
+}
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -61,7 +70,7 @@
 .custom-list li::before {
   content: "✔️";
   margin-right: 8px;
-  color: #d14f81;
+  color: var(--brand-color);
 }
 
 .highlight-card {
@@ -116,19 +125,6 @@
   font-size: 1rem;
   color: blue;
   font-size: 1.5rem;
-}
-
-.icon-wrapper {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1rem auto;
-  position: relative;
-}
-
-.bounce-icon {
-  width: 30px;
-  height: 30px;
-  animation: bounce 2s ease-in-out infinite;
 }
 
 .custom-hover-btn:hover {

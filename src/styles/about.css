@@ -26,11 +26,6 @@ img.img-fluid.rounded {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
-.core-values-section {
-  background-color: #f8f9fa;
-  padding: 60px 0;
-}
-
 .core-value-card {
   background-color: #ffffff;
   border-radius: 12px;

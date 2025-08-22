@@ -9,18 +9,11 @@
 }
 
 .leaders-container {
-  background-color: #f9f9f9;
-  width: 100vw;
-  padding: 20px 10px;
   box-sizing: border-box;
-}
-
-.leaders-heading {
-  color: #d14f81;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: 700;
+  background-image: url(https://solutek-wp.laralink.com/wp-content/uploads/2024/08/project-bg3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .leaders-image-con {
@@ -65,7 +58,6 @@
   width: 100%;
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
-  /* backdrop-filter: blur(3px); */
   text-align: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -121,7 +113,6 @@
   }
   .leaders-image-con {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
   }

@@ -152,7 +152,7 @@ const Careers: React.FC = () => {
       {/* Call to Action */}
       <section
         className="py-5 text-white text-center"
-        style={{ backgroundColor: "#00ccd9" }}
+        style={{ backgroundColor: 'var(--brand-color)' }}
       >
         <div className="container">
           <h2 className="mb-3">Your Future Starts Here</h2>

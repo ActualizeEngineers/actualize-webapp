@@ -1,52 +1,77 @@
-
-.highlight-card {
- padding: 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
-
-}
-
 .carousel-slide {
-  width: 100%!important; /* Force the card to fill the slide */
-  padding: 20px;
+  padding: 15px;
+  display: flex ; 
+  justify-content: center;
+  height: 100%;
   box-sizing: border-box;
-  text-align: center;
-}
-
-.carousel-container {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 40px 0;
 }
 
 
-.highlight-card:hover {
-  transform: translateY(-5px);
+.timeline-card {
+  background: #fff;
+  border-left: 6px solid #007dc5;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;     
+  min-height: 180px;   
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.icon-wrapper {
-  background-color: #e6f0ff;
-  width: 60px;
-  height: 60px;
+.timeline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0, 125, 197, 0.25);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -25px;
+  top: 20px;
+  background: #007dc5;
+  color: #fff;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 125, 197, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.bounce-icon {
-  animation: bounce 1.5s infinite;
+.timeline-card:hover .timeline-icon {
+  transform: rotate(10deg) scale(1.1);
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+/* Text styling */
+.timeline-content h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #222;
+  font-size: 1rem;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Slick dots */
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #007dc5;
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007dc5;
+  opacity: 1;
+  font-size: 12px;
 }

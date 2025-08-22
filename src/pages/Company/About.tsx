@@ -18,30 +18,23 @@ const About: React.FC = () => {
       <div className="about-container">
         <Navbar />
       </div>
+
       <div className="container py-5">
         <section className="fade-in pt-navbar-offset">
           <div className="container text-center">
-            <h1 className="display-5 fw-bold text-primary mb-3">
-              About Actualize
-            </h1>
-            <p className="lead text-muted mx-auto heading">
-              Empowering <span className="fw-semibold">Engineering</span> +{" "}
-              <span className="fw-semibold">Digital Innovation</span>
+            <h2 className="section-title m-0">
+              About <span className="highlight">Actualize</span>
+            </h2>
+            <p className="lead text-muted m-0 heading fw-semibold">
+              Empowering Engineering + Digital Innovation
             </p>
           </div>
         </section>
       </div>
 
-      <div className="container py-5">
+      <div className="container py-5 pt-0">
         {/* Company Introduction */}
-        <div className="row align-items-center mb-5 fade-in delay-1">
-          <div className="col-md-6">
-            <img
-              src={aboutImage}
-              className="img-fluid rounded shadow"
-              alt="About Actualize"
-            />
-          </div>
+        <div className="row align-items-center m-0 fade-in delay-1">
           <div className="col-md-6">
             <h3>Who We Are</h3>
             <p>
@@ -56,9 +49,16 @@ const About: React.FC = () => {
               through deep domain knowledge and agile execution.
             </p>
           </div>
+          <div className="col-md-6">
+            <img
+              src={aboutImage}
+              className="img-fluid rounded shadow"
+              alt="About Actualize"
+            />
+          </div>
         </div>
 
-        {/* Vision & Mission */}
+        {/* Vision */}
         <div className="row align-items-center my-5 fade-in delay-2">
           <div className="col-md-6">
             <img
@@ -87,6 +87,7 @@ const About: React.FC = () => {
           </div>
         </div>
 
+        {/* Mission */}
         <div className="row align-items-center my-5 fade-in delay-3">
           <div className="col-md-6">
             <h3 className="mb-3">Our Mission</h3>
@@ -105,10 +106,14 @@ const About: React.FC = () => {
             />
           </div>
         </div>
+      </div>
 
-        {/* Core Values */}
-        <div className="container my-5 core-values-section">
-          <h3 className="text-center mb-4">Our Core Values</h3>
+      {/* Core Values */}
+      <div className="bg-light py-5">
+        <div className="container">
+          <h2 className="section-title text-center mb-5">
+            Our <span className="highlight">Core Values</span>
+          </h2>
           <div className="row text-center g-4">
             <div className="col-md-3 col-sm-6">
               <div className="core-value-card">
@@ -160,28 +165,31 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Meet the Team CTA */}
-        <section className="bg-light py-5 fade-in delay-4">
-          <div className="container text-center">
-            <h2 className="mb-3">Meet the People Behind Actualize</h2>
-            <p className="lead text-muted text-center">
-              Discover the passionate minds driving innovation and excellence at
-              Actualize.
-            </p>
-            <a
-              href="/company/team"
-              className="btn btn-outline-primary btn-lg mt-3"
-            >
-              <i className="fas fa-users me-2"></i> Meet Our Team
-            </a>
-          </div>
-        </section>
       </div>
+
+      {/* Meet the Team CTA */}
+      <section className="py-5 fade-in delay-4">
+        <div className="container text-center">
+          <h2 className="section-title">
+            Meet the People Behind <span className="highlight">Actualize</span>
+          </h2>
+          <p className="lead text-muted text-center">
+            Discover the passionate minds driving innovation and excellence at
+            Actualize.
+          </p>
+          <a
+            href="/company/team"
+            className="btn btn-outline-primary btn-lg mt-3"
+          >
+            <i className="fas fa-users me-2"></i> Meet Our Team
+          </a>
+        </div>
+      </section>
+
       {/* Services/Contact CTA */}
       <section
         className="text-white py-5 fade-in delay-5"
-        style={{ backgroundColor: "#00ccd9" }}
+        style={{ backgroundColor: "var(--brand-color)" }}
       >
         <div className="container-fluid text-center">
           <h2 className="mb-3">Want to Know How We Work?</h2>

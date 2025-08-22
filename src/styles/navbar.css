@@ -22,9 +22,9 @@
 .nav-link {
   color: #000 !important;
   margin: 0;
-  font-size: 1.3rem !important;
+  font-size: 1.1rem !important;
   padding: 5px !important;
-  font-weight: 450 !important;
+  font-weight: 550 !important;
 }
 
 .navbar-nav {
@@ -72,4 +72,8 @@
   color: var(--brand-color) !important;
   border-bottom: var(--brand-color) 2px solid !important;
   font-weight: bold;
+}
+
+.navbar-toggler {
+  background-color: var(--brand-color) !important;
 }
