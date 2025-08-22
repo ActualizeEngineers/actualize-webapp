@@ -31,7 +31,6 @@ const Navbar: React.FC = () => {
           aria-controls="mainNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          style={{ backgroundColor: "#00ccd9" }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -172,6 +171,11 @@ const Navbar: React.FC = () => {
                   </NavLink>
                 </li>
               </ul>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/blog" className="nav-link">
+              Blog
+              </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/careers" className="nav-link">

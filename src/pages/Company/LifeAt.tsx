@@ -11,7 +11,7 @@ const LifeAt: React.FC = () => {
     <div className="life-container">
     <Navbar />
     </div>
-      <section className="life-section py-5">
+      <section className="py-5">
         <div className="container">
           <div className="text-center mb-4">
             <h2 className="section-title">

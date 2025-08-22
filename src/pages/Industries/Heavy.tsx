@@ -111,8 +111,9 @@ const Heavy: React.FC = () => {
                       {service.desc}
                     </p>
                     <button
-                      className="btn blue mt-3"
+                      className="btn mt-3"
                       onClick={() => showDetails(service.short)}
+                      style={{ backgroundColor: "var(--brand-color)"}}
                     >
                       View More Details
                     </button>
@@ -127,7 +128,7 @@ const Heavy: React.FC = () => {
       {showConstruction && (
         <section className="py-5">
           <div className="container">
-            <h2 className="mb-4">Construction Equipment We Support</h2>
+            <h2 className="mb-4"  style={{ color: "var(--brand-color)" }}>Construction Equipment We Support</h2>
             <p className="mb-4 text-muted">
               Actualize provides design, simulation, and lifecycle engineering
               support for a wide range of heavy equipment. Below are some of the
@@ -240,7 +241,7 @@ const Heavy: React.FC = () => {
         </section>
       )}
 
-      <section className="py-5 text-white blue">
+      <section className="py-5 text-white" style={{backgroundColor: "var(--brand-color)"}}>
         <div className="container text-center">
           <h3 className="fw-bold">Looking for a Heavy Engineering partner?</h3>
           <p className="lead">

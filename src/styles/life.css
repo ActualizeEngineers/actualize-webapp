@@ -8,10 +8,6 @@
   overflow: hidden;
 }
 
-.life-section {
-  background-color: #f9f9f9;
-}
-
 .life-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -44,7 +40,7 @@
 .life-content h5 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #d14f81;
+  color: var(--brand-color);
 }
 
 .life-content p {

@@ -11,8 +11,9 @@
   transform: translateY(-5px);
 } */
 
+
 .heavy-container {
- position: relative;
+  position: relative;
   height: 70vh;
   background-image: url("../../assets/industries/heavy.jpg");
   background-size: cover;
@@ -22,7 +23,7 @@
 }
 
 .auto-container {
- position: relative;
+  position: relative;
   height: 70vh;
   background-image: url("../../assets/industries/automotive.jpg");
   background-size: cover;
@@ -30,7 +31,8 @@
   width: 100%;
   overflow: hidden;
 }
-.indus-container{
+
+.indus-container {
   position: relative;
   height: 70vh;
   background-image: url("../../assets/industries/industrial.jpg");
@@ -39,7 +41,8 @@
   width: 100%;
   overflow: hidden;
 }
-.process-container{
+
+.process-container {
   position: relative;
   height: 70vh;
   background-image: url("../../assets/industries/process.jpg");
@@ -48,13 +51,6 @@
   width: 100%;
   overflow: hidden;
 }
-
-.blue {
-    background-Color: #00ccd9 !important; 
-    color: white !important;
-}
-
-
 
 .nav-tabs .nav-link {
   background-color: white !important;
@@ -72,8 +68,24 @@
 }
 
 .nav-tabs .nav-link.active {
-  background-color: #007dc5 !important;
+  background-color: var(--brand-color) !important;
   color: #fff !important;
-  border-color: #007dc5 !important;
+  border-color: var(--brand-color) !important;
   font-weight: 600;
+}
+
+.mb-4 {
+  text-align: center;
+  color: var(--brand-color);
+}
+
+.btn blue mt-3 {
+  color: var(--brand-color);
+}
+.py-5{
+  background-image: url("https://solutek-wp.laralink.com/wp-content/uploads/2024/08/faq-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  box-sizing: border-box;
 }
