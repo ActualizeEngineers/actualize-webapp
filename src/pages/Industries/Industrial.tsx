@@ -7,6 +7,8 @@ import electricity_grid from '../../assets/images/electricity_grid.png'
 import satellite_dish from '../../assets/images/satellite_dish.png'
 import ind_eng from "../../assets/industries/id3.jpg";
 
+import { Link } from "react-router-dom";
+
 import '../../styles/industrial.css';
 
 const industries = [
@@ -76,6 +78,21 @@ const Industrial: React.FC = () => {
         ))}
       </div>
     </section>
+
+
+    <section className="py-5 text-white" style={{backgroundColor: "var(--brand-color)"}}>
+        <div className="container text-center">
+          <h3 className="fw-bold">Let’s Build Smarter Engineering Solutions Together</h3>
+          <p className="lead">
+            Talk to our experts or explore our other industry solutions.
+          </p>
+          <div className="d-flex justify-content-center gap-3 mt-3">
+            <Link to="/contact" className="btn btn-light btn-lg">
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
