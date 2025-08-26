@@ -1,77 +1,200 @@
-.carousel-slide {
-  padding: 20px;
-  display: flex !important;
-  justify-content: center;
+.engineering-carousel-container {
+  background-image: url("../assets/banners/what-we-offer.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-attachment: fixed;
+  background-position: center;
+
 }
 
-.service-card {
+.scroll-cards-container {
+  position: relative;
+  padding-bottom: 6%;
+}
+
+.scroll-card {
   background: #fff;
+  padding: 2%;
   border-radius: 14px;
   width: 100%;
-  max-width: 360px;
-  height: 100%;
-  max-height: 400px;
-  overflow: hidden;
+  height: 400px;
+  margin: 0 auto 80px auto;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: box-shadow 0.35s, transform 0.35s;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  position: sticky;
+  top: 80px;
+  z-index: 1;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-}
-
-/* Image section */
-.service-image {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
 
 .service-image {
   width: 100%;
+  max-width: 50%;
   height: 100%;
-  min-height: 180px;
-  max-height: 180.1px;
   object-fit: cover;
-  transition: transform 0.5s ease;
-  margin: 0;
-}
-
-.service-card:hover .service-image {
-  transform: scale(1.08);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
 
 .service-info {
   padding: 1.5rem;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service-info h5 {
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #007dc5;
+  color: #000;
 }
 
 .service-info p {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #444;
+  color: #222222;
 }
 
-/* Dots */
-.slick-dots li button:before {
-  font-size: 10px;
-  color: #007dc5;
-  opacity: 0.6;
+.learn-more-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.18s;
+  letter-spacing: 0.01em;
+  cursor: pointer;
 }
 
-.slick-dots li.slick-active button:before {
-  color: #007dc5;
-  opacity: 1;
-  font-size: 12px;
+.learn-more-arrow {
+  font-size: 1.5em;
+  margin-left: 0.45em;
+  color: #000;
+  transition: transform 0.16s;
+  display: inline-block;
+}
+
+.learn-more-link:hover .learn-more-arrow {
+  transform: translateX(4px);
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-self: flex-end;
+}
+
+.service-tag {
+  background: #f2f5f7;
+  color: var(--brand-color);
+  font-size: 0.87rem;
+  border-radius: 8px;
+  padding: 0.4em 1em;
+  font-weight: 500;
+  border: 1px solid #e1e4ea;
+  transition: background 0.2s;
+  margin-right: 0.5rem;
+}
+
+.service-tag:last-child {
+  margin-right: 0;
+}
+
+.scroll-card:hover .service-tag {
+  background: #eaf1fb;
+}
+
+/* Base styles: already given by user (unchanged) */
+
+/* Responsive adjustments */
+
+/* Large desktops and above */
+@media (min-width: 1200px) {
+  .service-image {
+    max-width: 50%;
+    height: 100%;
+  }
+  .service-info h5 {
+    font-size: 2rem;
+  }
+  .service-info p {
+    font-size: 1rem;
+  }
+  .scroll-card {
+    height: 400px;
+    padding: 2%;
+  }
+}
+
+/* Desktops and laptops (992px and below) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .service-image {
+    max-width: 45%;
+    height: auto;
+  }
+  .service-info h5 {
+    font-size: 1.75rem;
+  }
+  .service-info p {
+    font-size: 0.95rem;
+  }
+  .scroll-card {
+    height: auto;
+    padding: 1.8%;
+  }
+}
+
+/* Tablets and medium devices (767px and below) */
+@media (max-width: 767px) {
+  .service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px 14px 0 0; /* keep consistent rounded corners */
+  }
+  .scroll-card {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5%;
+    margin-bottom: 50px;
+  }
+  .service-info {
+    padding: 1rem 0.8rem;
+    text-align: center;
+  }
+  .service-info h5 {
+    font-size: 1.4rem;
+  }
+  .service-info p {
+    font-size: 0.9rem;
+  }
+  .learn-more-link {
+    font-size: 1rem;
+  }
+  .service-tags {
+    justify-content: center;
+  }
+}
+
+/* Small phones and below (480px and below) */
+@media (max-width: 480px) {
+  .service-info h5 {
+    font-size: 1.2rem;
+  }
+  .service-info p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  .learn-more-link {
+    font-size: 0.9rem;
+  }
+  .service-tag {
+    font-size: 0.8rem;
+    padding: 0.3em 0.8em;
+  }
 }

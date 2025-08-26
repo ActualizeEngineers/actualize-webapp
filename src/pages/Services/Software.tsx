@@ -45,10 +45,12 @@ const Software: React.FC = () => {
       >
         <Navbar />
         <div className="overlay">
-          <h1 className="display-4 fw-bold">Software Solutions</h1>
-          <p className="lead">
-            Tailored software for your unique business challenges.
-          </p>
+          <h1 className="hero-heading">
+            Software
+            <span className="overlay-text">
+              INNOVATION DRIVEN BY <span className="highlight">TECHNOLOGY</span>
+            </span>
+          </h1>
         </div>
       </section>
 

@@ -18,18 +18,19 @@ const Engineering: React.FC = () => {
       >
         <Navbar />
         <div className="overlay">
-          <h1 className="display-4 fw-bold">Engineering Services</h1>
-          <p className="lead">
-            Delivering comprehensive and customized engineering design solutions
-            to meet your unique needs, ensuring quality, innovation, and
-            sustainability.
-          </p>
+          <h1 className="hero-heading">
+            ENGINEERING
+            <span className="overlay-text">
+              CUSTOMIZED SERVICES FOR YOUR
+              <span className="highlight"> SUCCESS</span>
+            </span>
+          </h1>
         </div>
       </section>
-      <div className="engineering-carousel">
 
-      <OfferCarousel />
-      <EngineeringCarousel />
+      <div className="engineering-carousel">
+        <OfferCarousel />
+        <EngineeringCarousel />
       </div>
 
       <section
@@ -44,7 +45,10 @@ const Engineering: React.FC = () => {
             Talk to our engineers or explore our case studies.
           </p>
           <div className="d-flex justify-content-center gap-3 mt-3">
-            <Link to="/contact" className="btn btn-light btn-lg custom-hover-btn">
+            <Link
+              to="/contact"
+              className="btn btn-light btn-lg custom-hover-btn"
+            >
               Contact Us
             </Link>
           </div>

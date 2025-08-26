@@ -9,6 +9,8 @@ import blog3 from "../assets/images/electricity_grid.png";
 import blog4 from "../assets/images/electricity_grid.png";
 import blog5 from "../assets/images/electricity_grid.png";
 import blog6 from "../assets/images/electricity_grid.png";
+import blog7 from "../assets/images/electricity_grid.png";
+import blog8 from "../assets/images/electricity_grid.png";
 
 const blogs = [
   {
@@ -53,12 +55,25 @@ const blogs = [
     author: "solutek",
     image: blog6,
   },
+  {
+    id: 7,
+    title: "Team Collaboration Boosting Productivity",
+    date: "Aug 10, 2024",
+    author: "solutek",
+    image: blog5,
+  },
+  {
+    id: 8,
+    title: "Leveraging Descriptive Solutions for Business Growth",
+    date: "Aug 08, 2024",
+    author: "solutek",
+    image: blog6,
+  },
 ];
 
 const Blog = () => {
   return (
     <>
-      {/* Hero Section */}
       <section
         className="hero-section text-white text-center"
         style={{

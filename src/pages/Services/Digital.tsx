@@ -90,27 +90,26 @@ const Digital: React.FC = () => {
       >
         <Navbar />
         <div className="overlay">
-          <h1 className="display-4 fw-bold">Digital Transformation</h1>
-          <p className="lead">
-            Transforming ideas into intelligent, scalable solutions.
-          </p>
+          <h1 className="hero-heading">
+            Digital
+            <span className="overlay-text">
+              TRANSFORMING IDEAS INTO <span className="highlight">IMPACT</span>
+            </span>
+          </h1>
         </div>
       </section>
 
-      <div className="digital-page-section">
-        {/* Digital Transformation Overview */}
-        <section
-          ref={overviewRef}
-          className="digital-overview-section py-5 fade-in-section"
-        >
-          <div className="container">
+      {/* Digital Transformation Overview */}
+      <div className="digital-overview-section">
+        <div className="container py-5 px-0">
+          <section ref={overviewRef} className="fade-in-section">
             <div className="row align-items-center">
               <h2 className="section-title text-center mb-4">
                 Digital{" "}
                 <span className="highlight">Transformation Overview</span>
               </h2>
               <div className="col-lg-6">
-                <p className="mb-4">
+                <p>
                   In today's rapidly evolving digital landscape, businesses must
                   transform to stay competitive. Our digital transformation
                   services empower organizations to innovate, optimize
@@ -131,14 +130,12 @@ const Digital: React.FC = () => {
                 />
               </div>
             </div>
-          </div>
-        </section>
-
+          </section>
+        </div>
+      </div>
+      <div className="our-services-section">
         {/* Our Services */}
-        <section
-          ref={servicesRef}
-          className="our-services-section fade-in-section"
-        >
+        <section ref={servicesRef} className="container fade-in-section">
           <div className="container">
             <div className="text-center mb-1">
               <h2 className="section-title text-center mb-4">
