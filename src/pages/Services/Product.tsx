@@ -1,39 +1,48 @@
 import React from "react";
-import "../../styles/digital.css";
+import "../../styles/pages/services/product.css";
 
 import digitalHero from "../../assets/icons/innovation.png";
 
 import Navbar from "../../layouts/Navbar";
 import { Link } from "react-router-dom";
 
-const Product: React.FC = () => {
-  const productServices = [
-    {
-      title: "MVP Development",
-      desc: "Rapid prototyping and MVP creation to test your product in the market.",
-    },
-    {
-      title: "End-to-End Product Engineering",
-      desc: "Full-cycle development from architecture to deployment and scaling.",
-    },
-    {
-      title: "UI/UX Design",
-      desc: "User-centric interface and experience design aligned with product goals.",
-    },
-    {
-      title: "Mobile & Web App Development",
-      desc: "Cross-platform development for modern digital experiences.",
-    },
-    {
-      title: "Product Re-engineering",
-      desc: "Modernize legacy systems into high-performing, modern solutions.",
-    },
-    {
-      title: "Product Strategy & Consulting",
-      desc: "Refine product ideas, go-to-market strategy, and feature roadmap.",
-    },
-  ];
+const productServices = [
+  {
+    title: "MVP Development",
+    desc: "Rapid prototyping and MVP creation to test your product in the market.",
+  },
+  {
+    title: "End-to-End Product Engineering",
+    desc: "Full-cycle development from architecture to deployment and scaling.",
+  },
+  {
+    title: "UI/UX Design",
+    desc: "User-centric interface and experience design aligned with product goals.",
+  },
+  {
+    title: "Mobile & Web App Development",
+    desc: "Cross-platform development for modern digital experiences.",
+  },
+  {
+    title: "Product Re-engineering",
+    desc: "Modernize legacy systems into high-performing, modern solutions.",
+  },
+  {
+    title: "Product Strategy & Consulting",
+    desc: "Refine product ideas, go-to-market strategy, and feature roadmap.",
+  },
+];
 
+const productProcess = [
+  { step: "Idea Validation", color: "bg-primary" },
+  { step: "UI/UX Design", color: "bg-secondary" },
+  { step: "Agile Development", color: "bg-success" },
+  { step: "Testing & QA", color: "bg-warning" },
+  { step: "Deployment", color: "bg-info" },
+  { step: "Support & Iteration", color: "bg-dark" },
+];
+
+const Product: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
@@ -57,7 +66,7 @@ const Product: React.FC = () => {
       {/* Overview */}
       <section className="py-5 text-center">
         <div className="container">
-          <h2 className="section-title mb-2">Overview</h2>
+          <h2 className="section-title mb-5">Overview</h2>
           <p>
             At Actualize, we bring your ideas to life by building full-fledged
             digital products — from MVPs to large-scale platforms. Our team
@@ -69,42 +78,33 @@ const Product: React.FC = () => {
       </section>
 
       {/* Our Capabilities */}
-      <section className="py-5 bg-light text-center">
-        <div className="container">
-          <h2 className="section-title mb-5">
-            Our Product{" "}
-            <span className="highlight">Development Capabilities</span>
+      <div className="our-capabilities-container">
+        <section className="capabilities-wrapper">
+          <h2 className="section-title">
+            Our Product <span className="highlight">Capabilities</span>
           </h2>
-          <div className="row g-4">
+
+          <div className="capabilities-grid">
             {productServices.map((service, idx) => (
-              <div className="col-md-6 col-lg-4" key={idx}>
-                <div className="card h-100 shadow-sm p-3">
-                  <div className="card-body">
-                    <h5 className="fw-semibold">{service.title}</h5>
-                    <p className="text-muted">{service.desc}</p>
-                  </div>
+              <div className="capability-card" key={idx}>
+                <div className="capability-card-body">
+                  <h5 className="capability-title">{service.title}</h5>
+                  <p className="capability-desc">{service.desc}</p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      {/* Process Section (Optional) */}
+      {/* Process Section */}
       <section className="py-5 text-center">
         <div className="container">
           <h2 className="section-title mb-5">
             Our <span className="highlight">Process </span>
           </h2>
           <div className="row text-center">
-            {[
-              { step: "Idea Validation", color: "bg-primary" },
-              { step: "UI/UX Design", color: "bg-info" },
-              { step: "Agile Development", color: "bg-success" },
-              { step: "Testing & QA", color: "bg-warning" },
-              { step: "Deployment", color: "bg-secondary" },
-              { step: "Support & Iteration", color: "bg-dark" },
-            ].map((item, index) => (
+            {productProcess.map((item, index) => (
               <div className="col-6 col-md-4 col-lg-2 mb-4" key={index}>
                 <div
                   className={`process-step text-white py-3 px-2 rounded shadow-sm ${item.color}`}
@@ -131,6 +131,7 @@ const Product: React.FC = () => {
             <Link
               to="/contact"
               className="btn btn-light btn-lg custom-hover-btn"
+              target="_top"
             >
               Start a Conversation
             </Link>

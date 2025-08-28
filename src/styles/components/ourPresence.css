@@ -1,6 +1,6 @@
 .our-presence-container {
     padding: 5rem 4.25rem;
-    background: url('../assets/images/Map-background.jpg');
+    background: url('../../assets/images/Map-background.jpg');
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;

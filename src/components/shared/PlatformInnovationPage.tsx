@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../styles/platformInnovationPage.css";
+import "../../styles/Pages/home/platformInnovationPage.css";
 
 import ideationImage from "../../assets/images/ideation.jpg";
 import architectureImage from "../../assets/images/architecture.jpg";

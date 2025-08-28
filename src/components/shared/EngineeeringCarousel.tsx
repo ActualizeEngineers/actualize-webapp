@@ -3,7 +3,7 @@ import electrical from "../../assets/icons/electrical.png";
 import manufacturing from "../../assets/icons/manufacturing.png";
 import analysis from "../../assets/icons/analysis.png";
 import technical from "../../assets/icons/technical.png";
-import "../../styles/EngineeeringCarousel.css";
+import "../../styles/components/EngineeeringCarousel.css";
 
 const services = [
   {

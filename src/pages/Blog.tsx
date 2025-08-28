@@ -1,4 +1,4 @@
-import "../styles/blog.css";
+import "../styles/Pages/blog.css";
 
 import Navbar from "../layouts/Navbar";
 import blog from "../assets/banners/blogbanner.jpg";
@@ -9,8 +9,8 @@ import blog3 from "../assets/images/electricity_grid.png";
 import blog4 from "../assets/images/electricity_grid.png";
 import blog5 from "../assets/images/electricity_grid.png";
 import blog6 from "../assets/images/electricity_grid.png";
-import blog7 from "../assets/images/electricity_grid.png";
-import blog8 from "../assets/images/electricity_grid.png";
+// import blog7 from "../assets/images/electricity_grid.png";
+// import blog8 from "../assets/images/electricity_grid.png";
 
 const blogs = [
   {

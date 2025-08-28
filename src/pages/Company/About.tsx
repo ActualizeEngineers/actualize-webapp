@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/about.css";
+import "../../styles/Pages/company/about.css";
 import visionImage from "../../assets/images/vision.jpg";
 import missionImage from "../../assets/images/mission.jpg";
 import aboutImage from "../../assets/what_is_actualize.png";

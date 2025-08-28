@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "animate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styles/megaTrends.css";
+import "../../styles/Pages/home/megaTrends.css";
 
 import cloudImage from "../../assets/icons/cloud.jpg";
 import aiDriven from "../../assets/icons/ai-driven.jpg";

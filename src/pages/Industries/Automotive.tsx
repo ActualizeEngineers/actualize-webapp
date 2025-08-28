@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../../layouts/Navbar";
-import "../../styles/industries.css";
+import "../../styles/Pages/industries/industries.css";
 
 import automotive from "../../assets/industries/automotive.jpg";
 

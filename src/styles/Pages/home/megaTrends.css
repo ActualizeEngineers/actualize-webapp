@@ -38,7 +38,7 @@
 
 .trend-card-mosaic:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 24px rgb(41 124 219);
+  box-shadow: 0 12px 24px var(--brand-color);
 }
 
 .card-overlay {

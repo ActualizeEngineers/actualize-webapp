@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../styles/OurExpert.css";//  // <-- create a new css file if needed
+import "../../styles/components/OurExpert.css";
 
 // Import your 4 expert images
 import expert1 from "../../assets/images/construction1.jpg";

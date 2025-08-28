@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/team.css";
+import "../../styles/Pages/company/team.css";
 import Navbar from "../../layouts/Navbar";
 import Harish from "../../assets/team/Harish.jpg";
 import Akhilesh from "../../assets/team/Akhilesh.jpg";

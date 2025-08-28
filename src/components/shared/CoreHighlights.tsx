@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "../../styles/coreHighlights.css";
+import "../../styles/Pages/home/coreHighlights.css";
 import { FaArrowRight } from "react-icons/fa";
 
 import softwareImage from "../../assets/icons/softwaredevelopment.jpg";

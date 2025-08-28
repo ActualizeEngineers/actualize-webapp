@@ -1,4 +1,4 @@
-  import '../../styles/Card.css'
+  import '../../styles/components/Card.css';
  type CardProps = {
   img: string;
   title: string;
