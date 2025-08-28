@@ -52,7 +52,7 @@
   overflow: hidden;
 }
 
-.nav-tabs .nav-link {
+.tab-nav-list .tab-link {
   background-color: white !important;
   color: black !important;
   border: 1px solid #69abca;
@@ -63,18 +63,18 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-tabs .nav-link:hover {
+.tab-nav-list .tab-link:hover {
   background-color: #e2e6ea;
 }
 
-.nav-tabs .nav-link.active {
+.tab-nav-list .tab-link.active {
   background-color: var(--brand-color) !important;
   color: #fff !important;
   border-color: var(--brand-color) !important;
   font-weight: 600;
 }
 
-.mb-4 {
+/* .mb-4 {
   text-align: center;
   color: var(--brand-color);
 }
@@ -82,6 +82,7 @@
 .btn blue mt-3 {
   color: var(--brand-color);
 }
+*/
 .abc{
   background-image: url("https://solutek-wp.laralink.com/wp-content/uploads/2024/08/faq-bg.png");
   background-repeat: no-repeat;

@@ -1,47 +1,11 @@
 .engineering-carousel {
-  background-image: url(/src/assets/banners/engineering-bg-png.jpg);
   background-repeat: no-repeat;
+  /* background-color: #000; */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   width: 100%;
   box-sizing: border-box;
-}
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 70vh !important;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: overlay;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  text-align: center;
-}
-
-.hero-section > .navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.hero-section .overlay {
-  z-index: 5;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 800px;
-  width: 90%;
-  text-align: center;
-  opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 0.3s;
 }
 
 @keyframes fadeInUp {
@@ -101,7 +65,7 @@
   background-size: cover;
 }
 
-.overlay-text {
+/* .overlay-text {
   position: absolute;
   top: 40%;
   left: 30%;
@@ -125,7 +89,7 @@
   font-size: 1rem;
   color: blue;
   font-size: 1.5rem;
-}
+} */
 
 .custom-hover-btn:hover {
   background-color: transparent !important;

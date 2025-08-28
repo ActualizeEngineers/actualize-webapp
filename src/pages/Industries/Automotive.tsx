@@ -5,8 +5,6 @@ import "../../styles/industries.css";
 import automotive from "../../assets/industries/automotive.jpg";
 
 const Automotive: React.FC = () => {
-    
-
 
   const services = [
     {

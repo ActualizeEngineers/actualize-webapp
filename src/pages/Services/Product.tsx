@@ -45,12 +45,12 @@ const Product: React.FC = () => {
       >
         <Navbar />
         <div className="overlay">
-          <h1 className="display-4 fw-bold">Product Development</h1>
-
-          <p className="lead">
-            From concept to launch — we build scalable, impactful digital
-            products.
-          </p>
+          <h1 className="hero-heading">
+            Product
+            <span className="overlay-text">
+              FROM CONCEPT TO <span className="highlight">CREATION</span>
+            </span>
+          </h1>
         </div>
       </section>
 
@@ -71,7 +71,10 @@ const Product: React.FC = () => {
       {/* Our Capabilities */}
       <section className="py-5 bg-light text-center">
         <div className="container">
-          <h2 className="section-title mb-5">Our Product <span className="highlight">Development Capabilities</span></h2>
+          <h2 className="section-title mb-5">
+            Our Product{" "}
+            <span className="highlight">Development Capabilities</span>
+          </h2>
           <div className="row g-4">
             {productServices.map((service, idx) => (
               <div className="col-md-6 col-lg-4" key={idx}>
@@ -90,7 +93,9 @@ const Product: React.FC = () => {
       {/* Process Section (Optional) */}
       <section className="py-5 text-center">
         <div className="container">
-           <h2 className="section-title mb-5">Our <span className="highlight">Process </span></h2>
+          <h2 className="section-title mb-5">
+            Our <span className="highlight">Process </span>
+          </h2>
           <div className="row text-center">
             {[
               { step: "Idea Validation", color: "bg-primary" },

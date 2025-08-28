@@ -1,6 +1,23 @@
 :root {
   --brand-color: #007dc5;
 }
+/* Works on Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 12px;              
+  height: 12px;            
+}
+
+::-webkit-scrollbar-track {
+  background: #fff; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--brand-color); 
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
 
 .video-banner {
   position: relative;
@@ -89,4 +106,91 @@
 .home-content {
   background-color: #fff;
   height: 100%;
+}
+/* 
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh !important;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+
+.hero-section > .navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.hero-section .overlay {
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+} */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh !important;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.295);
+  background-blend-mode: overlay;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+
+.hero-section > .navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.hero-heading {
+  position: relative;
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgb(46, 46, 46);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.hero-heading .overlay-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+}
+
+.hero-heading .highlight {
+  /* background-color: var(--brand-color); */
+  color: var(--brand-color);
+  /* padding: 0.2rem 0.6rem; */
+  /* margin-left: 1%; */
+  /* border-radius: 4px; */
 }
