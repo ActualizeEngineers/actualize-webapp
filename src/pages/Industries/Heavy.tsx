@@ -3,6 +3,9 @@ import Navbar from "../../layouts/Navbar";
 import heavy_eng from "../../assets/industries/heavy.jpg";
 import { Link } from "react-router-dom";
 import "../../styles/industries.css";
+import OurExpert from "../../components/shared/OurExpert";
+
+
 
 const Heavy: React.FC = () => {
   const [showConstruction, setShowConstruction] = useState<boolean>(true);
@@ -82,20 +85,16 @@ const Heavy: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-5">
+      <section className="py-5 abcd">
         <div className="container">
           <h2 className="mb-4">Overview</h2>
           <p>
-            At Actualize, we provide comprehensive support for the Heavy
-            Engineering sector—from plant design and automation to product
-            lifecycle management. Our team brings domain expertise and hands-on
-            experience to ensure our clients meet safety, quality, and delivery
-            standards.
+           At Actualize, we provide end-to-end support for the Heavy Engineering sector—from plant design, automation, and product lifecycle management to digital transformation. With strong domain expertise and hands-on experience, our team helps clients achieve higher efficiency, reduce downtime, and optimize resources. We ensure strict adherence to safety, quality, and delivery standards while driving innovation and faster time-to-market.
           </p>
         </div>
       </section>
 
-      <section className="py-5 bg-light">
+      {/* <section className="py-5 bg-light">
         <div className="container">
           <h2 className="mb-4">Our Expertise</h2>
           <div className="row g-4">
@@ -123,10 +122,14 @@ const Heavy: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+       {/* <PlatformInnovationPage /> */}
+
+       <OurExpert/>
+     
 
       {showConstruction && (
-        <section className="py-5">
+        <section className="py-5 abc">
           <div className="container">
             <h2 className="mb-4"  style={{ color: "var(--brand-color)" }}>Construction Equipment We Support</h2>
             <p className="mb-4 text-muted">
@@ -155,7 +158,7 @@ const Heavy: React.FC = () => {
       )}
 
       {showMining && (
-        <section className="py-5">
+        <section className="py-5 abc">
           <div className="container">
             <h2 className="mb-4">Mining Equipment We Support</h2>
             <p className="mb-4 text-muted">
@@ -184,7 +187,7 @@ const Heavy: React.FC = () => {
       )}
 
       {showMaterial && (
-        <section className="py-5">
+        <section className="py-5 abc">
           <div className="container">
             <h2 className="mb-4">Material Handling We Support</h2>
             <p className="mb-4 text-muted">
@@ -213,7 +216,7 @@ const Heavy: React.FC = () => {
       )}
 
       {showAgriculture && (
-        <section className="py-5">
+        <section className="py-5 abc">
           <div className="container">
             <h2 className="mb-4">Agriculture Equipment We Support</h2>
             <p className="mb-4 text-muted">
