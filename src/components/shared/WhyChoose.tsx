@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/whyChoose.css";
+import "../../styles/Pages/home/whyChoose.css";
 
 const WhyChoose: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import WorldMap from "../../assets/images/world-map.png";
-import "../../styles/ourPresence.css";
+import "../../styles/components/ourPresence.css";
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({

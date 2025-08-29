@@ -8,7 +8,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import "../../styles/cardCarousel.css";
+import "../../styles/components/cardCarousel.css";
 
 interface ServiceCard {
   title: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../src/styles/Careers.css"; // External CSS for extra styling (optional)
+import "../../src/styles/Pages/careers.css";
 import Navbar from "../layouts/Navbar";
 import carrers from "../assets/images/careers.jpg";
 

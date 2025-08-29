@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/life.css";
+import "../../styles/Pages/company/life.css";
 import life1 from "../../assets/images/life-1.jpg";
 import life2 from "../../assets/images/life-2.jpg";
 import life3 from "../../assets/images/life-3.jpg";

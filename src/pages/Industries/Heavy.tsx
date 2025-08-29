@@ -2,60 +2,58 @@ import React, { useState } from "react";
 import Navbar from "../../layouts/Navbar";
 import heavy_eng from "../../assets/industries/heavy.jpg";
 import { Link } from "react-router-dom";
-import "../../styles/industries.css";
+import "../../styles/Pages/industries/industries.css";
 import OurExpert from "../../components/shared/OurExpert";
 
-
+const services = [
+  {
+    title: "Construction Equipment",
+    short: "CE",
+    desc: "Designing efficient plant systems for optimal productivity.",
+  },
+  {
+    title: "Mining",
+    short: "MIN",
+    desc: "3D CAD modeling and assembly validation of large machinery.",
+  },
+  {
+    title: "Material Handling",
+    short: "MH",
+    desc: "Detailed drawing creation and standards compliance.",
+  },
+  {
+    title: "Agriculture",
+    short: "AGRI",
+    desc: "We provide smart engineering solutions that improve farm machinery efficiency and flexibility.",
+  },
+];
+console.log(services);
+const equipmentList = [
+  {
+    name: "Cranes & Lifting Equipment",
+    shortDesc: "Support for hydraulic, mechanical, and telescopic cranes.",
+    fullDesc:
+      "We provide 3D modeling, structural analysis, and control system design for cranes used in construction and heavy industry, ensuring safety and load efficiency.",
+  },
+  {
+    name: "Mining & Earthmoving Equipment",
+    shortDesc: "Engineering support for excavators, bulldozers, and dumpers.",
+    fullDesc:
+      "From component modeling to fatigue analysis and lifecycle estimation, we support the complete design cycle for mining equipment used in harsh environments.",
+  },
+  {
+    name: "Pressure Vessels & Boilers",
+    shortDesc: "ASME-compliant design and validation services.",
+    fullDesc:
+      "We assist with thermal/stress analysis, fabrication drawings, and compliance documentation for high-pressure equipment across energy and manufacturing sectors.",
+  },
+];
 
 const Heavy: React.FC = () => {
   const [showConstruction, setShowConstruction] = useState<boolean>(true);
   const [showMining, setShowMining] = useState<boolean>(false);
   const [showMaterial, setShowMaterial] = useState<boolean>(false);
   const [showAgriculture, setShowAgriculture] = useState<boolean>(false);
-
-  const services = [
-    {
-      title: "Construction Equipment",
-      short: "CE",
-      desc: "Designing efficient plant systems for optimal productivity.",
-    },
-    {
-      title: "Mining",
-      short: "MIN",
-      desc: "3D CAD modeling and assembly validation of large machinery.",
-    },
-    {
-      title: "Material Handling",
-      short: "MH",
-      desc: "Detailed drawing creation and standards compliance.",
-    },
-    {
-      title: "Agriculture",
-      short: "AGRI",
-      desc: "We provide smart engineering solutions that improve farm machinery efficiency and flexibility.",
-    },
-  ];
-  const equipmentList = [
-    {
-      name: "Cranes & Lifting Equipment",
-      shortDesc: "Support for hydraulic, mechanical, and telescopic cranes.",
-      fullDesc:
-        "We provide 3D modeling, structural analysis, and control system design for cranes used in construction and heavy industry, ensuring safety and load efficiency.",
-    },
-    {
-      name: "Mining & Earthmoving Equipment",
-      shortDesc: "Engineering support for excavators, bulldozers, and dumpers.",
-      fullDesc:
-        "From component modeling to fatigue analysis and lifecycle estimation, we support the complete design cycle for mining equipment used in harsh environments.",
-    },
-    {
-      name: "Pressure Vessels & Boilers",
-      shortDesc: "ASME-compliant design and validation services.",
-      fullDesc:
-        "We assist with thermal/stress analysis, fabrication drawings, and compliance documentation for high-pressure equipment across energy and manufacturing sectors.",
-    },
-    // Add more
-  ];
 
   let showDetails = (showDetails: string) => {
     if (showDetails == "CE" && !showConstruction) setShowConstruction(true);
@@ -67,6 +65,7 @@ const Heavy: React.FC = () => {
     if (showDetails == "AGRI" && !showAgriculture) setShowAgriculture(true);
     else setShowAgriculture(false);
   };
+  console.log(showDetails);
   return (
     <>
       {/* Hero Section */}
@@ -89,7 +88,13 @@ const Heavy: React.FC = () => {
         <div className="container">
           <h2 className="mb-4">Overview</h2>
           <p>
-           At Actualize, we provide end-to-end support for the Heavy Engineering sector—from plant design, automation, and product lifecycle management to digital transformation. With strong domain expertise and hands-on experience, our team helps clients achieve higher efficiency, reduce downtime, and optimize resources. We ensure strict adherence to safety, quality, and delivery standards while driving innovation and faster time-to-market.
+            At Actualize, we provide end-to-end support for the Heavy
+            Engineering sector—from plant design, automation, and product
+            lifecycle management to digital transformation. With strong domain
+            expertise and hands-on experience, our team helps clients achieve
+            higher efficiency, reduce downtime, and optimize resources. We
+            ensure strict adherence to safety, quality, and delivery standards
+            while driving innovation and faster time-to-market.
           </p>
         </div>
       </section>
@@ -123,15 +128,16 @@ const Heavy: React.FC = () => {
           </div>
         </div>
       </section> */}
-       {/* <PlatformInnovationPage /> */}
+      {/* <PlatformInnovationPage /> */}
 
-       <OurExpert/>
-     
+      <OurExpert />
 
       {showConstruction && (
         <section className="py-5 abc">
           <div className="container">
-            <h2 className="mb-4"  style={{ color: "var(--brand-color)" }}>Construction Equipment We Support</h2>
+            <h2 className="mb-4" style={{ color: "var(--brand-color)" }}>
+              Construction Equipment We Support
+            </h2>
             <p className="mb-4 text-muted">
               Actualize provides design, simulation, and lifecycle engineering
               support for a wide range of heavy equipment. Below are some of the
@@ -244,7 +250,10 @@ const Heavy: React.FC = () => {
         </section>
       )}
 
-      <section className="py-5 text-white" style={{backgroundColor: "var(--brand-color)"}}>
+      <section
+        className="py-5 text-white"
+        style={{ backgroundColor: "var(--brand-color)" }}
+      >
         <div className="container text-center">
           <h3 className="fw-bold">Looking for a Heavy Engineering partner?</h3>
           <p className="lead">

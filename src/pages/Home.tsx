@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "../styles/custom.css";
+import "../styles/Pages/home/custom.css";
 
 import oneBgVideo from "../assets/banners/one.mp4";
 import twoBgVideo from "../assets/banners/two.mp4";

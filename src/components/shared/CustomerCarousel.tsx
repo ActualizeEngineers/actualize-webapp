@@ -4,8 +4,10 @@ import CountUp from "react-countup";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../styles/customercarousel.css";
 
+import "../../styles/Pages/home/customercarousel.css";
+
+import projectBg from "../../assets/banners/project-bg3.png";
 // import customerImage from "../../assets/icons/customer.webp";
 
 const imageModules = import.meta.glob("../../assets/customers/*.png", {
@@ -204,7 +206,7 @@ const CustomerCarousel: React.FC = () => {
   // };
 
   return (
-    <div className="customer-carousel-container">
+    <div className="customer-carousel-container" style={{backgroundImage : `url(${projectBg})`}}>
       <div className="container">
         <section className="frameworks-section">
           <h2 className="section-title">

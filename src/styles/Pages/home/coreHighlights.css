@@ -49,7 +49,6 @@
   border-radius: 17px;
   transition: height 0.4s cubic-bezier(0.41, 1, 0.41, 1), box-shadow 0.3s,
     transform 0.3s;
-  cursor: pointer;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
   background-size: cover;
   background-position: center;
@@ -218,7 +217,7 @@
 }
 
 @media (max-width: 500px) {
-  .highlights-container{
+  .highlights-container {
     flex-wrap: wrap;
   }
   .highlight-cards-container {

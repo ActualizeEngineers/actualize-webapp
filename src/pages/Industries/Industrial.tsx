@@ -9,7 +9,7 @@ import ind_eng from "../../assets/industries/id3.jpg";
 
 import { Link } from "react-router-dom";
 
-import '../../styles/industrial.css';
+import '../../styles/Pages/industries/industrial.css';
 
 const industries = [
   {

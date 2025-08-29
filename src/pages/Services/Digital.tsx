@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import "../../styles/digital.css";
+import "../../styles/pages/services/digital.css";
 
 import digitalHero from "../../assets/services/digital.jpg";
 import cloudImage from "../../assets/icons/cloud.png";

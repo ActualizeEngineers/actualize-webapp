@@ -1,0 +1,98 @@
+.our-capabilities-container {
+  text-align: center;
+  background: url("../../../assets/banners/our-capabilities-bg.png") no-repeat;
+  background-position: top left;
+  background-size: 15% auto;
+  padding: 3rem 1rem;
+}
+
+.capabilities-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Default: auto-fit for mobile/tablet */
+.capabilities-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Cards */
+.capability-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  min-height: 150px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.capability-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+/* Card Content */
+.capability-card-body {
+  padding: 3%;
+  text-align: center;
+}
+
+.capability-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.capability-desc {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* Tablet & below */
+@media (max-width: 1080px) {
+  .capability-card {
+    min-height: 150px;
+    padding: 1.25rem;
+  }
+  .capability-title {
+    font-size: 1.1rem;
+  }
+  .capability-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .capability-card {
+    padding: 1rem;
+  }
+  .capability-title {
+    font-size: 1rem;
+  }
+  .capability-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* ✅ Desktop (≥1080px) — force 3 columns + larger cards */
+@media (min-width: 1080px) {
+  .capabilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .capability-card {
+    min-height: 150px;
+    padding: 2rem;
+  }
+  .capability-title {
+    font-size: 1.35rem;
+  }
+  .capability-desc {
+    font-size: 1.05rem;
+  }
+}

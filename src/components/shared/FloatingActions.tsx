@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaEnvelope, FaCogs, FaIndustry } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-import "../../styles/floatingActions.css";
+import "../../styles/components/floatingActions.css";
 
 const FloatingActions: React.FC = () => {
   const navigate = useNavigate();

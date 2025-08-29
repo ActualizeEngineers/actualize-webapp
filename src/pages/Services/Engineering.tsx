@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/engineering.css";
+import "../../styles/pages/services/engineering.css";
 
 import EngineeringServicesHero from "../../assets/images/services1.jpg";
 import EngineeringCarousel from "../../components/shared/EngineeeringCarousel";

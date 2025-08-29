@@ -1,39 +1,49 @@
-import React from "react";
-import "../../styles/digital.css";
+import React, { useState } from "react";
+import "../../styles/pages/services/software.css";
 
 import digitalHero from "../../assets/services/software.jpg";
-
 import Navbar from "../../layouts/Navbar";
 import { Link } from "react-router-dom";
+
+import { FiGlobe, FiSmartphone, FiCloud, FiTool } from "react-icons/fi";
+import { FaNetworkWired, FaBuilding } from "react-icons/fa";
 
 const softwareServices = [
   {
     title: "Custom Web Applications",
-    desc: "Robust, scalable, and secure apps tailored to your workflow.",
+    icon: <FiGlobe size={28} />,
+    desc: "We design and build robust, scalable, and secure web applications tailored to your unique workflows. From dashboards to customer portals, we ensure your solution is intuitive, performant, and easy to maintain.",
   },
   {
     title: "Mobile App Development",
-    desc: "iOS & Android apps designed for usability, speed, and performance.",
+    icon: <FiSmartphone size={28} />,
+    desc: "We craft high-performance mobile apps for iOS and Android, focusing on speed, usability, and engaging user experiences. Whether native or cross-platform, we build apps that scale with your business.",
   },
   {
     title: "Enterprise Solutions",
-    desc: "CRMs, ERPs, and process automation tailored for enterprise needs.",
+    icon: <FaBuilding size={28} />,
+    desc: "Our team delivers enterprise-grade software such as CRMs, ERPs, and automation systems. We streamline complex processes and align with your internal workflows for maximum efficiency and control.",
   },
   {
     title: "API & Integration",
-    desc: "Seamless integration with internal and third-party systems.",
+    icon: <FaNetworkWired size={28} />,
+    desc: "We develop and integrate APIs that connect your internal systems or external services seamlessly. From payment gateways to internal tools, we ensure data flows securely and reliably across platforms.",
   },
   {
     title: "Cloud Migration",
-    desc: "Migrate legacy apps to modern cloud-native platforms.",
+    icon: <FiCloud size={28} />,
+    desc: "We help migrate your legacy systems to modern cloud-native environments. With minimal downtime and maximum security, we future-proof your infrastructure for scalability and cost-efficiency.",
   },
   {
     title: "Support & Maintenance",
-    desc: "Ongoing support, optimization, and tech upgrades.",
+    icon: <FiTool size={28} />,
+    desc: "Our team provides continuous support, updates, and optimization to keep your software secure, fast, and reliable. We proactively monitor performance and offer enhancements as your needs evolve.",
   },
 ];
 
 const Software: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <>
       {/* Hero Section */}
@@ -57,7 +67,6 @@ const Software: React.FC = () => {
       {/* Overview */}
       <section className="py-5 text-center">
         <div className="container">
-          {/* <h2 className="mb-4">Overview</h2> */}
           <h2 className="section-title mb-2">Overview</h2>
           <p>
             At Actualize, we build scalable, secure, and performance-driven
@@ -69,26 +78,86 @@ const Software: React.FC = () => {
         </div>
       </section>
 
-      {/* Key Offerings */}
-      <section className="py-5 bg-light text-center">
-        <div className="container">
+      {/* Core Offerings Carousel */}
+      <div className="container py-5">
+        <section className="text-white text-center">
           <h2 className="section-title mb-5">
             Our <span className="highlight">Core Offerings</span>
           </h2>
-          <div className="row g-4">
-            {softwareServices.map((item, idx) => (
-              <div className="col-md-6 col-lg-4" key={idx}>
-                <div className="card h-100 shadow-sm p-3">
-                  <div className="card-body">
-                    <h5 className="fw-semibold">{item.title}</h5>
-                    <p className="text-muted">{item.desc}</p>
+
+          <div className="offerings-carousel">
+            {/* Side avatars LEFT */}
+            <div className="side-avatars left">
+              {softwareServices.slice(0, 3).map((item, idx) => {
+                const actualIndex = idx;
+                return (
+                  <div
+                    key={idx}
+                    className={`avatar-circle ${
+                      activeIndex === actualIndex ? "active" : ""
+                    } ${idx === 1 ? "translate-left" : ""}`} // <-- custom shift
+                    onClick={() => setActiveIndex(actualIndex)}
+                  >
+                    <span className="service-icon">{item.icon}</span>
                   </div>
-                </div>
-              </div>
-            ))}
+                );
+              })}
+            </div>
+
+            {/* Main card */}
+            <div className="offer-card">
+              <h4>{softwareServices[activeIndex].title}</h4>
+              <p>{softwareServices[activeIndex].desc}</p>
+            </div>
+
+            {/* Side avatars RIGHT */}
+            <div className="side-avatars right">
+              {softwareServices.slice(3, 6).map((item, idx) => {
+                const actualIndex = idx + 3;
+                return (
+                  <div
+                    key={idx}
+                    className={`avatar-circle ${
+                      activeIndex === actualIndex ? "active" : ""
+                    } ${idx === 1 ? "translate-right" : ""}`} // <-- custom shift
+                    onClick={() => setActiveIndex(actualIndex)}
+                  >
+                    <span className="service-icon">{item.icon}</span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+
+          {/* Arrows at bottom */}
+          <div className="carousel-controls">
+            <button
+              className="carousel-btn"
+              onClick={() =>
+                setActiveIndex(
+                  activeIndex === 0
+                    ? softwareServices.length - 1
+                    : activeIndex - 1
+                )
+              }
+            >
+              &#8592;
+            </button>
+            <button
+              className="carousel-btn"
+              onClick={() =>
+                setActiveIndex(
+                  activeIndex === softwareServices.length - 1
+                    ? 0
+                    : activeIndex + 1
+                )
+              }
+            >
+              &#8594;
+            </button>
+          </div>
+        </section>
+      </div>
 
       {/* CTA */}
       <section

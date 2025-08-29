@@ -5,7 +5,7 @@ import bengaluru from '../../assets/Cities/bengaluru.jpg'
 import pune from '../../assets/Cities/pune.jpg'
 import munich from '../../assets/Cities/munich.jpg'
 import ohio from '../../assets/Cities/ohio.jpg'
-import '../../styles/WorldMap.css'
+import '../../styles/components/WorldMap.css'
 
 type Location = {
   name:  JSX.Element;
