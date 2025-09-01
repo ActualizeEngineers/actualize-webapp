@@ -52,12 +52,22 @@ const Industrial: React.FC = () => {
         }}
       >
         <Navbar />
-        <div className="overlay">
+        {/* <div className="overlay">
           <h1 className="display-4 fw-bold">Industrial Engineering</h1>
           <p className="lead">
             Engineering excellence for large-scale, mission-critical industries.
           </p>
+        </div> */}
+         <div className="overlay">
+          <h1 className="hero-heading">
+           INDUSTRIAL
+            <span className="overlay-text">
+           Driving efficiency and innovation
+              <span className="highlight"> in industry.</span>
+            </span>
+          </h1>
         </div>
+
       </section>
       
       

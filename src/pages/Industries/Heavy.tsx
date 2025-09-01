@@ -76,14 +76,23 @@ const Heavy: React.FC = () => {
         }}
       >
         <Navbar />
-        <div className="overlay">
+        {/* <div className="overlay">
           <h1 className="display-4 fw-bold">Heavy Engineering</h1>
           <p className="lead">
             Engineering excellence for large-scale, mission-critical industries.
           </p>
+        </div> */}
+          <div className="overlay">
+          <h1 className="hero-heading">
+            HEAVY
+            <span className="overlay-text">
+            Engineering excellence for
+              <span className="highlight"> mission-critical industries.</span>
+            </span>
+          </h1>
         </div>
       </section>
-
+      <div className="overview">
       <section className="py-5 abcd">
         <div className="container">
           <h2 className="mb-4">Overview</h2>
@@ -98,6 +107,7 @@ const Heavy: React.FC = () => {
           </p>
         </div>
       </section>
+      {/* </div> */}
 
       {/* <section className="py-5 bg-light">
         <div className="container">
@@ -249,6 +259,7 @@ const Heavy: React.FC = () => {
           </div>
         </section>
       )}
+      </div>
 
       <section
         className="py-5 text-white"

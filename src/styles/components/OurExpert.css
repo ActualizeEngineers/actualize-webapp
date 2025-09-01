@@ -12,14 +12,28 @@
   color: #007bff; /* bootstrap primary */
 }
 
-.expert-card {
+/* .expert-card {
   background: #fff;
   border-radius: 15px;
   padding: 20px;
   margin: 10px;
   height: 400px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+} */
+.expert-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 12px; /* horizontal gap between slides */
+  height: 400px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+.slick-slide > div {
+  margin: 0 5px;   /* gap between cards */
+}
+
+
 
 .expert-img img {
   max-width: 100%;

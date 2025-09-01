@@ -22,6 +22,20 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
+.life-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.life-card1 {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
 
 .life-card:hover {
   transform: translateY(-5px);
@@ -47,4 +61,34 @@
   font-size: 0.95rem;
   color: #555;
   margin-top: 0.5rem;
+}
+/* Add animation for cards */
+.life-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  opacity: 0; /* hidden initially */
+  transform: translateX(-100px); /* start from left */
+  animation: slideIn 0.8s ease forwards;
+}
+
+.life-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.life-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.life-card:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

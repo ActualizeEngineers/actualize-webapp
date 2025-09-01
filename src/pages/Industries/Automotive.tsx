@@ -50,12 +50,21 @@ const Automotive: React.FC = () => {
         }}
       >
         <Navbar />
-        <div className="overlay">
+        {/* <div className="overlay">
           <h1 className="display-4 fw-bold">Automotive Engineering</h1>
           <p className="lead">
             Innovative solutions for vehicle design, development, and
             performance optimization.
           </p>
+        </div> */}
+         <div className="overlay">
+          <h1 className="hero-heading">
+            AUTOMATIVE
+            <span className="overlay-text">
+            Engineering the future of
+              <span className="highlight"> automobiles.</span>
+            </span>
+          </h1>
         </div>
       </section>
 
