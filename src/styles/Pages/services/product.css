@@ -1,24 +1,21 @@
 .our-capabilities-container {
-  text-align: center;
   background: url("../../../assets/banners/our-capabilities-bg.png") no-repeat;
   background-position: top left;
   background-size: 15% auto;
-  padding: 3rem 1rem;
 }
 
-.capabilities-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+.process-section-container {
+  background: url("../../../assets/banners/our-capabilities-bg.png") no-repeat;
+  background-position: bottom right;
+  background-size: 15% auto;
 }
 
-/* Default: auto-fit for mobile/tablet */
 .capabilities-grid {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* Cards */
 .capability-card {
   background: #fff;
   border-radius: 1rem;
@@ -53,7 +50,6 @@
   line-height: 1.5;
 }
 
-/* Tablet & below */
 @media (max-width: 1080px) {
   .capability-card {
     min-height: 150px;
@@ -67,7 +63,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
   .capability-card {
     padding: 1rem;
@@ -80,7 +75,6 @@
   }
 }
 
-/* ✅ Desktop (≥1080px) — force 3 columns + larger cards */
 @media (min-width: 1080px) {
   .capabilities-grid {
     grid-template-columns: repeat(3, 1fr);

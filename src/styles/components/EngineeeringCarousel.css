@@ -1,11 +1,10 @@
-.engineering-carousel-container {
-  background-image: url("../assets/banners/what-we-offer.png");
+/* .engineering-carousel-container {
+  background-image: url("../../assets/banners/what-we-offer.png");
   background-repeat: no-repeat;
   background-size: 100% auto, 100% auto;
   background-attachment: fixed;
   background-position: center;
-
-}
+} */
 
 .scroll-cards-container {
   position: relative;
@@ -43,7 +42,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 2%;
 }
 
 .service-info h5 {
@@ -69,6 +68,8 @@
   transition: color 0.18s;
   letter-spacing: 0.01em;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .learn-more-arrow {
@@ -110,11 +111,6 @@
   background: #eaf1fb;
 }
 
-/* Base styles: already given by user (unchanged) */
-
-/* Responsive adjustments */
-
-/* Large desktops and above */
 @media (min-width: 1200px) {
   .service-image {
     max-width: 50%;
@@ -132,7 +128,6 @@
   }
 }
 
-/* Desktops and laptops (992px and below) */
 @media (max-width: 1199px) and (min-width: 768px) {
   .service-image {
     max-width: 45%;
@@ -150,12 +145,11 @@
   }
 }
 
-/* Tablets and medium devices (767px and below) */
 @media (max-width: 767px) {
   .service-image {
     max-width: 100%;
     height: auto;
-    border-radius: 14px 14px 0 0; /* keep consistent rounded corners */
+    border-radius: 14px 14px 0 0;
   }
   .scroll-card {
     flex-direction: column;
@@ -181,7 +175,6 @@
   }
 }
 
-/* Small phones and below (480px and below) */
 @media (max-width: 480px) {
   .service-info h5 {
     font-size: 1.2rem;

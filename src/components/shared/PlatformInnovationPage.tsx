@@ -77,7 +77,7 @@ const PlatformInnovationPage = () => {
           <h2 className="section-title">
             Platform-Based <span className="highlight">Innovation</span>
           </h2>
-          <p className="lead">Explore our journey and achievements.</p>
+          <p className="lead text-muted">Explore our journey and achievements.</p>
           <div className="container-fluid milestone-bg">
             <Slider ref={sliderRef} {...settings}>
               {innovationSteps.map((step, i) => (

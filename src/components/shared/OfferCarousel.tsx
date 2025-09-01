@@ -12,7 +12,7 @@ const offerItems = [
   {
     icon: "fas fa-sync-alt",
     title: "Lifecycle Management",
-    desc: "PLM customization, integration across Windchill, Teamcenter & more.",
+    desc: "PLM customization, integration across Windchill & more.",
   },
   {
     icon: "fas fa-drafting-compass",
@@ -32,7 +32,7 @@ const offerItems = [
   {
     icon: "fas fa-sync-alt",
     title: "Lifecycle Management",
-    desc: "PLM customization, integration across Windchill, Teamcenter & more.",
+    desc: "PLM customization, integration across Windchill & more.",
   },
 ];
 

@@ -1,22 +1,9 @@
 .engineering-carousel {
+  background-image: url("../../../assets/banners/what-we-offer.png");
   background-repeat: no-repeat;
-  /* background-color: #000; */
-  background-size: cover;
+  background-size: 100% auto, 100% auto;
   background-attachment: fixed;
   background-position: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
 
 .section-subtitle {
@@ -48,9 +35,7 @@
 .highlight-card:hover {
   transform: translateY(-5px);
 }
-.custom-highlight-section {
-  background-color: #dd6974 !important;
-}
+
 .team-grid.team-grid-five {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -65,39 +50,12 @@
   background-size: cover;
 }
 
-/* .overlay-text {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  height: 30vh;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  background-color: rgb(243, 238, 238);
-}
-
-.overlay-text h1 {
-  font-size: 3.5rem;
-  font-weight: 1200;
-  color: #d14f81;
-  margin-bottom: 10px;
-}
-
-.overlay-text p {
-  font-size: 1rem;
-  color: blue;
-  font-size: 1.5rem;
-} */
-
 .custom-hover-btn:hover {
   background-color: transparent !important;
   color: #fff !important;
   border: 1px #fff solid !important;
 }
 
-/* Bouncing Animation Keyframes */
 @keyframes bounce {
   0%,
   100% {
@@ -106,5 +64,16 @@
   50%,
   75% {
     transform: translateY(-30px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

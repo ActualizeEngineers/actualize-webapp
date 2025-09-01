@@ -78,8 +78,8 @@ const Product: React.FC = () => {
       </section>
 
       {/* Our Capabilities */}
-      <div className="our-capabilities-container">
-        <section className="capabilities-wrapper">
+      <section className="py-5 our-capabilities-container text-center">
+        <div className="container">
           <h2 className="section-title">
             Our Product <span className="highlight">Capabilities</span>
           </h2>
@@ -94,11 +94,11 @@ const Product: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* Process Section */}
-      <section className="py-5 text-center">
+      <section className="py-5 process-section-container">
         <div className="container">
           <h2 className="section-title mb-5">
             Our <span className="highlight">Process </span>
