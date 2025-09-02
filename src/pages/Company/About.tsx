@@ -1,8 +1,10 @@
 import React from "react";
-import "../../styles/Pages/company/about.css";
+
+import aboutBanner from "../../assets/banners/aboutbanner.jpg";
 import visionImage from "../../assets/images/vision.jpg";
 import missionImage from "../../assets/images/mission.jpg";
 import aboutImage from "../../assets/what_is_actualize.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLightbulb,
@@ -10,14 +12,29 @@ import {
   faTools,
   faBullseye,
 } from "@fortawesome/free-solid-svg-icons";
+
 import Navbar from "../../layouts/Navbar";
+
+import "../../styles/Pages/company/about.css";
 
 const About: React.FC = () => {
   return (
     <>
-      <div className="about-container">
+      <section
+        className="hero-section text-white text-center"
+        style={{ backgroundImage: `url(${aboutBanner})` }}
+      >
         <Navbar />
-      </div>
+        <div className="overlay">
+          <h1 className="hero-heading">
+            About Us
+            <span className="overlay-text">
+              TRANSFORMING VISION INTO{" "}
+              <span className="highlight"> REALITY</span>
+            </span>
+          </h1>
+        </div>
+      </section>
 
       <div className="container py-5">
         <section className="fade-in pt-navbar-offset">
@@ -177,33 +194,15 @@ const About: React.FC = () => {
             Discover the passionate minds driving innovation and excellence at
             Actualize.
           </p>
-          <a
-            href="/company/team"
-            className="btn btn-outline-primary btn-lg mt-3"
-          >
-            <i className="fas fa-users me-2"></i> Meet Our Team
-          </a>
-        </div>
-      </section>
-
-      {/* Services/Contact CTA */}
-      <section
-        className="text-white py-5 fade-in delay-5"
-        style={{ backgroundColor: "var(--brand-color)" }}
-      >
-        <div className="container-fluid text-center">
-          <h2 className="mb-3">Want to Know How We Work?</h2>
-          <p className="lead text-center">
-            Explore our services or reach out — we’d love to partner with you.
-          </p>
-          <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mt-3">
+          <div className="button-container">
             <a
-              href="/services/engineering"
-              className="btn btn-outline-light btn-lg"
+              href="/company/team"
+              className="btn btn-outline-primary btn-lg mt-3"
             >
-              <i className="fas fa-cogs me-2"></i> View Services
+              <i className="fas fa-users me-2"></i> Meet Our Team
             </a>
-            <a href="/contact" className="btn btn-light btn-lg text-primary">
+
+            <a href="/contact" className="btn btn-outline-primary btn-lg mt-3">
               <i className="fas fa-envelope me-2"></i> Get in Touch
             </a>
           </div>

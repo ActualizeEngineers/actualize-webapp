@@ -1,5 +1,5 @@
 .about-container {
- position: relative;
+  position: relative;
   height: 70vh;
   background-image: url("../../../assets/banners/aboutbanner.jpg");
   background-size: cover;
@@ -60,24 +60,11 @@ img.img-fluid.rounded {
   color: #666;
 }
 
-.cta-section {
-  text-align: center;
-  padding: 60px 0;
-}
-
-.cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.cta-section p {
-  font-size: 1rem;
-  color: #666;
-}
-
-.cta-section a.btn {
-  font-weight: 500;
-  padding: 12px 24px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
 }
 
 .bg-light {
