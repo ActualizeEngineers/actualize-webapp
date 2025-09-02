@@ -45,11 +45,21 @@ const Process: React.FC = () => {
         }}
       >
         <Navbar />
-        <div className="overlay">
+        {/* <div className="overlay">
           <h1 className="display-4 fw-bold">Process Engineering</h1>
           <p className="lead">
             Engineering excellence for large-scale, mission-critical industries.
           </p>
+        </div> */}
+
+         <div className="overlay">
+          <h1 className="hero-heading">
+          PROCESS
+            <span className="overlay-text">
+          Innovative solutions for 
+              <span className="highlight"> efficient process design</span>
+            </span>
+          </h1>
         </div>
       </section>
 

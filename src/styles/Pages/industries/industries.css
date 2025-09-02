@@ -91,9 +91,21 @@
   box-sizing: border-box;
 }
 .abcd {
-  background-image: url("/src/assets/images/bg1.jpg");
+  /* background-image: url("/src/assets/images/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  box-sizing: border-box; */
+    background-image: url("https://solutek-wp.laralink.com/wp-content/uploads/2024/08/faq-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   box-sizing: border-box;
+}
+.overview{
+  background-image: url(/src/assets/banners/digital-overview-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 120%;
+  background-position: center;
 }
